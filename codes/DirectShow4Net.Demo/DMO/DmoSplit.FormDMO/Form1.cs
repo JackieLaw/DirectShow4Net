@@ -85,36 +85,36 @@ namespace FormDMO
             // btnStart
             // 
             this.btnStart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnStart.Location = new System.Drawing.Point(80, 136);
+            this.btnStart.Location = new System.Drawing.Point(96, 161);
             this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(75, 40);
+            this.btnStart.Size = new System.Drawing.Size(90, 44);
             this.btnStart.TabIndex = 0;
             this.btnStart.Text = "Start";
             this.btnStart.Click += new System.EventHandler(this.button1_Click);
             // 
             // tbFileName
             // 
-            this.tbFileName.Location = new System.Drawing.Point(16, 24);
+            this.tbFileName.Location = new System.Drawing.Point(19, 26);
             this.tbFileName.Name = "tbFileName";
-            this.tbFileName.Size = new System.Drawing.Size(216, 20);
+            this.tbFileName.Size = new System.Drawing.Size(259, 21);
             this.tbFileName.TabIndex = 1;
             this.tbFileName.Text = "c:\\l2.wav";
             // 
             // rbLeft
             // 
             this.rbLeft.Checked = true;
-            this.rbLeft.Location = new System.Drawing.Point(24, 16);
+            this.rbLeft.Location = new System.Drawing.Point(29, 17);
             this.rbLeft.Name = "rbLeft";
-            this.rbLeft.Size = new System.Drawing.Size(56, 24);
+            this.rbLeft.Size = new System.Drawing.Size(67, 26);
             this.rbLeft.TabIndex = 2;
             this.rbLeft.TabStop = true;
             this.rbLeft.Text = "Left";
             // 
             // rbRight
             // 
-            this.rbRight.Location = new System.Drawing.Point(24, 40);
+            this.rbRight.Location = new System.Drawing.Point(29, 43);
             this.rbRight.Name = "rbRight";
-            this.rbRight.Size = new System.Drawing.Size(56, 24);
+            this.rbRight.Size = new System.Drawing.Size(67, 26);
             this.rbRight.TabIndex = 3;
             this.rbRight.Text = "Right";
             // 
@@ -122,17 +122,17 @@ namespace FormDMO
             // 
             this.groupBox1.Controls.Add(this.rbLeft);
             this.groupBox1.Controls.Add(this.rbRight);
-            this.groupBox1.Location = new System.Drawing.Point(24, 56);
+            this.groupBox1.Location = new System.Drawing.Point(29, 60);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(184, 72);
+            this.groupBox1.Size = new System.Drawing.Size(221, 78);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Channel";
             // 
             // Form1
             // 
-            this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-            this.ClientSize = new System.Drawing.Size(242, 188);
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(311, 217);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tbFileName);
             this.Controls.Add(this.btnStart);
@@ -142,6 +142,7 @@ namespace FormDMO
             this.Text = "DMOSplit Test";
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 		#endregion

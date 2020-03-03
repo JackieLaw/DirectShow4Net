@@ -56,7 +56,7 @@ namespace DirectShowLib.Sample
 			base.Dispose( disposing );
 		}
 
-		#region Code généré par le Concepteur Windows Form
+		#region Code génér?par le Concepteur Windows Form
 		/// <summary>
 		/// Méthode requise pour la prise en charge du concepteur - ne modifiez pas
 		/// le contenu de cette méthode avec l'éditeur de code.
