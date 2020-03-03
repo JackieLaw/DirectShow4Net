@@ -93,8 +93,9 @@ namespace FormDMO
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button1.Location = new System.Drawing.Point(8, 294);
+            this.button1.Location = new System.Drawing.Point(10, 325);
             this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(90, 24);
             this.button1.TabIndex = 0;
             this.button1.Text = "Start";
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -102,17 +103,18 @@ namespace FormDMO
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-                | System.Windows.Forms.AnchorStyles.Right)));
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(296, 216);
+            this.panel1.Size = new System.Drawing.Size(462, 233);
             this.panel1.TabIndex = 1;
             // 
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button2.Location = new System.Drawing.Point(104, 294);
+            this.button2.Location = new System.Drawing.Point(125, 325);
             this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(90, 24);
             this.button2.TabIndex = 2;
             this.button2.Text = "FlipX";
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -120,8 +122,9 @@ namespace FormDMO
             // button3
             // 
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Location = new System.Drawing.Point(208, 294);
+            this.button3.Location = new System.Drawing.Point(357, 325);
             this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(90, 24);
             this.button3.TabIndex = 3;
             this.button3.Text = "FlipY";
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -129,17 +132,16 @@ namespace FormDMO
             // textBox1
             // 
             this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(8, 224);
+            this.textBox1.Location = new System.Drawing.Point(10, 241);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(280, 64);
+            this.textBox1.Size = new System.Drawing.Size(336, 69);
             this.textBox1.TabIndex = 4;
-            this.textBox1.Text = "";
             // 
             // Form1
             // 
-            this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-            this.ClientSize = new System.Drawing.Size(292, 324);
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(457, 357);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -150,6 +152,7 @@ namespace FormDMO
             this.Name = "Form1";
             this.Text = "DMOFlip Test";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 		#endregion

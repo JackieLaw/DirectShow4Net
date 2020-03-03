@@ -82,17 +82,18 @@ namespace WebCamClient
             this.txtFrames = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-                | System.Windows.Forms.AnchorStyles.Left) 
-                | System.Windows.Forms.AnchorStyles.Right)));
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(320, 240);
+            this.pictureBox1.Size = new System.Drawing.Size(639, 227);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -100,9 +101,9 @@ namespace WebCamClient
             // 
             this.btnPress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnPress.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnPress.Location = new System.Drawing.Point(232, 328);
+            this.btnPress.Location = new System.Drawing.Point(278, 322);
             this.btnPress.Name = "btnPress";
-            this.btnPress.Size = new System.Drawing.Size(80, 32);
+            this.btnPress.Size = new System.Drawing.Size(96, 35);
             this.btnPress.TabIndex = 1;
             this.btnPress.Tag = "1";
             this.btnPress.Text = "Start";
@@ -111,67 +112,65 @@ namespace WebCamClient
             // txtServer
             // 
             this.txtServer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtServer.Location = new System.Drawing.Point(16, 288);
+            this.txtServer.Location = new System.Drawing.Point(19, 279);
             this.txtServer.Name = "txtServer";
-            this.txtServer.Size = new System.Drawing.Size(96, 20);
+            this.txtServer.Size = new System.Drawing.Size(115, 21);
             this.txtServer.TabIndex = 3;
             this.txtServer.Text = "192.168.0.3";
             // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-            this.label1.Location = new System.Drawing.Point(16, 248);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(19, 236);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 40);
+            this.label1.Size = new System.Drawing.Size(144, 43);
             this.label1.TabIndex = 4;
             this.label1.Text = "Enter server name or ip address";
             // 
             // txtMessage
             // 
             this.txtMessage.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-                | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtMessage.Location = new System.Drawing.Point(8, 376);
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtMessage.Location = new System.Drawing.Point(10, 374);
             this.txtMessage.Name = "txtMessage";
             this.txtMessage.ReadOnly = true;
-            this.txtMessage.Size = new System.Drawing.Size(304, 20);
+            this.txtMessage.Size = new System.Drawing.Size(619, 21);
             this.txtMessage.TabIndex = 5;
-            this.txtMessage.Text = "";
             // 
             // txtPort
             // 
             this.txtPort.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtPort.Location = new System.Drawing.Point(160, 288);
+            this.txtPort.Location = new System.Drawing.Point(192, 279);
             this.txtPort.Name = "txtPort";
-            this.txtPort.Size = new System.Drawing.Size(48, 20);
+            this.txtPort.Size = new System.Drawing.Size(58, 21);
             this.txtPort.TabIndex = 6;
             this.txtPort.Text = "399";
             // 
             // label2
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label2.Location = new System.Drawing.Point(160, 264);
+            this.label2.Location = new System.Drawing.Point(192, 253);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 23);
+            this.label2.Size = new System.Drawing.Size(86, 25);
             this.label2.TabIndex = 7;
             this.label2.Text = "Port Number";
             // 
             // txtFrames
             // 
             this.txtFrames.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtFrames.Location = new System.Drawing.Point(248, 288);
+            this.txtFrames.Location = new System.Drawing.Point(298, 279);
             this.txtFrames.Name = "txtFrames";
             this.txtFrames.ReadOnly = true;
-            this.txtFrames.Size = new System.Drawing.Size(64, 20);
+            this.txtFrames.Size = new System.Drawing.Size(76, 21);
             this.txtFrames.TabIndex = 8;
-            this.txtFrames.Text = "";
             // 
             // label3
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label3.Location = new System.Drawing.Point(248, 264);
+            this.label3.Location = new System.Drawing.Point(298, 253);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(48, 16);
+            this.label3.Size = new System.Drawing.Size(57, 18);
             this.label3.TabIndex = 9;
             this.label3.Text = "Frames";
             // 
@@ -183,9 +182,9 @@ namespace WebCamClient
             // Form1
             // 
             this.AcceptButton = this.btnPress;
-            this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
             this.CancelButton = this.btnPress;
-            this.ClientSize = new System.Drawing.Size(320, 402);
+            this.ClientSize = new System.Drawing.Size(639, 402);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtFrames);
             this.Controls.Add(this.label2);
@@ -199,7 +198,9 @@ namespace WebCamClient
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "WebClient";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 		#endregion
