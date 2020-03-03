@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29519.181
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DirectShowLib", "src\DirectShowLib.csproj", "{6D0386CE-37E6-4F77-B678-07C584105DC6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DirectShow4Net.Standard", "src\DirectShow4Net.Standard.csproj", "{6D0386CE-37E6-4F77-B678-07C584105DC6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
