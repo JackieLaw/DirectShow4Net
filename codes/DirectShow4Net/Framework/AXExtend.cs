@@ -26,7 +26,10 @@ using System;
 using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Text;
+
+#if !USING_NET11
 using System.Runtime.InteropServices.ComTypes;
+#endif
 
 namespace DirectShow4Net
 {
@@ -2186,14 +2189,26 @@ namespace DirectShow4Net
             );
 
         [PreserveSig]
+#if USING_NET11
+        int GetAllSettings([In] UCOMIStream pStream);
+#else
         int GetAllSettings([In] IStream pStream);
+#endif
 
         [PreserveSig]
+#if USING_NET11
+        int SetAllSettings([In] UCOMIStream pStream);
+#else
         int SetAllSettings([In] IStream pStream);
+#endif
 
         [PreserveSig]
         int SetAllSettingsWithNotify(
+#if USING_NET11
+            [In] UCOMIStream pStream,
+#else
             [In] IStream pStream,
+#endif
             [Out] out Guid[] ChangedParam,
             [Out] out int ChangedParamCount
             );

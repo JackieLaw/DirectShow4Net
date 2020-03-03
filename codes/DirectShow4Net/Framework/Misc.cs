@@ -24,7 +24,10 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
 using System;
 using System.Runtime.InteropServices;
+
+#if !USING_NET11
 using System.Runtime.InteropServices.ComTypes;
+#endif
 
 namespace DirectShow4Net
 {
@@ -61,11 +64,19 @@ namespace DirectShow4Net
         int IsDirty();
 
         [PreserveSig]
+#if USING_NET11
+        int Load([In] UCOMIStream pStm);
+#else
         int Load([In] IStream pStm);
+#endif
 
         [PreserveSig]
         int Save(
+#if USING_NET11
+            [In] UCOMIStream pStm,
+#else
             [In] IStream pStm,
+#endif
             [In, MarshalAs(UnmanagedType.Bool)] bool fClearDirty);
 
         [PreserveSig]
@@ -130,7 +141,11 @@ namespace DirectShow4Net
         [PreserveSig]
         int AddError(
             [In, MarshalAs(UnmanagedType.LPWStr)] string pszPropName,
+#if USING_NET11
+            [In] EXCEPINFO pExcepInfo);
+#else
             [In] System.Runtime.InteropServices.ComTypes.EXCEPINFO pExcepInfo);
+#endif
     }
 
     #endregion

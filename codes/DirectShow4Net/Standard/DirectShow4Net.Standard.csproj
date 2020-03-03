@@ -15,6 +15,18 @@
     <PackageProjectUrl>http://directshownet.sourceforge.net/</PackageProjectUrl>
     <PackageLicenseExpression>LGPL-2.1-only</PackageLicenseExpression>
     <DefineConstants>TRACE;ALLOW_UNTESTED_INTERFACES</DefineConstants>
+    <AssemblyName>DirectShow4Net</AssemblyName>
+    <RootNamespace>DirectShow4Net</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>..\..\..\outputs\standard</OutputPath>
+    <DocumentationFile>..\..\..\outputs\standard\DirectShow4Net.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>..\..\..\releases\standard</OutputPath>
+    <DocumentationFile>..\..\..\releases\standard\DirectShow4Net.xml</DocumentationFile>
   </PropertyGroup>
 
 </Project>

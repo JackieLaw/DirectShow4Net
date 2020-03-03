@@ -657,7 +657,7 @@ namespace DirectShow4Net
         int Next(
             [In] int cFilters,
             [Out, MarshalAs(UnmanagedType.LPArray, SizeParamIndex=0)] IBaseFilter[] ppFilter,
-            [Out] out int fetched
+            [In] IntPtr pcFetched
             );
 
         [PreserveSig]
@@ -679,7 +679,7 @@ namespace DirectShow4Net
         int Next(
             [In] int cPins,
             [Out, MarshalAs(UnmanagedType.LPArray, SizeParamIndex=0)] IPin[] ppPins,
-            [Out] out int fetched
+            [In] IntPtr pcFetched
             );
 
         [PreserveSig]
@@ -729,7 +729,7 @@ namespace DirectShow4Net
         int Next(
             [In] int cMediaTypes,
             [In, Out, MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef=typeof(EMTMarshaler), SizeParamIndex = 0)] AMMediaType[] ppMediaTypes,
-            [Out] out int fetched
+            [In] IntPtr pcFetched
             );
 
         [PreserveSig]

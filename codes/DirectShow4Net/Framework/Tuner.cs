@@ -24,7 +24,10 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
 using System;
 using System.Runtime.InteropServices;
+
+#if !USING_NET11
 using System.Runtime.InteropServices.ComTypes;
+#endif
 
 namespace DirectShow4Net.BDA
 {
@@ -622,13 +625,13 @@ namespace DirectShow4Net.BDA
         }
 
     }
-#if PROTECTED_BROADCAST_DRIVER_ARCHITECTURE
+
     [ComImport, System.Security.SuppressUnmanagedCodeSecurity,
     Guid("6B80E96F-55E2-45AA-B754-0C23C8E7D5C1"),
     InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
     public interface IESCloseMmiEvent : IESEvent
     {
-    #region IESEvent Methods
+        #region IESEvent Methods
 
         [PreserveSig]
         new int GetEventId();
@@ -647,7 +650,7 @@ namespace DirectShow4Net.BDA
         [PreserveSig]
         new string GetStringData();
 
-    #endregion
+        #endregion
 
         [PreserveSig]
         int GetDialogNumber();
@@ -739,7 +742,7 @@ namespace DirectShow4Net.BDA
     InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
     public interface IESFileExpiryDateEvent : IESEvent
     {
-    #region IESEvent Methods
+        #region IESEvent Methods
 
         [PreserveSig]
         new int GetEventId();
@@ -758,7 +761,7 @@ namespace DirectShow4Net.BDA
         [PreserveSig]
         new string GetStringData();
 
-    #endregion
+        #endregion
 
         [PreserveSig]
         Guid GetTunerId();
@@ -785,7 +788,7 @@ namespace DirectShow4Net.BDA
     InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
     public interface IESIsdbCasResponseEvent : IESEvent
     {
-    #region IESEvent Methods
+        #region IESEvent Methods
 
         [PreserveSig]
         new int GetEventId();
@@ -804,7 +807,7 @@ namespace DirectShow4Net.BDA
         [PreserveSig]
         new string GetStringData();
 
-    #endregion
+        #endregion
 
         [PreserveSig]
         int GetRequestId();
@@ -826,7 +829,7 @@ namespace DirectShow4Net.BDA
     InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
     public interface IESLicenseRenewalResultEvent : IESEvent
     {
-    #region IESEvent Methods
+        #region IESEvent Methods
 
         [PreserveSig]
         new int GetEventId();
@@ -845,7 +848,7 @@ namespace DirectShow4Net.BDA
         [PreserveSig]
         new string GetStringData();
 
-    #endregion
+        #endregion
 
         [PreserveSig]
         int GetCallersId();
@@ -890,7 +893,7 @@ namespace DirectShow4Net.BDA
     InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
     public interface IESOpenMmiEvent : IESEvent
     {
-    #region IESEvent Methods
+        #region IESEvent Methods
 
         [PreserveSig]
         new int GetEventId();
@@ -909,7 +912,7 @@ namespace DirectShow4Net.BDA
         [PreserveSig]
         new string GetStringData();
 
-    #endregion
+        #endregion
 
         [PreserveSig]
         int GetDialogNumber(out int pDialogRequest);
@@ -932,7 +935,7 @@ namespace DirectShow4Net.BDA
     InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
     public interface IESRequestTunerEvent : IESEvent
     {
-    #region IESEvent Methods
+        #region IESEvent Methods
 
         [PreserveSig]
         new int GetEventId();
@@ -951,7 +954,7 @@ namespace DirectShow4Net.BDA
         [PreserveSig]
         new string GetStringData();
 
-    #endregion
+        #endregion
 
         [PreserveSig]
         byte GetPriority();
@@ -972,7 +975,7 @@ namespace DirectShow4Net.BDA
     InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
     public interface IESValueUpdatedEvent : IESEvent
     {
-    #region IESEvent Methods
+        #region IESEvent Methods
 
         [PreserveSig]
         new int GetEventId();
@@ -991,14 +994,13 @@ namespace DirectShow4Net.BDA
         [PreserveSig]
         new string GetStringData();
 
-    #endregion
+        #endregion
 
         [return: MarshalAs(UnmanagedType.SafeArray, SafeArraySubType = VarEnum.VT_BSTR)]
         [PreserveSig]
         string[] GetValueNames();
 
     }
-#endif
 
     [ComImport, System.Security.SuppressUnmanagedCodeSecurity,
     Guid("907E0B5C-E42D-4F04-91F0-26F401F36907"),
@@ -1111,7 +1113,7 @@ namespace DirectShow4Net.BDA
     InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
     public interface IDVBTLocator2 : IDVBTLocator
     {
-    #region ILocator Methods
+        #region ILocator Methods
 
         [PreserveSig]
         new int get_CarrierFrequency([Out] out int Frequency);
@@ -1158,9 +1160,9 @@ namespace DirectShow4Net.BDA
         [PreserveSig]
         new int Clone([Out] out ILocator NewLocator);
 
-    #endregion
+        #endregion
 
-    #region IDVBTLocator Methods
+        #region IDVBTLocator Methods
 
         [PreserveSig]
         new int get_Bandwidth([Out] out int BandwidthVal);
@@ -1204,7 +1206,7 @@ namespace DirectShow4Net.BDA
         [PreserveSig]
         new int put_OtherFrequencyInUse([In, MarshalAs(UnmanagedType.VariantBool)] bool OtherFrequencyInUseVal);
 
-    #endregion
+        #endregion
 
         [PreserveSig]
         int get_PhysicalLayerPipeId( 
@@ -1772,7 +1774,7 @@ namespace DirectShow4Net.BDA
         int Next(
             [In] int celt,
             [Out, MarshalAs(UnmanagedType.LPArray, SizeParamIndex = 0)] ITuningSpace[] rgelt,
-            [Out] out int fetched
+            [In] IntPtr pceltFetched
             );
 
         int Skip([In] int celt);
@@ -2026,7 +2028,7 @@ namespace DirectShow4Net.BDA
         int Next(
             [In] int celt,
             [Out, MarshalAs(UnmanagedType.LPArray, SizeParamIndex = 0)] IComponentType[] rgelt,
-            [Out] out int fetched
+            [In] IntPtr pceltFetched
             );
 
         int Skip([In] int celt);

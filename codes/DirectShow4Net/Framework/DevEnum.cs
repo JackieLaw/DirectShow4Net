@@ -63,7 +63,11 @@ namespace DirectShow4Net
         [PreserveSig]
         int CreateClassEnumerator(
             [In, MarshalAs(UnmanagedType.LPStruct)] Guid pType,
+#if USING_NET11
+            [Out] out UCOMIEnumMoniker ppEnumMoniker,
+#else
             [Out] out IEnumMoniker ppEnumMoniker,
+#endif
             [In] CDef dwFlags);
     }
 

@@ -5,6 +5,14 @@ VisualStudioVersion = 16.0.29519.181
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DirectShow4Net.Standard", "Standard\DirectShow4Net.Standard.csproj", "{6D0386CE-37E6-4F77-B678-07C584105DC6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DirectShow4Net.Framework", "Framework\DirectShow4Net.Framework.csproj", "{871529EF-35CE-4ED0-97FA-91A02E5239C9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "[globals]", "[globals]", "{117A3A2B-6B56-42CD-9D46-DC64BE0E6E8E}"
+	ProjectSection(SolutionItems) = preProject
+		[globals]\G_AssemblyInfo.cs = [globals]\G_AssemblyInfo.cs
+		[globals]\KeyForDirectShow4Net.pfx = [globals]\KeyForDirectShow4Net.pfx
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +23,10 @@ Global
 		{6D0386CE-37E6-4F77-B678-07C584105DC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D0386CE-37E6-4F77-B678-07C584105DC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D0386CE-37E6-4F77-B678-07C584105DC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{871529EF-35CE-4ED0-97FA-91A02E5239C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{871529EF-35CE-4ED0-97FA-91A02E5239C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{871529EF-35CE-4ED0-97FA-91A02E5239C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{871529EF-35CE-4ED0-97FA-91A02E5239C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

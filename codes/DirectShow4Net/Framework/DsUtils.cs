@@ -31,11 +31,12 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Reflection;
 using System.Security;
-using System.Runtime.InteropServices.ComTypes;
 
 using DirectShow4Net.Dvd;
-using System.Collections.Generic;
-using System.Diagnostics;
+
+#if !USING_NET11
+using System.Runtime.InteropServices.ComTypes;
+#endif
 
 namespace DirectShow4Net
 {
@@ -771,8 +772,6 @@ namespace DirectShow4Net
 
     static public class DsResults
     {
-        public const int S_Ok = 0;
-        public const int S_False = 1;
         public const int E_InvalidMediaType = unchecked((int)0x80040200);
         public const int E_InvalidSubType = unchecked((int)0x80040201);
         public const int E_NeedOwner = unchecked((int)0x80040202);
@@ -916,7 +915,6 @@ namespace DirectShow4Net
         public const int E_VMRNoProcAMPHW = unchecked((int)0x80040299);
         public const int E_DVDVMR9IncompatibleDec = unchecked((int)0x8004029A);
         public const int E_NoCOPPHW = unchecked((int)0x8004029B);
-        public const int E_MoreData = unchecked((int)0x800700EA);
     }
 
 
@@ -924,7 +922,7 @@ namespace DirectShow4Net
     {
         [DllImport("quartz.dll", CharSet = CharSet.Unicode, ExactSpelling = true, EntryPoint = "AMGetErrorTextW"),
         SuppressUnmanagedCodeSecurity]
-        internal static extern int AMGetErrorText(int hr, StringBuilder buf, int max);
+        public static extern int AMGetErrorText(int hr, StringBuilder buf, int max);
 
         /// <summary>
         /// If hr has a "failed" status code (E_*), throw an exception.  Note that status
@@ -964,7 +962,7 @@ namespace DirectShow4Net
             const int MAX_ERROR_TEXT_LEN = 160;
 
             // Make a buffer to hold the string
-            var buf = new StringBuilder(MAX_ERROR_TEXT_LEN, MAX_ERROR_TEXT_LEN);
+            StringBuilder buf = new StringBuilder(MAX_ERROR_TEXT_LEN, MAX_ERROR_TEXT_LEN);
 
             // If a string is returned, build a com error from it
             if (AMGetErrorText(hr, buf, MAX_ERROR_TEXT_LEN) > 0)
@@ -1070,37 +1068,76 @@ namespace DirectShow4Net
 
         #region APIs
         [DllImport("ole32.dll", ExactSpelling = true), SuppressUnmanagedCodeSecurity]
+#if USING_NET11
+        private static extern int GetRunningObjectTable(int r, out UCOMIRunningObjectTable pprot);
+#else
         private static extern int GetRunningObjectTable(int r, out IRunningObjectTable pprot);
+#endif
 
         [DllImport("ole32.dll", CharSet = CharSet.Unicode, ExactSpelling = true), SuppressUnmanagedCodeSecurity]
+#if USING_NET11
+        private static extern int CreateItemMoniker(string delim, string item, out UCOMIMoniker ppmk);
+#else
         private static extern int CreateItemMoniker(string delim, string item, out IMoniker ppmk);
+#endif
         #endregion
 
         public DsROTEntry(IFilterGraph graph)
         {
-            // First, get a pointer to the running object table
-            int hr = GetRunningObjectTable(0, out IRunningObjectTable rot);
-            DsError.ThrowExceptionForHR(hr);
-
-            // Build up the object to add to the table
-            int id = Process.GetCurrentProcess().Id;
-            IntPtr iuPtr = Marshal.GetIUnknownForObject(graph);
-            string s;
+            int hr = 0;
+#if USING_NET11
+            UCOMIRunningObjectTable rot = null;
+            UCOMIMoniker mk = null;
+#else
+            IRunningObjectTable rot = null;
+            IMoniker mk = null;
+#endif
             try
             {
-                s = iuPtr.ToString("x");
+                // First, get a pointer to the running object table
+                hr = GetRunningObjectTable(0, out rot);
+                DsError.ThrowExceptionForHR(hr);
+
+                // Build up the object to add to the table
+                int id = System.Diagnostics.Process.GetCurrentProcess().Id;
+                IntPtr iuPtr = Marshal.GetIUnknownForObject(graph);
+                string s;
+                try
+                {
+                    s = iuPtr.ToString("x");
+                }
+                catch
+                {
+                    s = "";
+                }
+                finally
+                {
+                    Marshal.Release(iuPtr);
+                }
+                string item = string.Format("FilterGraph {0} pid {1}", s, id.ToString("x8"));
+                hr = CreateItemMoniker("!", item, out mk);
+                DsError.ThrowExceptionForHR(hr);
+
+                // Add the object to the table
+#if USING_NET11
+                rot.Register((int)ROTFlags.RegistrationKeepsAlive, graph, mk, out m_cookie);
+#else
+                m_cookie = rot.Register((int)ROTFlags.RegistrationKeepsAlive, graph, mk);
+#endif
             }
-            catch
+            finally
             {
-                s = "";
+                if (mk != null)
+                {
+                    Marshal.ReleaseComObject(mk);
+                    mk = null;
+                }
+                if (rot != null)
+                {
+                    Marshal.ReleaseComObject(rot);
+                    rot = null;
+                }
             }
-
-            string item = string.Format("FilterGraph {0} pid {1:x8}", s, id);
-            hr = CreateItemMoniker("!", item, out IMoniker mk);
-            DsError.ThrowExceptionForHR(hr);
-
-            // Add the object to the table
-            m_cookie = rot.Register((int)ROTFlags.RegistrationKeepsAlive, graph, mk);
         }
 
         ~DsROTEntry()
@@ -1113,37 +1150,72 @@ namespace DirectShow4Net
             if (m_cookie != 0)
             {
                 GC.SuppressFinalize(this);
+#if USING_NET11
+                UCOMIRunningObjectTable rot = null;
+#else
+                IRunningObjectTable rot = null;
+#endif
 
                 // Get a pointer to the running object table
-                int hr = GetRunningObjectTable(0, out IRunningObjectTable rot);
+                int hr = GetRunningObjectTable(0, out rot);
                 DsError.ThrowExceptionForHR(hr);
 
-                // Remove our entry
-                rot.Revoke(m_cookie);
-                m_cookie = 0;
+                try
+                {
+                    // Remove our entry
+                    rot.Revoke(m_cookie);
+                    m_cookie = 0;
+                }
+                finally
+                {
+                    Marshal.ReleaseComObject(rot);
+                    rot = null;
+                }
             }
         }
     }
 
-    public class DsDevice
-    {
-        public IMoniker Mon { get; }
-        private string _name;
 
-        public DsDevice(IMoniker mon)
+    public class DsDevice : IDisposable
+    {
+#if USING_NET11
+        private UCOMIMoniker m_Mon;
+#else
+        private IMoniker m_Mon;
+#endif
+        private string m_Name;
+
+#if USING_NET11
+        public DsDevice(UCOMIMoniker Mon)
+#else
+        public DsDevice(IMoniker Mon)
+#endif
         {
-            Mon = mon;
+            m_Mon = Mon;
+            m_Name = null;
+        }
+
+#if USING_NET11
+        public UCOMIMoniker Mon
+#else
+        public IMoniker Mon
+#endif
+        {
+            get
+            {
+                return m_Mon;
+            }
         }
 
         public string Name
         {
             get
             {
-                if (_name == null)
+                if (m_Name == null)
                 {
-                    _name = GetPropBagValue("FriendlyName");
+                    m_Name = GetPropBagValue("FriendlyName");
                 }
-                return _name;
+                return m_Name;
             }
         }
 
@@ -1154,17 +1226,17 @@ namespace DirectShow4Net
         {
             get
             {
-                string result = null;
+                string s = null;
 
                 try
                 {
-                    Mon.GetDisplayName(null, null, out result);
+                    m_Mon.GetDisplayName(null, null, out s);
                 }
                 catch
                 {
                 }
 
-                return result;
+                return s;
             }
         }
 
@@ -1175,254 +1247,370 @@ namespace DirectShow4Net
         {
             get
             {
-                Mon.GetClassID(out Guid result);
-                return result;
+                Guid g;
+
+                m_Mon.GetClassID(out g);
+
+                return g;
             }
         }
 
 
         /// <summary>
-        /// Enumerates the System Device and returns an array of device monikers,
-        /// selected by device category
+        /// Returns an array of DsDevices of type devcat.
         /// </summary>
-        /// <returns>An array of DsDevices of type <paramref name="category"/></returns>
-        /// <param name="category">Any one of FilterCategory</param>
-        public static DsDevice[] GetDevicesOfCat(Guid category)
+        /// <param name="cat">Any one of FilterCategory</param>
+        public static DsDevice[] GetDevicesOfCat(Guid FilterCategory)
         {
-            ICreateDevEnum devEnum = (ICreateDevEnum)new CreateDevEnum();
+            int hr;
 
-            int hr = devEnum.CreateClassEnumerator(category, out IEnumMoniker enumerator, 0);
+            // Use arrayList to build the retun list since it is easily resizable
+            DsDevice[] devret;
+            ArrayList devs = new ArrayList();
+#if USING_NET11
+            UCOMIEnumMoniker enumMon;
+#else
+            IEnumMoniker enumMon;
+#endif
+
+            ICreateDevEnum enumDev = (ICreateDevEnum)new CreateDevEnum();
+            hr = enumDev.CreateClassEnumerator(FilterCategory, out enumMon, 0);
             DsError.ThrowExceptionForHR(hr);
 
-            DsDevice[] result;
-            if (hr == DsResults.S_False)
+            // CreateClassEnumerator returns null for enumMon if there are no entries
+            if (hr != 1)
             {
-                result = Array.Empty<DsDevice>();
+                try
+                {
+                    try
+                    {
+#if USING_NET11
+                        UCOMIMoniker[] mon = new UCOMIMoniker[1];
+#else
+                        IMoniker[] mon = new IMoniker[1];
+#endif
+
+#if USING_NET11
+                        int j;
+                        while ((enumMon.Next(1, mon, out j) == 0))
+#else
+                        while ((enumMon.Next(1, mon, IntPtr.Zero) == 0))
+#endif
+                        {
+                            try
+                            {
+                                // The devs array now owns this object.  Don't
+                                // release it if we are going to be successfully
+                                // returning the devret array
+                                devs.Add(new DsDevice(mon[0]));
+                            }
+                            catch
+                            {
+                                Marshal.ReleaseComObject(mon[0]);
+                                throw;
+                            }
+                        }
+                    }
+                    finally
+                    {
+                        Marshal.ReleaseComObject(enumMon);
+                    }
+
+                    // Copy the ArrayList to the DsDevice[]
+                    devret = new DsDevice[devs.Count];
+                    devs.CopyTo(devret);
+                }
+                catch
+                {
+                    foreach (DsDevice d in devs)
+                    {
+                        d.Dispose();
+                    }
+                    throw;
+                }
             }
             else
             {
-                var results = new List<DsDevice>();
-
-                IMoniker[] values = new IMoniker[1];
-                while (enumerator.Next(1, values, IntPtr.Zero) == 0)
-                {
-                    results.Add(new DsDevice(values[0]));
-                }
-
-                result = results.ToArray();
+                devret = new DsDevice[0];
             }
 
-            return result;
+            return devret;
         }
 
         /// <summary>
         /// Get a specific PropertyBag value from a moniker
         /// </summary>
-        /// <param name="propertyName">The name of the value to retrieve</param>
+        /// <param name="sPropName">The name of the value to retrieve</param>
         /// <returns>String or null on error</returns>
-        public string GetPropBagValue(string propertyName)
+        public string GetPropBagValue(string sPropName)
         {
-            var bagId = typeof(IPropertyBag).GUID;
-            Mon.BindToStorage(null, null, ref bagId, out object obj);
+            IPropertyBag bag = null;
+            string ret = null;
+            object bagObj = null;
+            object val = null;
 
-            string result = string.Empty;
-
-            if (obj is IPropertyBag propertyBag)
+            try
             {
-                int hr = propertyBag.Read(propertyName, out object propertyValue, null);
-                if (hr >= DsResults.S_Ok && propertyValue is string str)
+                Guid bagId = typeof(IPropertyBag).GUID;
+                m_Mon.BindToStorage(null, null, ref bagId, out bagObj);
+
+                bag = (IPropertyBag)bagObj;
+
+                int hr = bag.Read(sPropName, out val, null);
+                DsError.ThrowExceptionForHR(hr);
+
+                ret = val as string;
+            }
+            catch
+            {
+                ret = null;
+            }
+            finally
+            {
+                bag = null;
+                if (bagObj != null)
                 {
-                    result = str;
+                    Marshal.ReleaseComObject(bagObj);
+                    bagObj = null;
                 }
             }
-            return result;
+
+            return ret;
+        }
+
+        public void Dispose()
+        {
+            if (Mon != null)
+            {
+                Marshal.ReleaseComObject(Mon);
+                m_Mon = null;
+            }
+            m_Name = null;
         }
     }
+
 
     static public class DsFindPin
     {
         /// <summary>
         /// Scans a filter's pins looking for a pin in the specified direction
         /// </summary>
-        /// <param name="filter">The filter to scan</param>
-        /// <param name="direction">The direction to find</param>
-        /// <param name="index">Zero based index (ie 2 will return the third pin in the specified direction)</param>
+        /// <param name="vSource">The filter to scan</param>
+        /// <param name="vDir">The direction to find</param>
+        /// <param name="iIndex">Zero based index (ie 2 will return the third pin in the specified direction)</param>
         /// <returns>The matching pin, or null if not found</returns>
-        public static IPin ByDirection(IBaseFilter filter, PinDirection direction, int index)
+        public static IPin ByDirection(IBaseFilter vSource, PinDirection vDir, int iIndex)
         {
-            if (filter == null)
+            int hr;
+            IEnumPins ppEnum;
+            PinDirection ppindir;
+            IPin pRet = null;
+            IPin[] pPins = new IPin[1];
+
+            if (vSource == null)
             {
                 return null;
             }
 
-            int hr = filter.EnumPins(out IEnumPins ppEnum);
+            // Get the pin enumerator
+            hr = vSource.EnumPins(out ppEnum);
             DsError.ThrowExceptionForHR(hr);
 
-            IPin result = default;
-            if (hr != DsResults.S_False)
+            try
             {
-                var values = new IPin[1];
-                while (ppEnum.Next(1, values, out int fetched) == 0)
+                // Walk the pins looking for a match
+                while (ppEnum.Next(1, pPins, IntPtr.Zero) == 0)
                 {
-                    if (fetched == 0)
-                    {
-                        break;
-                    }
-
-                    hr = values[0].QueryDirection(out PinDirection ppindir);
+                    // Read the direction
+                    hr = pPins[0].QueryDirection(out ppindir);
                     DsError.ThrowExceptionForHR(hr);
 
-                    if (ppindir == direction)
+                    // Is it the right direction?
+                    if (ppindir == vDir)
                     {
                         // Is is the right index?
-                        if (index == 0)
+                        if (iIndex == 0)
                         {
-                            result = values[0];
+                            pRet = pPins[0];
                             break;
                         }
-                        index--;
+                        iIndex--;
                     }
+                    Marshal.ReleaseComObject(pPins[0]);
                 }
             }
+            finally
+            {
+                Marshal.ReleaseComObject(ppEnum);
+            }
 
-            return result;
+            return pRet;
         }
 
         /// <summary>
         /// Scans a filter's pins looking for a pin with the specified name
         /// </summary>
-        /// <param name="filter">The filter to scan</param>
-        /// <param name="name">The pin name to find</param>
+        /// <param name="vSource">The filter to scan</param>
+        /// <param name="vPinName">The pin name to find</param>
         /// <returns>The matching pin, or null if not found</returns>
-        public static IPin ByName(IBaseFilter filter, string name)
+        public static IPin ByName(IBaseFilter vSource, string vPinName)
         {
-            if (filter == null)
+            int hr;
+            IEnumPins ppEnum;
+            PinInfo ppinfo;
+            IPin pRet = null;
+            IPin[] pPins = new IPin[1];
+
+            if (vSource == null)
             {
                 return null;
             }
 
-            int hr = filter.EnumPins(out IEnumPins ppEnum);
+            // Get the pin enumerator
+            hr = vSource.EnumPins(out ppEnum);
             DsError.ThrowExceptionForHR(hr);
 
-            IPin result = default;
-            if (hr != DsResults.S_False)
+            try
             {
-                var values = new IPin[1];
-                while (ppEnum.Next(1, values, out int fetched) == 0)
+                // Walk the pins looking for a match
+                while (ppEnum.Next(1, pPins, IntPtr.Zero) == 0)
                 {
-                    if (fetched == 0)
-                    {
-                        break;
-                    }
-
-                    hr = values[0].QueryPinInfo(out PinInfo info);
+                    // Read the info
+                    hr = pPins[0].QueryPinInfo(out ppinfo);
                     DsError.ThrowExceptionForHR(hr);
 
-                    if (info.name == name)
+                    // Is it the right name?
+                    if (ppinfo.name == vPinName)
                     {
-                        result = values[0];
+                        DsUtils.FreePinInfo(ppinfo);
+                        pRet = pPins[0];
                         break;
                     }
+                    Marshal.ReleaseComObject(pPins[0]);
+                    DsUtils.FreePinInfo(ppinfo);
                 }
             }
+            finally
+            {
+                Marshal.ReleaseComObject(ppEnum);
+            }
 
-            return result;
+            return pRet;
         }
 
         /// <summary>
         /// Scan's a filter's pins looking for a pin with the specified category
         /// </summary>
-        /// <param name="filter">The filter to scan</param>
+        /// <param name="vSource">The filter to scan</param>
         /// <param name="guidPinCat">The guid from PinCategory to scan for</param>
-        /// <param name="index">Zero based index (ie 2 will return the third pin of the specified category)</param>
+        /// <param name="iIndex">Zero based index (ie 2 will return the third pin of the specified category)</param>
         /// <returns>The matching pin, or null if not found</returns>
-        public static IPin ByCategory(IBaseFilter filter, Guid category, int index)
+        public static IPin ByCategory(IBaseFilter vSource, Guid PinCategory, int iIndex)
         {
-            if (filter == null)
+            int hr;
+            IEnumPins ppEnum;
+            IPin pRet = null;
+            IPin[] pPins = new IPin[1];
+
+            if (vSource == null)
             {
                 return null;
             }
 
-            int hr = filter.EnumPins(out IEnumPins ppEnum);
+            // Get the pin enumerator
+            hr = vSource.EnumPins(out ppEnum);
             DsError.ThrowExceptionForHR(hr);
 
-            IPin result = default;
-            if (hr != DsResults.S_False)
+            try
             {
-                var values = new IPin[1];
-                while (ppEnum.Next(1, values, out int fetched) == 0)
+                // Walk the pins looking for a match
+                while (ppEnum.Next(1, pPins, IntPtr.Zero) == 0)
                 {
-                    if (fetched == 0)
+                    // Is it the right category?
+                    if (DsUtils.GetPinCategory(pPins[0]) == PinCategory)
                     {
-                        break;
-                    }
-
-                    if (DsUtils.GetPinCategory(values[0]) == category)
-                    {
-                        if (index == 0)
+                        // Is is the right index?
+                        if (iIndex == 0)
                         {
-                            result = values[0];
+                            pRet = pPins[0];
                             break;
                         }
-                        index--;
+                        iIndex--;
                     }
+                    Marshal.ReleaseComObject(pPins[0]);
                 }
             }
+            finally
+            {
+                Marshal.ReleaseComObject(ppEnum);
+            }
 
-            return result;
+            return pRet;
         }
-
         /// <summary>
         /// Scans a filter's pins looking for a pin with the specified connection status
         /// </summary>
-        /// <param name="filter">The filter to scan</param>
-        /// <param name="status">The status to find (connected/unconnected)</param>
-        /// <param name="index">Zero based index (ie 2 will return the third pin with the specified status)</param>
+        /// <param name="vSource">The filter to scan</param>
+        /// <param name="vStat">The status to find (connected/unconnected)</param>
+        /// <param name="iIndex">Zero based index (ie 2 will return the third pin with the specified status)</param>
         /// <returns>The matching pin, or null if not found</returns>
-        public static IPin ByConnectionStatus(IBaseFilter filter, PinConnectedStatus status, int index)
+        public static IPin ByConnectionStatus(IBaseFilter vSource, PinConnectedStatus vStat, int iIndex)
         {
-            if (filter == default)
+            int hr;
+            IEnumPins ppEnum;
+            IPin pRet = null;
+            IPin pOutPin;
+            IPin[] pPins = new IPin[1];
+
+            if (vSource == null)
             {
                 return null;
             }
 
-            int hr = filter.EnumPins(out IEnumPins ppEnum);
+            // Get the pin enumerator
+            hr = vSource.EnumPins(out ppEnum);
             DsError.ThrowExceptionForHR(hr);
 
-            IPin result = default;
-            if (hr != DsResults.S_False)
+            try
             {
-                var values = new IPin[1];
-                while (ppEnum.Next(1, values, out int fetched) == 0)
+                // Walk the pins looking for a match
+                while (ppEnum.Next(1, pPins, IntPtr.Zero) == 0)
                 {
-                    if (fetched == 0)
-                    {
-                        break;
-                    }
+                    // Read the connected status
+                    hr = pPins[0].ConnectedTo(out pOutPin);
 
-                    hr = values[0].ConnectedTo(out IPin pOutPin);
                     // Check for VFW_E_NOT_CONNECTED.  Anything else is bad.
                     if (hr != DsResults.E_NotConnected)
                     {
                         DsError.ThrowExceptionForHR(hr);
+
+                        // The ConnectedTo call succeeded, release the interface
+                        Marshal.ReleaseComObject(pOutPin);
                     }
 
                     // Is it the right status?
-                    if ((hr == 0 && status == PinConnectedStatus.Connected)
-                        || (hr == DsResults.E_NotConnected && status == PinConnectedStatus.Unconnected))
+                    if (
+                        (hr == 0 && vStat == PinConnectedStatus.Connected) ||
+                        (hr == DsResults.E_NotConnected && vStat == PinConnectedStatus.Unconnected)
+                        )
                     {
                         // Is is the right index?
-                        if (index == 0)
+                        if (iIndex == 0)
                         {
-                            result = values[0];
+                            pRet = pPins[0];
                             break;
                         }
-                        index--;
+                        iIndex--;
                     }
+                    Marshal.ReleaseComObject(pPins[0]);
                 }
             }
+            finally
+            {
+                Marshal.ReleaseComObject(ppEnum);
+            }
 
-            return result;
+            return pRet;
         }
     }
 
@@ -1435,7 +1623,7 @@ namespace DirectShow4Net
         /// <returns>Concatenation of MajorType + SubType + FormatType + Fixed + Temporal + SampleSize.ToString</returns>
         public static string AMMediaTypeToString(AMMediaType pmt)
         {
-            return string.Format(nameof(AMMediaType) + "\\{0}\\{1}\\{2}\\{3}\\{4}\\{5}",
+            return string.Format("{0} {1} {2} {3} {4} {5}",
                 MediaTypeToString(pmt.majorType),
                 MediaSubTypeToString(pmt.subType),
                 MediaFormatTypeToString(pmt.formatType),
@@ -1494,15 +1682,15 @@ namespace DirectShow4Net
         /// <summary>
         /// Use reflection to walk a class looking for a property containing a specified guid
         /// </summary>
-        /// <param name="type">Class to scan</param>
+        /// <param name="MyType">Class to scan</param>
         /// <param name="guid">Guid to scan for</param>
         /// <returns>String representing property name that matches, or Guid.ToString() for no match</returns>
-        private static string WalkClass(Type type, Guid guid)
+        private static string WalkClass(Type MyType, Guid guid)
         {
             object o = null;
 
             // Read the fields from the class
-            FieldInfo[] Fields = type.GetFields();
+            FieldInfo[] Fields = MyType.GetFields();
 
             // Walk the returned array
             foreach (FieldInfo m in Fields)

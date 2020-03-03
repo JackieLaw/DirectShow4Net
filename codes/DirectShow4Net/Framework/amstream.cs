@@ -24,7 +24,10 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
 using System;
 using System.Runtime.InteropServices;
+
+#if !USING_NET11
 using System.Runtime.InteropServices.ComTypes;
+#endif
 
 namespace DirectShow4Net.MultimediaStreaming
 {
@@ -234,8 +237,13 @@ namespace DirectShow4Net.MultimediaStreaming
 
         [PreserveSig]
         int OpenMoniker(
+#if USING_NET11
+            [In, MarshalAs(UnmanagedType.Interface)] UCOMIBindCtx pCtx,
+            [In, MarshalAs(UnmanagedType.Interface)] UCOMIMoniker pMoniker,
+#else
             [In, MarshalAs(UnmanagedType.Interface)] IBindCtx pCtx,
             [In, MarshalAs(UnmanagedType.Interface)] IMoniker pMoniker,
+#endif
             [In] AMOpenModes dwFlags
             );
 
