@@ -286,7 +286,7 @@ namespace DirectShow4Net
         /// <summary>
         /// Get a string representation of this DirectShow4Net.DsGuid Instance with a specific format.
         /// </summary>
-        /// <param name="format"><see cref="System.Guid.ToString"/> for a description of the format parameter.</param>
+        /// <param name="format"><see cref="System.Guid.ToString()"/> for a description of the format parameter.</param>
         /// <returns>A string representing this instance according to the format parameter</returns>
         public string ToString(string format)
         {
@@ -953,7 +953,7 @@ namespace DirectShow4Net
 
         /// <summary>
         /// Returns a string describing a DS error.  Works for both error codes
-        /// (values < 0) and Status codes (values >= 0)
+        /// (values ¡¶ 0) and Status codes (values ¡·= 0)
         /// </summary>
         /// <param name="hr">HRESULT for which to get description</param>
         /// <returns>The string, or null if no error text can be found</returns>
@@ -1502,7 +1502,7 @@ namespace DirectShow4Net
         /// Scan's a filter's pins looking for a pin with the specified category
         /// </summary>
         /// <param name="vSource">The filter to scan</param>
-        /// <param name="guidPinCat">The guid from PinCategory to scan for</param>
+        /// <param name="PinCategory">The guid from PinCategory to scan for</param>
         /// <param name="iIndex">Zero based index (ie 2 will return the third pin of the specified category)</param>
         /// <returns>The matching pin, or null if not found</returns>
         public static IPin ByCategory(IBaseFilter vSource, Guid PinCategory, int iIndex)
