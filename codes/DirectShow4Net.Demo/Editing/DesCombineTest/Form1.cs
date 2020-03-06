@@ -16,7 +16,7 @@ using System.Text;
 using System.Runtime.InteropServices;
 
 using DESCombineLib;
-using DirectShowLib;
+using DirectShow4Net;
 
 namespace TestConverter
 {
@@ -105,22 +105,21 @@ namespace TestConverter
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(148, 288);
+            this.button1.Location = new System.Drawing.Point(178, 310);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 40);
+            this.button1.Size = new System.Drawing.Size(90, 43);
             this.button1.TabIndex = 30;
             this.button1.Text = "Doit";
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // tbStatus
             // 
-            this.tbStatus.Location = new System.Drawing.Point(8, 448);
+            this.tbStatus.Location = new System.Drawing.Point(10, 482);
             this.tbStatus.Name = "tbStatus";
             this.tbStatus.ReadOnly = true;
-            this.tbStatus.Size = new System.Drawing.Size(296, 20);
+            this.tbStatus.Size = new System.Drawing.Size(355, 21);
             this.tbStatus.TabIndex = 2;
             this.tbStatus.TabStop = false;
-            this.tbStatus.Text = "";
             // 
             // groupBox1
             // 
@@ -129,29 +128,29 @@ namespace TestConverter
             this.groupBox1.Controls.Add(this.rbToScreen);
             this.groupBox1.Controls.Add(this.labProfile);
             this.groupBox1.Controls.Add(this.labCompressor);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(8, 128);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(10, 138);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(344, 72);
+            this.groupBox1.Size = new System.Drawing.Size(412, 77);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Render Method";
             // 
             // tbCompressor
             // 
-            this.tbCompressor.Location = new System.Drawing.Point(176, 40);
+            this.tbCompressor.Location = new System.Drawing.Point(211, 43);
             this.tbCompressor.Name = "tbCompressor";
             this.tbCompressor.ReadOnly = true;
-            this.tbCompressor.Size = new System.Drawing.Size(144, 23);
+            this.tbCompressor.Size = new System.Drawing.Size(173, 23);
             this.tbCompressor.TabIndex = 12;
-            this.tbCompressor.Text = "Indeo® video 5.10 Compression Filter";
+            this.tbCompressor.Text = "Indeo?video 5.10 Compression Filter";
             this.tbCompressor.Visible = false;
             // 
             // rbToAVI
             // 
-            this.rbToAVI.Location = new System.Drawing.Point(8, 40);
+            this.rbToAVI.Location = new System.Drawing.Point(10, 43);
             this.rbToAVI.Name = "rbToAVI";
-            this.rbToAVI.Size = new System.Drawing.Size(80, 24);
+            this.rbToAVI.Size = new System.Drawing.Size(96, 26);
             this.rbToAVI.TabIndex = 12;
             this.rbToAVI.Text = "To AVI";
             this.rbToAVI.CheckedChanged += new System.EventHandler(this.CheckedChanged);
@@ -159,9 +158,9 @@ namespace TestConverter
             // rbToScreen
             // 
             this.rbToScreen.Checked = true;
-            this.rbToScreen.Location = new System.Drawing.Point(8, 16);
+            this.rbToScreen.Location = new System.Drawing.Point(10, 17);
             this.rbToScreen.Name = "rbToScreen";
-            this.rbToScreen.Size = new System.Drawing.Size(88, 24);
+            this.rbToScreen.Size = new System.Drawing.Size(105, 26);
             this.rbToScreen.TabIndex = 11;
             this.rbToScreen.TabStop = true;
             this.rbToScreen.Text = "To Screen";
@@ -169,38 +168,39 @@ namespace TestConverter
             // 
             // labProfile
             // 
-            this.labProfile.Location = new System.Drawing.Point(176, 48);
+            this.labProfile.Location = new System.Drawing.Point(211, 52);
             this.labProfile.Name = "labProfile";
-            this.labProfile.Size = new System.Drawing.Size(48, 16);
+            this.labProfile.Size = new System.Drawing.Size(58, 17);
             this.labProfile.TabIndex = 5;
             this.labProfile.Text = "Profile";
             this.labProfile.Visible = false;
             // 
             // labCompressor
             // 
-            this.labCompressor.Location = new System.Drawing.Point(176, 24);
+            this.labCompressor.Location = new System.Drawing.Point(211, 26);
             this.labCompressor.Name = "labCompressor";
+            this.labCompressor.Size = new System.Drawing.Size(120, 25);
             this.labCompressor.TabIndex = 7;
             this.labCompressor.Text = "Compressor";
             this.labCompressor.Visible = false;
             // 
             // tbOutput
             // 
-            this.tbOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-            this.tbOutput.Location = new System.Drawing.Point(24, 224);
+            this.tbOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbOutput.Location = new System.Drawing.Point(29, 241);
             this.tbOutput.Name = "tbOutput";
-            this.tbOutput.Size = new System.Drawing.Size(232, 23);
+            this.tbOutput.Size = new System.Drawing.Size(278, 23);
             this.tbOutput.TabIndex = 20;
             this.tbOutput.Text = "output.avi";
             this.tbOutput.Visible = false;
             // 
             // labOutput
             // 
-            this.labOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
+            this.labOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labOutput.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.labOutput.Location = new System.Drawing.Point(8, 200);
+            this.labOutput.Location = new System.Drawing.Point(10, 215);
             this.labOutput.Name = "labOutput";
-            this.labOutput.Size = new System.Drawing.Size(112, 23);
+            this.labOutput.Size = new System.Drawing.Size(134, 25);
             this.labOutput.TabIndex = 5;
             this.labOutput.Text = "Output file name";
             this.labOutput.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -208,19 +208,19 @@ namespace TestConverter
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-            this.label2.Location = new System.Drawing.Point(8, 432);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(10, 465);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 16);
+            this.label2.Size = new System.Drawing.Size(57, 17);
             this.label2.TabIndex = 6;
             this.label2.Text = "Status";
             // 
             // btnOutput
             // 
-            this.btnOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-            this.btnOutput.Location = new System.Drawing.Point(264, 224);
+            this.btnOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOutput.Location = new System.Drawing.Point(317, 241);
             this.btnOutput.Name = "btnOutput";
-            this.btnOutput.Size = new System.Drawing.Size(24, 23);
+            this.btnOutput.Size = new System.Drawing.Size(29, 25);
             this.btnOutput.TabIndex = 21;
             this.btnOutput.Text = "...";
             this.btnOutput.Visible = false;
@@ -237,152 +237,148 @@ namespace TestConverter
             this.groupBox2.Controls.Add(this.labOutput);
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.cbShowXML);
-            this.groupBox2.Location = new System.Drawing.Point(5, 0);
+            this.groupBox2.Location = new System.Drawing.Point(6, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(363, 280);
+            this.groupBox2.Size = new System.Drawing.Size(436, 302);
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
             // 
             // btnDel
             // 
-            this.btnDel.Location = new System.Drawing.Point(296, 14);
+            this.btnDel.Location = new System.Drawing.Point(355, 15);
             this.btnDel.Name = "btnDel";
-            this.btnDel.Size = new System.Drawing.Size(40, 23);
+            this.btnDel.Size = new System.Drawing.Size(48, 25);
             this.btnDel.TabIndex = 2;
             this.btnDel.Text = "Del";
             this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(240, 14);
+            this.btnAdd.Location = new System.Drawing.Point(288, 15);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(40, 23);
+            this.btnAdd.Size = new System.Drawing.Size(48, 25);
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "Add";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // listBox1
             // 
-            this.listBox1.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
+            this.listBox1.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox1.HorizontalScrollbar = true;
             this.listBox1.ItemHeight = 14;
-            this.listBox1.Location = new System.Drawing.Point(8, 40);
+            this.listBox1.Location = new System.Drawing.Point(10, 43);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(336, 88);
+            this.listBox1.Size = new System.Drawing.Size(403, 88);
             this.listBox1.TabIndex = 3;
             // 
             // label12
             // 
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-            this.label12.Location = new System.Drawing.Point(8, 16);
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(10, 17);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(40, 23);
+            this.label12.Size = new System.Drawing.Size(48, 25);
             this.label12.TabIndex = 23;
             this.label12.Text = "Files";
             // 
             // cbShowXML
             // 
-            this.cbShowXML.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-            this.cbShowXML.Location = new System.Drawing.Point(16, 256);
+            this.cbShowXML.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbShowXML.Location = new System.Drawing.Point(19, 276);
             this.cbShowXML.Name = "cbShowXML";
-            this.cbShowXML.Size = new System.Drawing.Size(96, 16);
+            this.cbShowXML.Size = new System.Drawing.Size(115, 20);
             this.cbShowXML.TabIndex = 22;
             this.cbShowXML.Text = "Show XML";
             // 
             // tbVideo
             // 
-            this.tbVideo.Location = new System.Drawing.Point(272, 344);
+            this.tbVideo.Location = new System.Drawing.Point(326, 370);
             this.tbVideo.Name = "tbVideo";
             this.tbVideo.ReadOnly = true;
-            this.tbVideo.Size = new System.Drawing.Size(88, 20);
+            this.tbVideo.Size = new System.Drawing.Size(106, 21);
             this.tbVideo.TabIndex = 12;
             this.tbVideo.TabStop = false;
-            this.tbVideo.Text = "";
             this.tbVideo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // tbAudio
             // 
-            this.tbAudio.Location = new System.Drawing.Point(272, 368);
+            this.tbAudio.Location = new System.Drawing.Point(326, 396);
             this.tbAudio.Name = "tbAudio";
             this.tbAudio.ReadOnly = true;
-            this.tbAudio.Size = new System.Drawing.Size(88, 20);
+            this.tbAudio.Size = new System.Drawing.Size(106, 21);
             this.tbAudio.TabIndex = 13;
             this.tbAudio.TabStop = false;
-            this.tbAudio.Text = "";
             this.tbAudio.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // tbTime
             // 
-            this.tbTime.Location = new System.Drawing.Point(104, 368);
+            this.tbTime.Location = new System.Drawing.Point(125, 396);
             this.tbTime.Name = "tbTime";
             this.tbTime.ReadOnly = true;
-            this.tbTime.Size = new System.Drawing.Size(48, 20);
+            this.tbTime.Size = new System.Drawing.Size(57, 21);
             this.tbTime.TabIndex = 14;
             this.tbTime.TabStop = false;
-            this.tbTime.Text = "";
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-            this.label1.Location = new System.Drawing.Point(8, 368);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(10, 396);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 16);
+            this.label1.Size = new System.Drawing.Size(96, 18);
             this.label1.TabIndex = 15;
             this.label1.Text = "Media Time";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label4
             // 
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-            this.label4.Location = new System.Drawing.Point(184, 344);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(221, 370);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 16);
+            this.label4.Size = new System.Drawing.Size(96, 18);
             this.label4.TabIndex = 16;
             this.label4.Text = "Video Bytes";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label5
             // 
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-            this.label5.Location = new System.Drawing.Point(184, 368);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(221, 396);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(80, 16);
+            this.label5.Size = new System.Drawing.Size(96, 18);
             this.label5.TabIndex = 17;
             this.label5.Text = "Audio Bytes";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // tbElapsed
             // 
-            this.tbElapsed.Location = new System.Drawing.Point(104, 344);
+            this.tbElapsed.Location = new System.Drawing.Point(125, 370);
             this.tbElapsed.Name = "tbElapsed";
             this.tbElapsed.ReadOnly = true;
-            this.tbElapsed.Size = new System.Drawing.Size(48, 20);
+            this.tbElapsed.Size = new System.Drawing.Size(57, 21);
             this.tbElapsed.TabIndex = 18;
             this.tbElapsed.TabStop = false;
-            this.tbElapsed.Text = "";
             // 
             // label13
             // 
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-            this.label13.Location = new System.Drawing.Point(8, 344);
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(10, 370);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(96, 16);
+            this.label13.Size = new System.Drawing.Size(115, 18);
             this.label13.TabIndex = 19;
             this.label13.Text = "Elapsed Time";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(8, 400);
+            this.progressBar1.Location = new System.Drawing.Point(10, 431);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(288, 24);
+            this.progressBar1.Size = new System.Drawing.Size(345, 26);
             this.progressBar1.TabIndex = 99;
             // 
             // Form1
             // 
             this.AcceptButton = this.button1;
-            this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-            this.ClientSize = new System.Drawing.Size(370, 476);
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
+            this.ClientSize = new System.Drawing.Size(546, 576);
             this.Controls.Add(this.tbElapsed);
             this.Controls.Add(this.tbTime);
             this.Controls.Add(this.tbAudio);
@@ -402,8 +398,11 @@ namespace TestConverter
             this.Text = "Test Converter";
             this.Closing += new System.ComponentModel.CancelEventHandler(this.FormClose);
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
         #endregion
@@ -426,16 +425,16 @@ namespace TestConverter
 #endif
         }
 
-        protected override void Dispose( bool disposing )
+        protected override void Dispose(bool disposing)
         {
-            if( disposing )
+            if (disposing)
             {
-                if (components != null) 
+                if (components != null)
                 {
                     components.Dispose();
                 }
             }
-            base.Dispose( disposing );
+            base.Dispose(disposing);
         }
 
         private struct Chunk
@@ -523,7 +522,7 @@ namespace TestConverter
         DESCombine ds;
 
         [STAThread]
-        static void Main() 
+        static void Main()
         {
             Application.Run(new Form1());
         }
@@ -596,7 +595,7 @@ namespace TestConverter
                     ds.Cancel();
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 ds.Dispose();
@@ -608,16 +607,15 @@ namespace TestConverter
         {
             IBaseFilter ibf = null;
 
-            DsDevice [] dsd = DsDevice.GetDevicesOfCat(FilterCategory.VideoCompressorCategory);
+            DsDevice[] dsd = DsDevice.GetDevicesOfCat(FilterCategory.VideoCompressorCategory);
             int x;
 
-            for(x=0; x < dsd.Length; x++)
+            for (x = 0; x < dsd.Length; x++)
             {
                 if (dsd[x].Name == sName)
                 {
                     Guid grf = typeof(IBaseFilter).GUID;
-                    object o;
-                    dsd[x].Mon.BindToObject(null, null, ref grf, out o);
+                    dsd[x].Mon.BindToObject(null, null, ref grf, out object o);
                     ibf = o as IBaseFilter;
                     break;
                 }
@@ -646,33 +644,35 @@ namespace TestConverter
 
         private void btnOutput_Click(object sender, System.EventArgs e)
         {
-            SaveFileDialog sfd = new SaveFileDialog();
-            sfd.OverwritePrompt = true;
-            sfd.Filter = "All Files (*.*)|*.*";
+            SaveFileDialog sfd = new SaveFileDialog
+            {
+                OverwritePrompt = true,
+                Filter = "All Files (*.*)|*.*"
+            };
             DialogResult r = sfd.ShowDialog();
             if (r == DialogResult.OK)
             {
-                tbOutput.Text = sfd.FileName;
+                this.tbOutput.Text = sfd.FileName;
             }
         }
 
         private void CheckedChanged(object sender, System.EventArgs e)
         {
-            if (rbToScreen.Checked)
+            if (this.rbToScreen.Checked)
             {
-                tbOutput.Visible = false;
-                labOutput.Visible = false;
-                labProfile.Visible = false;
-                labCompressor.Visible = false;
-                tbCompressor.Visible = false;
+                this.tbOutput.Visible = false;
+                this.labOutput.Visible = false;
+                this.labProfile.Visible = false;
+                this.labCompressor.Visible = false;
+                this.tbCompressor.Visible = false;
             }
             else if (rbToAVI.Checked)
             {
-                tbOutput.Visible = true;
-                labOutput.Visible = true;
-                labProfile.Visible = false;
-                labCompressor.Visible = true;
-                tbCompressor.Visible = true;
+                this.tbOutput.Visible = true;
+                this.labOutput.Visible = true;
+                this.labProfile.Visible = false;
+                this.labCompressor.Visible = true;
+                this.tbCompressor.Visible = true;
             }
             else
             {
@@ -693,9 +693,9 @@ namespace TestConverter
                         if (f.tbVideoFile.Text.Length > 0 || f.tbAudioFile.Text.Length > 0)
                         {
                             Chunk c = new Chunk(
-                                f.tbVideoFile.Text, 
-                                f.tbAudioFile.Text, 
-                                f.tbStart.Text, 
+                                f.tbVideoFile.Text,
+                                f.tbAudioFile.Text,
+                                f.tbStart.Text,
                                 f.tbEnd.Text);
                             int i = listBox1.Items.Add(c);
                             listBox1.SelectedIndex = i;
@@ -735,7 +735,7 @@ namespace TestConverter
                         listBox1.SelectedIndex = 0;
                     }
                 }
-            }        
+            }
         }
 
         private void FormClose(object sender, System.ComponentModel.CancelEventArgs e)
@@ -762,74 +762,74 @@ namespace TestConverter
 
         public MyCallback(TextBox c)
         {
-            m_FrameCount = 0;
-            m_TotBytes = 0;
-            m_KeepTime = false;
+            this.m_FrameCount = 0;
+            this.m_TotBytes = 0;
+            this.m_KeepTime = false;
 
-            m_tbBytes = c;
-            m_MediaTime = null;
-            m_ElapsedTime = null;
-            m_pb = null;
+            this.m_tbBytes = c;
+            this.m_MediaTime = null;
+            this.m_ElapsedTime = null;
+            this.m_pb = null;
         }
         public MyCallback(TextBox c, TextBox d, TextBox e, ProgressBar f)
         {
-            m_FrameCount = 0;
-            m_TotBytes = 0;
-            m_KeepTime = false;
+            this.m_FrameCount = 0;
+            this.m_TotBytes = 0;
+            this.m_KeepTime = false;
 
-            m_tbBytes = c;
-            m_MediaTime = d;
-            m_ElapsedTime = e;
-            m_pb = f;
+            this.m_tbBytes = c;
+            this.m_MediaTime = d;
+            this.m_ElapsedTime = e;
+            this.m_pb = f;
         }
         ~MyCallback()
         {
-            m_tbBytes.Text = m_TotBytes.ToString();
-            if (m_MediaTime != null)
+            this.m_tbBytes.Text = this.m_TotBytes.ToString();
+            if (this.m_MediaTime != null)
             {
-                m_MediaTime.Text = m_LastSampleTime.ToString("0.00");
-                m_ElapsedTime.Text = (DateTime.Now - m_StartTime).ToString();
+                this.m_MediaTime.Text = this.m_LastSampleTime.ToString("0.00");
+                this.m_ElapsedTime.Text = (DateTime.Now - this.m_StartTime).ToString();
 
-                m_pb.Value = m_pb.Maximum;
+                this.m_pb.Value = this.m_pb.Maximum;
             }
         }
 
         public void KeepTime()
         {
-            m_KeepTime = true;
+            this.m_KeepTime = true;
         }
 
-        public int BufferCB(string sFilename, double SampleTime, System.IntPtr pBuffer, int BufferLen)
+        public int BufferCB(string sFilename, double sampleTime, System.IntPtr pBuffer, int bufferLen)
         {
-            if (m_FrameCount == 0 && m_MediaTime != null)
+            if (this.m_FrameCount == 0 && this.m_MediaTime != null)
             {
-                m_StartTime = DateTime.Now;
+                this.m_StartTime = DateTime.Now;
             }
 
-            if (m_KeepTime && m_MediaTime != null)
+            if (this.m_KeepTime && this.m_MediaTime != null)
             {
-                TimeSpan ts = DateTime.Now - m_StartTime;
-                int iSleep = (int)((SampleTime - ts.TotalSeconds) * 1000);
+                TimeSpan ts = DateTime.Now - this.m_StartTime;
+                int iSleep = (int)((sampleTime - ts.TotalSeconds) * 1000);
                 if (iSleep > 0)
                 {
                     System.Threading.Thread.Sleep(iSleep);
                 }
             }
 
-            m_FrameCount++;
-            m_TotBytes += BufferLen;
+            this.m_FrameCount++;
+            this.m_TotBytes += bufferLen;
 
-            if (m_FrameCount % 15 == 0)
+            if (this.m_FrameCount % 15 == 0)
             {
-                m_tbBytes.Text = m_TotBytes.ToString();
-                if (m_MediaTime != null)
+                this.m_tbBytes.Text = this.m_TotBytes.ToString();
+                if (this.m_MediaTime != null)
                 {
-                    m_pb.Value = (int)(SampleTime * 10);
-                    m_MediaTime.Text = SampleTime.ToString("0.00");
-                    m_ElapsedTime.Text = (DateTime.Now - m_StartTime).ToString();
+                    this.m_pb.Value = (int)(sampleTime * 10);
+                    this.m_MediaTime.Text = sampleTime.ToString("0.00");
+                    this.m_ElapsedTime.Text = (DateTime.Now - this.m_StartTime).ToString();
                 }
             }
-            m_LastSampleTime = SampleTime;
+            this.m_LastSampleTime = sampleTime;
 
             return 0;
         }

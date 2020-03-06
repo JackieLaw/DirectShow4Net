@@ -12,10 +12,10 @@ using System.ComponentModel;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
-using DirectShowLib;
-using DirectShowLib.BDA;
+using DirectShow4Net;
+using DirectShow4Net.BDA;
 
-namespace DirectShowLib.Sample
+namespace DirectShow4Net.Sample
 {
 	/// <summary>
 	/// Description résumée de DVBTTuning.
@@ -84,7 +84,7 @@ namespace DirectShowLib.Sample
 			base.Dispose( disposing );
 		}
 
-		#region Code généré par le Concepteur Windows Form
+		#region Code génér?par le Concepteur Windows Form
 		/// <summary>
 		/// Méthode requise pour la prise en charge du concepteur - ne modifiez pas
 		/// le contenu de cette méthode avec l'éditeur de code.
@@ -212,7 +212,7 @@ namespace DirectShowLib.Sample
 
     #region Membres de ITuningSelector
 
-    public DirectShowLib.BDA.ITuningSpace TuningSpace
+    public DirectShow4Net.BDA.ITuningSpace TuningSpace
     {
       get
       {
@@ -220,7 +220,7 @@ namespace DirectShowLib.Sample
       }
     }
 
-    public DirectShowLib.BDA.ITuneRequest TuneRequest
+    public DirectShow4Net.BDA.ITuneRequest TuneRequest
     {
       get
       {

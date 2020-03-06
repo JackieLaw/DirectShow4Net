@@ -15,9 +15,9 @@ using System.Windows.Forms;
 using System.Data;
 using System.Runtime.InteropServices;
 
-using DirectShowLib;
+using DirectShow4Net;
 
-namespace DirectShowLib.Samples
+namespace DirectShow4Net.Samples
 {
 	/// <summary>
 	/// Summary description for Form1.

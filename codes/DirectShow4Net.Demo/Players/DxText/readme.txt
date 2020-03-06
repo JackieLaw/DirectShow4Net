@@ -1,6 +1,6 @@
 /************************************************************************
 
-DirectShowLib - Provide access to DirectShow interfaces via .NET
+DirectShow4Net - Provide access to DirectShow interfaces via .NET
 Copyright (C) 2005
 http://sourceforge.net/projects/directshownet/
 

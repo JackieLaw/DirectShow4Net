@@ -10,13 +10,13 @@ using System.Collections;
 using System.Runtime.InteropServices;
 using System.Security.Permissions;
 
-using DirectShowLib;
+using DirectShow4Net;
 
 #if !USING_NET11
 using System.Runtime.InteropServices.ComTypes;
 #endif
 
-namespace DirectShowLib.Utils
+namespace DirectShow4Net.Utils
 {
     /// <summary>
     /// A collection of methods to do common DirectShow tasks.
@@ -87,7 +87,7 @@ namespace DirectShowLib.Utils
         /// Add a filter to a DirectShow Graph using its name
         /// </summary>
         /// <param name="graphBuilder">the IGraphBuilder interface of the graph</param>
-        /// <param name="deviceCategory">the filter category (see DirectShowLib.FilterCategory)</param>
+        /// <param name="deviceCategory">the filter category (see DirectShow4Net.FilterCategory)</param>
         /// <param name="friendlyName">the filter name (case-sensitive)</param>
         /// <returns>an instance of the filter if the method successfully created it, null if not</returns>
         /// <example>This sample shows how to programmatically add a NVIDIA Video decoder filter to a graph

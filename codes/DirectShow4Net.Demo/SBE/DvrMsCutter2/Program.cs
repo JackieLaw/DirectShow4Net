@@ -9,7 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
-namespace DirectShowLib.Sample
+namespace DirectShow4Net.Sample
 {
   public struct Segment
   {

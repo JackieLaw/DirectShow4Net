@@ -8,8 +8,8 @@ or FITNESS FOR A PARTICULAR PURPOSE.
 using System;
 using System.Runtime.InteropServices;
 
-using DirectShowLib;
-using DirectShowLib.GDCL;
+using DirectShow4Net;
+using DirectShow4Net.GDCL;
 
 namespace GMFPreview
 {

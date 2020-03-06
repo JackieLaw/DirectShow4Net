@@ -5,7 +5,7 @@
 'or FITNESS FOR A PARTICULAR PURPOSE.  
 '*****************************************************************************/
 
-Imports DirectShowLib
+Imports DirectShow4Net
 Imports System.Runtime.InteropServices
 
 Public Class Form1

@@ -9,7 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace DirectShowLib.Sample
+namespace DirectShow4Net.Sample
 {
   static class Program
   {

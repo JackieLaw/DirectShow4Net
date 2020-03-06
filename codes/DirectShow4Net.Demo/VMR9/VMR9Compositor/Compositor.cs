@@ -16,9 +16,9 @@ using Microsoft.DirectX;
 using Microsoft.DirectX.Direct3D;
 using Direct3D = Microsoft.DirectX.Direct3D;
 
-using DirectShowLib;
+using DirectShow4Net;
 
-namespace DirectShowLib.Sample
+namespace DirectShow4Net.Sample
 {
   public class Compositor : IVMRImageCompositor9, IDisposable
   {
@@ -232,7 +232,7 @@ namespace DirectShowLib.Sample
       d3dFont = new Direct3D.Font(device, gdiFont);
 
       // Load a bitmap (the spider) from embedded resources. This is a png file with alpha transparency
-      using (Stream stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("DirectShowLib.Sample.redspider.png"))
+      using (Stream stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("DirectShow4Net.Sample.redspider.png"))
       {
         spiderTex = TextureLoader.FromStream(device, stream, D3DX.Default, D3DX.Default, D3DX.Default, D3DX.Default, Usage.None, Format.A8R8G8B8, Pool.Default, Filter.None, Filter.None, 0);
         SurfaceDescription spiderDesc = spiderTex.GetLevelDescription(0);

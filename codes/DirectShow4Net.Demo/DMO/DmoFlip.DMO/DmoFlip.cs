@@ -13,8 +13,8 @@ using System;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 using MediaObjectTemplate;
-using DirectShowLib;
-using DirectShowLib.DMO;
+using DirectShow4Net;
+using DirectShow4Net.DMO;
 
 namespace DmoFlip
 {

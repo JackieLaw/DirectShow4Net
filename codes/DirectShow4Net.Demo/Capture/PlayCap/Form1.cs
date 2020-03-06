@@ -12,7 +12,7 @@ or FITNESS FOR A PARTICULAR PURPOSE.
 // DirectShow Interfaces used : ICaptureGraphBuilder2, IGraphBuilder, 
 // IMediaEventEx, IMediaControl, IVideoWindow, IBaseFilter
 //
-// DirectShowLib helper classes used : DsError, DsROTEntry, DsDevice
+// DirectShow4Net helper classes used : DsError, DsROTEntry, DsDevice
 //
 //------------------------------------------------------------------------------
 
@@ -23,13 +23,13 @@ using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
-using DirectShowLib;
+using DirectShow4Net;
 
 #if !USING_NET11
 using System.Runtime.InteropServices.ComTypes;
 #endif
 
-namespace DirectShowLib.Samples
+namespace DirectShow4Net.Samples
 {
 	public class Form1 : System.Windows.Forms.Form
 	{
@@ -71,7 +71,7 @@ namespace DirectShowLib.Samples
 			base.Dispose( disposing );
 		}
 
-		#region Code généré par le Concepteur Windows Form
+		#region Code génér?par le Concepteur Windows Form
 		/// <summary>
 		/// Méthode requise pour la prise en charge du concepteur - ne modifiez pas
 		/// le contenu de cette méthode avec l'éditeur de code.

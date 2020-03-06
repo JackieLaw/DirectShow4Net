@@ -12,13 +12,13 @@ using System.ComponentModel;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 
-using DirectShowLib;
+using DirectShow4Net;
 
 using Microsoft.DirectX;
 using Microsoft.DirectX.Direct3D;
 using Microsoft.Win32;
 
-namespace DirectShowLib.Sample
+namespace DirectShow4Net.Sample
 {
     public class MainForm : System.Windows.Forms.Form
     {
@@ -99,7 +99,7 @@ namespace DirectShowLib.Sample
             base.Dispose( disposing );
         }
 
-        #region Code généré par le Concepteur Windows Form
+        #region Code génér?par le Concepteur Windows Form
         /// <summary>
         /// Méthode requise pour la prise en charge du concepteur - ne modifiez pas
         /// le contenu de cette méthode avec l'éditeur de code.

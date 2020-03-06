@@ -14,7 +14,7 @@ using System.Threading;
 using System.Diagnostics;
 using System.Windows.Forms;
 
-using DirectShowLib;
+using DirectShow4Net;
 
 
 namespace SnapShot

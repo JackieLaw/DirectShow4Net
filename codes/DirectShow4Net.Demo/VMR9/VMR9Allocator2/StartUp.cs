@@ -9,7 +9,7 @@ using System;
 using System.Windows.Forms;
 using System.Threading;
 
-namespace DirectShowLib.Sample
+namespace DirectShow4Net.Sample
 {
   public class StartUp
   {

@@ -13,8 +13,8 @@ using System.Diagnostics;
 using System.Threading;
 using System.Collections;
 
-using DirectShowLib;
-using DirectShowLib.DES;
+using DirectShow4Net;
+using DirectShow4Net.DES;
 
 namespace DESCombineLib
 {
@@ -58,7 +58,7 @@ namespace DESCombineLib
     {
         /// <summary>The result of the rendering</summary>
         /// <remarks>
-        /// This code will be a member of DirectShowLib.EventCode.  Typically it 
+        /// This code will be a member of DirectShow4Net.EventCode.  Typically it 
         /// will be EventCode.Complete, EventCode.ErrorAbort or EventCode.UserAbort.
         /// </remarks>
         public EventCode Result;
@@ -768,7 +768,7 @@ namespace DESCombineLib
         /// The <see cref="CompletedArgs"/>
         /// contains the result of running the graph (Completed, UserAborted,
         /// out of disk space, etc.)
-        /// This code will be a member of DirectShowLib.EventCode.  Typically it 
+        /// This code will be a member of DirectShow4Net.EventCode.  Typically it 
         /// will be EventCode.Complete, EventCode.ErrorAbort or EventCode.UserAbort.
         /// </remarks>
         public event EventHandler Completed = null;

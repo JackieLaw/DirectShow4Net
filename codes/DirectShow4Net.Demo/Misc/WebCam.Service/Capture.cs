@@ -13,7 +13,7 @@ using System.Runtime.InteropServices;
 using System.Threading;
 using System.Diagnostics;
 
-using DirectShowLib;
+using DirectShow4Net;
 
 
 namespace WebCamService

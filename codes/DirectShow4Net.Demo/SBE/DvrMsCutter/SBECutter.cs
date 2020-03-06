@@ -8,9 +8,9 @@ or FITNESS FOR A PARTICULAR PURPOSE.
 using System;
 using System.Runtime.InteropServices;
 
-using DirectShowLib.SBE;
+using DirectShow4Net.SBE;
 
-namespace DirectShowLib.Sample
+namespace DirectShow4Net.Sample
 {
 	public class SBECutter : IDisposable
 	{

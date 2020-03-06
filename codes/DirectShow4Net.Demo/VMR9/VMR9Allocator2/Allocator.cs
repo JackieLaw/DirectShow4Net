@@ -14,12 +14,12 @@ using System.Text;
 using System.Threading;
 using System.Windows.Forms;
 
-using DirectShowLib;
+using DirectShow4Net;
 
 using Microsoft.DirectX;
 using Microsoft.DirectX.Direct3D;
 
-namespace DirectShowLib.Sample
+namespace DirectShow4Net.Sample
 {
   [ComVisible(true)]
   [ClassInterface(ClassInterfaceType.None)]

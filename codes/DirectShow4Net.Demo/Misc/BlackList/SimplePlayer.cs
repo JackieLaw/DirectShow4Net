@@ -2,9 +2,9 @@
 using System.IO;
 using System.Runtime.InteropServices;
 
-using DirectShowLib;
+using DirectShow4Net;
 
-namespace DirectShowLib.Samples
+namespace DirectShow4Net.Samples
 {
   /// <summary>
   /// The SimplePlayer class implement a very basic player that use DirectShow.

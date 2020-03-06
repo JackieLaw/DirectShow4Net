@@ -13,7 +13,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.Diagnostics;
-using DirectShowLib;
+using DirectShow4Net;
 
 namespace GMFPlay
 {

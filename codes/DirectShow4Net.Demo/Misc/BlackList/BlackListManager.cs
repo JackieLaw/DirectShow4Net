@@ -7,9 +7,9 @@ using System.Text.RegularExpressions;
 
 using Microsoft.Win32;
 
-using DirectShowLib;
+using DirectShow4Net;
 
-namespace DirectShowLib.Samples
+namespace DirectShow4Net.Samples
 {
   /// <summary>
   /// The BlackListManager class is an implementation of the IAMGraphBuilderCallback interface.

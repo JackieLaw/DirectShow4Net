@@ -11,7 +11,7 @@ using System.Drawing.Imaging;
 using System.Runtime.InteropServices;
 using System.Diagnostics;
 
-using DirectShowLib;
+using DirectShow4Net;
 
 
 namespace DxLogo

@@ -8,7 +8,7 @@ or FITNESS FOR A PARTICULAR PURPOSE.
                   DirectShow .NET
 		      netmaster@swissonline.ch
 
-Updated to use DirectShowLib from SourceForge by
+Updated to use DirectShow4Net from SourceForge by
 snarfle@SourceForge.net
 
 *****************************************************************************/
@@ -19,8 +19,8 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Text;
 
-using DirectShowLib;
-using DirectShowLib.Dvd;
+using DirectShow4Net;
+using DirectShow4Net.Dvd;
 
 namespace DVDPlayerNET
 {

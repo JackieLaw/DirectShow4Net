@@ -1,4 +1,4 @@
-﻿namespace DirectShowLib.Sample
+﻿namespace DirectShow4Net.Sample
 {
   partial class ConfigForm
   {

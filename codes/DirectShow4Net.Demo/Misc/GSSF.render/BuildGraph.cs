@@ -23,7 +23,7 @@ using System.Threading;
 using System.Windows.Forms;
 using System.IO;
 
-using DirectShowLib;
+using DirectShow4Net;
 using GenericSampleSourceFilterClasses;
 
 #if USING_BASS_DLL
@@ -366,7 +366,7 @@ namespace DxPlay
         {
             /// <summary>The result of the rendering</summary>
             /// <remarks>
-            /// This code will be a member of DirectShowLib.EventCode.  Typically it 
+            /// This code will be a member of DirectShow4Net.EventCode.  Typically it 
             /// will be EventCode.Complete, EventCode.ErrorAbort or EventCode.UserAbort.
             /// </remarks>
             public EventCode Result;

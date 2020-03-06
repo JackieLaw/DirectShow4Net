@@ -8,7 +8,7 @@ or FITNESS FOR A PARTICULAR PURPOSE.
 using System;
 using System.Windows.Forms;
 
-using DirectShowLib;
+using DirectShow4Net;
 
 namespace GMFPreview
 {
@@ -74,24 +74,16 @@ namespace GMFPreview
     // A wrapper class to put DsDevices into a listbox
     public class VDevice
     {
-        private DsDevice m_dev;
-
         public VDevice(DsDevice dev)
         {
-            m_dev = dev;
+            this.Device = dev;
         }
 
-        public DsDevice Device
-        {
-            get
-            {
-                return m_dev;
-            }
-        }
+        public DsDevice Device { get; }
 
         public override string ToString()
         {
-            return m_dev.Name;
+            return this.Device.Name;
         }
     }
 }

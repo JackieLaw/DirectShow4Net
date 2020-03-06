@@ -12,9 +12,9 @@ or FITNESS FOR A PARTICULAR PURPOSE.
 using System;
 using System.Runtime.InteropServices;
 
-using DirectShowLib;
+using DirectShow4Net;
 
-namespace DirectShowLib.GDCL
+namespace DirectShow4Net.GDCL
 {
     public enum eFormatType
     {

@@ -14,7 +14,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Runtime.InteropServices.ComTypes;
 
-using DirectShowLib;
+using DirectShow4Net;
 
 namespace GMFPreview
 {

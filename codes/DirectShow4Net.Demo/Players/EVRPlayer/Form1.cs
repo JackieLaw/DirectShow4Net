@@ -335,22 +335,22 @@ namespace EVRPlayer
 
         #region GraphEventCallback Members
 
-        public void OnGraphEvent(DirectShowLib.EventCode eventCode, IntPtr param1, IntPtr param2)
+        public void OnGraphEvent(DirectShow4Net.EventCode eventCode, IntPtr param1, IntPtr param2)
         {
             Debug.WriteLine(eventCode);
             switch (eventCode)
             {
-                case DirectShowLib.EventCode.Complete:
+                case DirectShow4Net.EventCode.Complete:
                     bnStop_Click(null, null);
                     break;
 
-                case DirectShowLib.EventCode.StepComplete:
+                case DirectShow4Net.EventCode.StepComplete:
                     // Frame stepping has completed.
                     m_bFrameStepping = false;
                     UpdateUI();
                     break;
 
-                case DirectShowLib.EventCode.ErrorAbort:
+                case DirectShow4Net.EventCode.ErrorAbort:
                     NotifyError("An error occurred during playback.", param1.ToInt32());
                     UpdateUI();
                     break;

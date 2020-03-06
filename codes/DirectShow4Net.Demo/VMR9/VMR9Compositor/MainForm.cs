@@ -14,9 +14,9 @@ using System.Windows.Forms;
 
 using Microsoft.Win32;
 
-using DirectShowLib;
+using DirectShow4Net;
 
-namespace DirectShowLib.Sample
+namespace DirectShow4Net.Sample
 {
   public partial class MainForm : Form
   {

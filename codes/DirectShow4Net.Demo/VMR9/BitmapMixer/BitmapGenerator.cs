@@ -11,7 +11,7 @@ using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.Drawing.Text;
 
-namespace DirectShowLib.Sample
+namespace DirectShow4Net.Sample
 {
 	public sealed class BitmapGenerator
 	{

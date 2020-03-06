@@ -7,10 +7,10 @@ or FITNESS FOR A PARTICULAR PURPOSE.
 
 using System;
 
-using DirectShowLib;
-using DirectShowLib.BDA;
+using DirectShow4Net;
+using DirectShow4Net.BDA;
 
-namespace DirectShowLib.Sample
+namespace DirectShow4Net.Sample
 {
 	public interface ITuningSelector
 	{

@@ -6,9 +6,9 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-using DirectShowLib;
+using DirectShow4Net;
 
-namespace DirectShowLib.Samples
+namespace DirectShow4Net.Samples
 {
   public partial class MainForm : Form
   {

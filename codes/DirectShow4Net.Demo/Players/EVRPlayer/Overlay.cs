@@ -12,7 +12,7 @@ using System.Drawing.Imaging;
 using System.Runtime.InteropServices;
 using System.Security;
 
-using DirectShowLib;
+using DirectShow4Net;
 using MediaFoundation;
 using GenericSampleSourceFilterClasses;
 
@@ -550,7 +550,7 @@ namespace EVRPlayer
 
                 if (pvi.BmiHeader.Compression != 3)
                 {
-                    // ARGH! Create a MediaFoundation.Misc.BitmapInfoHeader from a DirectShowLib.BitmapInfoHeader (even
+                    // ARGH! Create a MediaFoundation.Misc.BitmapInfoHeader from a DirectShow4Net.BitmapInfoHeader (even
                     // tho they are the same), so we can call MFCalculateBitmapImageSize
                     MediaFoundation.Misc.BitmapInfoHeader bmi = new MediaFoundation.Misc.BitmapInfoHeader();
                     GCHandle gh = GCHandle.Alloc(pvi.BmiHeader, GCHandleType.Pinned);

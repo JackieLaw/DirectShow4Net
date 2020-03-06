@@ -14,7 +14,7 @@ using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
 using System.Data;
-using DirectShowLib;
+using DirectShow4Net;
 
 namespace DxText
 {

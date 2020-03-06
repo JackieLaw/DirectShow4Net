@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 using Microsoft.DirectX.Direct3D;
 
-namespace DirectShowLib.Sample
+namespace DirectShow4Net.Sample
 {
   /// <summary>
   /// Helper struture to pass selected preferences

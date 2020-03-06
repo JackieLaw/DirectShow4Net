@@ -1,4 +1,4 @@
-﻿namespace DirectShowLib.Samples
+﻿namespace DirectShow4Net.Samples
 {
   partial class MainForm
   {

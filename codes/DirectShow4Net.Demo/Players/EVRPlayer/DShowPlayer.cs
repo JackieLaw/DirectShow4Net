@@ -11,7 +11,7 @@ using System.Runtime.InteropServices;
 using System.Diagnostics;
 using System.Windows.Forms;
 
-using DirectShowLib;
+using DirectShow4Net;
 using MediaFoundation;
 using MediaFoundation.EVR;
 using MediaFoundation.Transform;

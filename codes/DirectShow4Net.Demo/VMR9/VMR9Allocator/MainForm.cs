@@ -13,9 +13,9 @@ using System.Windows.Forms;
 using System.Data;
 using System.Runtime.InteropServices;
 
-using DirectShowLib;
+using DirectShow4Net;
 
-namespace DirectShowLib.Sample
+namespace DirectShow4Net.Sample
 {
 	public class MainForm : System.Windows.Forms.Form
 	{

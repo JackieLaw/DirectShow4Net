@@ -12,7 +12,7 @@ using System.Runtime.InteropServices;
 using Microsoft.DirectX;
 using Microsoft.DirectX.Direct3D;
 
-namespace DirectShowLib.Sample
+namespace DirectShow4Net.Sample
 {
 	public class PlaneScene : IDisposable
 	{

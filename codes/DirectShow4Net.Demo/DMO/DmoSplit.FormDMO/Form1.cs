@@ -15,8 +15,8 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 
-using DirectShowLib;
-using DirectShowLib.DMO;
+using DirectShow4Net;
+using DirectShow4Net.DMO;
 
 namespace FormDMO
 {

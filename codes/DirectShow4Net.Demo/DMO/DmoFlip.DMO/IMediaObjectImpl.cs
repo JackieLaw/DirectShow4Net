@@ -12,8 +12,8 @@ or FITNESS FOR A PARTICULAR PURPOSE.
 using System;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
-using DirectShowLib;
-using DirectShowLib.DMO;
+using DirectShow4Net;
+using DirectShow4Net.DMO;
 using System.IO;
 using System.Collections;
 
@@ -80,8 +80,8 @@ namespace MediaObjectTemplate
     /// your DMO.  See the sample for how this is done.</para>
     /// 
     /// <para><b>WARNING:</b> If you use the "Register for COM Interop" compiler switch, the
-    /// compiler will attempt to register DirectShowLib.dll as well as your DMO.
-    /// Since DirectShowLib has no registration to perform, this generates an error.
+    /// compiler will attempt to register DirectShow4Net.dll as well as your DMO.
+    /// Since DirectShow4Net has no registration to perform, this generates an error.
     /// That is why the sample uses pre/post build events to perform the registration.  You
     /// may need to adjust this command for your particular installation.</para>
     /// 

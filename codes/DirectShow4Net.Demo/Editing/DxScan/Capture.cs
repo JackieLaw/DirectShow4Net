@@ -13,7 +13,7 @@ using System.Runtime.InteropServices;
 using System.Diagnostics;
 using System.Threading;
 
-using DirectShowLib;
+using DirectShow4Net;
 
 namespace DxScan
 {

@@ -1,0 +1,3714 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DirectShow4Net</name>
+    </assembly>
+    <members>
+        <member name="T:DirectShow4Net.MultimediaStreaming.AMMStream">
+            <summary>
+            From unnamed enum
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.MultimediaStreaming.AMMMultiStream">
+            <summary>
+            From unnamed enum
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.MultimediaStreaming.AMOpenModes">
+            <summary>
+            From unnamed enum
+            </summary>
+        </member>
+        <member name="M:DirectShow4Net.MultimediaStreaming.MsError.ThrowExceptionForHR(System.Int32)">
+            <summary>
+            If hr has a "failed" status code (E_*), throw an exception.  Note that status
+            messages (S_*) are not considered failure codes.  If DES or DShow error text
+            is available, it is used to build the exception, otherwise a generic com error
+            is thrown.
+            </summary>
+            <param name="hr">The HRESULT to check</param>
+        </member>
+        <member name="T:DirectShow4Net.MultimediaStreaming.AMMultiMediaStream">
+            <summary>
+            From CLSID_AMMultiMediaStream
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.MultimediaStreaming.AMMediaTypeStream">
+            <summary>
+            From CLSID_AMMediaTypeStream
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.MultimediaStreaming.AMDirectDrawStream">
+            <summary>
+            From CLSID_AMDirectDrawStream
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.MultimediaStreaming.AMAudioStream">
+            <summary>
+            From CLSID_AMAudioStream
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.MultimediaStreaming.AMAudioData">
+            <summary>
+            From CLSID_AMAudioData
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.MultimediaStreaming.CompletionStatusFlags">
+            <summary>
+            From COMPLETION_STATUS_FLAGS
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.MultimediaStreaming.SSUpdate">
+            <summary>
+            From unnamed enum
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.MultimediaStreaming.StreamState">
+            <summary>
+            From STREAM_STATE
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.MultimediaStreaming.StreamType">
+            <summary>
+            From STREAM_TYPE
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.MultimediaStreaming.MMSSF">
+            <summary>
+            From unnamed enum
+            </summary>
+        </member>
+        <member name="F:DirectShow4Net.MultimediaStreaming.MSPID.PrimaryVideo">
+            <summary> MSPID_PrimaryVideo </summary>
+        </member>
+        <member name="F:DirectShow4Net.MultimediaStreaming.MSPID.PrimaryAudio">
+            <summary> MSPID_PrimaryAudio </summary>
+        </member>
+        <member name="T:DirectShow4Net.BDA.BDAChangeState">
+            <summary>
+            From BDA_CHANGE_STATE
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.BDA.MulticastMode">
+            <summary>
+            From BDA_MULTICAST_MODE
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.BDA.MediaSampleContent">
+            <summary>
+            From MEDIA_SAMPLE_CONTENT
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.BDA.BDANodeDescriptor">
+            <summary>
+            From BDANODE_DESCRIPTOR
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.BDA.CCSubstreamService">
+            <summary>
+            From KS_CC_SUBSTREAM_SERVICE_* defines
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.BDA.TIFLoad">
+            <summary>
+            From CLSID_TIFLoad
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.BDA.FECMethod">
+            <summary>
+            From FECMethod
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.BDA.BinaryConvolutionCodeRate">
+            <summary>
+            From BinaryConvolutionCodeRate
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.BDA.Polarisation">
+            <summary>
+            From Polarisation
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.BDA.SpectralInversion">
+            <summary>
+            From SpectralInversion
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.BDA.ModulationType">
+            <summary>
+            From ModulationType
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.BDA.DVBSystemType">
+            <summary>
+            From DVBSystemType
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.BDA.HierarchyAlpha">
+            <summary>
+            From HierarchyAlpha
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.BDA.GuardInterval">
+            <summary>
+            From GuardInterval
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.BDA.TransmissionMode">
+            <summary>
+            From TransmissionMode
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.BDA.ComponentStatus">
+            <summary>
+            From ComponentStatus
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.BDA.ComponentCategory">
+            <summary>
+            From ComponentCategory
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.BDA.MPEG2StreamType">
+            <summary>
+            From MPEG2StreamType
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.BDA.ATSCComponentTypeFlags">
+            <summary>
+            From ATSCComponentTypeFlags
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.BDA.BDATemplateConnection">
+            <summary>
+            From BDA_TEMPLATE_CONNECTION
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.BDA.BDACompFlags">
+            <summary>
+            From BDA_Comp_Flags
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.BDA.RunningStatus">
+            <summary>
+            Define possible values for a running_status field according to ETSI EN 300 468
+            This enum doesn't exist in the c++ headers
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.BDA.ETFilterEncProperties">
+            <summary>
+            CLSID_ETFilterEncProperties
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.BDA.ETFilterTagProperties">
+            <summary>
+            CLSID_ETFilterTagProperties
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.BDA.DTFilterEncProperties">
+            <summary>
+            CLSID_DTFilterEncProperties
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.BDA.DTFilterTagProperties">
+            <summary>
+            CLSID_DTFilterTagProperties
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.BDA.XDSCodecProperties">
+            <summary>
+            CLSID_XDSCodecProperties
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.BDA.XDSCodecTagProperties">
+            <summary>
+            CLSID_XDSCodecTagProperties
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.BDA.CXDSData">
+            <summary>
+            CLSID_CXDSData
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.BDA.XDSCodec">
+            <summary>
+            CLSID_XDSCodec
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.BDA.ProtType">
+            <summary>
+            From ProtType
+            </summary>
+        </member>
+        <member name="F:DirectShow4Net.BDA.EventID.XDSCodecNewXDSRating">
+            <summary> EVENTID_XDSCodecNewXDSRating </summary>
+        </member>
+        <member name="F:DirectShow4Net.BDA.EventID.XDSCodecDuplicateXDSRating">
+            <summary> EVENTID_XDSCodecDuplicateXDSRating </summary>
+        </member>
+        <member name="F:DirectShow4Net.BDA.EventID.XDSCodecNewXDSPacket">
+            <summary> EVENTID_XDSCodecNewXDSPacket </summary>
+        </member>
+        <member name="F:DirectShow4Net.BDA.EventID.DTFilterRatingChange">
+            <summary> EVENTID_DTFilterRatingChange </summary>
+        </member>
+        <member name="F:DirectShow4Net.BDA.EventID.DTFilterRatingsBlock">
+            <summary> EVENTID_DTFilterRatingsBlock </summary>
+        </member>
+        <member name="F:DirectShow4Net.BDA.EventID.DTFilterRatingsUnblock">
+            <summary> EVENTID_DTFilterRatingsUnblock </summary>
+        </member>
+        <member name="F:DirectShow4Net.BDA.EventID.DTFilterXDSPacket">
+            <summary> EVENTID_DTFilterXDSPacket </summary>
+        </member>
+        <member name="F:DirectShow4Net.BDA.EventID.ETFilterEncryptionOn">
+            <summary> EVENTID_ETFilterEncryptionOn </summary>
+        </member>
+        <member name="F:DirectShow4Net.BDA.EventID.ETFilterEncryptionOff">
+            <summary> EVENTID_ETFilterEncryptionOff </summary>
+        </member>
+        <member name="F:DirectShow4Net.BDA.EventID.DTFilterCOPPUnblock">
+            <summary> EVENTID_DTFilterCOPPUnblock </summary>
+        </member>
+        <member name="F:DirectShow4Net.BDA.EventID.EncDecFilterError">
+            <summary> EVENTID_EncDecFilterError </summary>
+        </member>
+        <member name="F:DirectShow4Net.BDA.EventID.DTFilterCOPPBlock">
+            <summary> EVENTID_DTFilterCOPPBlock </summary>
+        </member>
+        <member name="F:DirectShow4Net.BDA.EventID.ETFilterCopyOnce">
+            <summary> EVENTID_ETFilterCopyOnce </summary>
+        </member>
+        <member name="F:DirectShow4Net.BDA.EventID.ETFilterCopyNever">
+            <summary> EVENTID_ETFilterCopyNever </summary>
+        </member>
+        <member name="F:DirectShow4Net.BDA.EventID.DTFilterDataFormatOK">
+            <summary> EVENTID_DTFilterDataFormatOK </summary>
+        </member>
+        <member name="F:DirectShow4Net.BDA.EventID.DTFilterDataFormatFailure">
+            <summary> EVENTID_DTFilterDataFormatFailure </summary>
+        </member>
+        <member name="F:DirectShow4Net.BDA.EventID.ETDTFilterLicenseOK">
+            <summary> EVENTID_ETDTFilterLicenseOK </summary>
+        </member>
+        <member name="F:DirectShow4Net.BDA.EventID.ETDTFilterLicenseFailure">
+            <summary> EVENTID_ETDTFilterLicenseFailure </summary>
+        </member>
+        <member name="F:DirectShow4Net.BDA.EventID.EncDecFilterEvent">
+            <summary> EVENTID_EncDecFilterEvent </summary>
+        </member>
+        <member name="F:DirectShow4Net.BDA.EventID.FormatNotSupportedEvent">
+            <summary> EVENTID_FormatNotSupportedEvent </summary>
+        </member>
+        <member name="F:DirectShow4Net.BDA.EventID.DemultiplexerFilterDiscontinuity">
+            <summary> EVENTID_DemultiplexerFilterDiscontinuity </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:DirectShow4Net.BDA.PidBits" -->
+        <!-- Badly formed XML comment ignored for member "T:DirectShow4Net.BDA.MpegHeaderBits" -->
+        <!-- Badly formed XML comment ignored for member "T:DirectShow4Net.BDA.MpegHeaderVersionBits" -->
+        <!-- Badly formed XML comment ignored for member "T:DirectShow4Net.BDA.MpegDuration" -->
+        <member name="T:DirectShow4Net.BDA.MpegDateAndTime">
+            <summary>
+            From MPEG_DATE_AND_TIME
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.BDA.DsmccElement">
+            <summary>
+            From DSMCC_ELEMENT
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.BDA.MpeElement">
+            <summary>
+            From MPE_ELEMENT
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.BDA.EnTvRat_System">
+            <summary>
+            From EnTvRat_System
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.BDA.EnTvRat_GenericLevel">
+            <summary>
+            From EnTvRat_GenericLevel
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.BDA.BfEnTvRat_GenericAttributes">
+            <summary>
+            From BfEnTvRat_GenericAttributes
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.AMGBF">
+            <summary>
+            From AM_GBF_* defines
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.AMVideoFlag">
+            <summary>
+            From AM_VIDEO_FLAG_* defines
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.AMSamplePropertyFlags">
+            <summary>
+            From AM_SAMPLE_PROPERTY_FLAGS
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.PinInfo">
+            <summary>
+            From PIN_INFO
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.AMMediaType">
+            <summary>
+            From AM_MEDIA_TYPE - When you are done with an instance of this class,
+            it should be released with FreeAMMediaType() to avoid leaking
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.PinDirection">
+            <summary>
+            From PIN_DIRECTION
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.AMSeekingSeekingCapabilities">
+            <summary>
+            From AM_SEEKING_SeekingCapabilities
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.FilterState">
+            <summary>
+            From FILTER_STATE
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.FilterInfo">
+            <summary>
+            From FILTER_INFO
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.AMSeekingSeekingFlags">
+            <summary>
+            From AM_SEEKING_SeekingFlags
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.AllocatorProperties">
+            <summary>
+            From ALLOCATOR_PROPERTIES
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.AMSample2Properties">
+            <summary>
+            From AM_SAMPLE2_PROPERTIES
+            </summary>
+        </member>
+        <member name="M:DirectShow4Net.IPin.ConnectionMediaType(DirectShow4Net.AMMediaType)">
+            <summary>
+            Release returned parameter with DsUtils.FreeAMMediaType
+            </summary>
+        </member>
+        <member name="M:DirectShow4Net.IPin.QueryPinInfo(DirectShow4Net.PinInfo@)">
+            <summary>
+            Release returned parameter with DsUtils.FreePinInfo
+            </summary>
+        </member>
+        <member name="M:DirectShow4Net.IMediaSample.GetMediaType(DirectShow4Net.AMMediaType@)">
+            <summary>
+            Returned object must be released with DsUtils.FreeAMMediaType()
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.AMFilterMiscFlags">
+            <summary>
+            From _AM_FILTER_MISC_FLAGS
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.AMStreamInfoFlags">
+            <summary>
+            From AM_STREAM_INFO_FLAGS
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.MPEG2Program">
+            <summary>
+            From MPEG2_PROGRAM_* defines
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.AMAudioRendererStatParam">
+            <summary>
+            From _AM_AUDIO_RENDERER_STAT_PARAM
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.AMStreamInfo">
+            <summary>
+            From AM_STREAM_INFO
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DVDecoderResolution">
+            <summary>
+            From _DVDECODERRESOLUTION
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.AMIntfSearchFlags">
+            <summary>
+            From _AM_INTF_SEARCH_FLAGS
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.AMQueryDecoder">
+            <summary>
+            From AM_QUERY_DECODER_* defines
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DecoderCap">
+            <summary>
+            From DECODER_CAP_* defines
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DecimationUsage">
+            <summary>
+            From DECIMATION_USAGE
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.AMOverlayFX">
+            <summary>
+            From AMOVERLAYFX
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.AMResCtlReserveFlags">
+            <summary>
+            From _AMRESCTL_RESERVEFLAGS
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.AMStreamSelectInfoFlags">
+            <summary>
+            From _AMSTREAMSELECTINFOFLAGS
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.AMStreamSelectEnableFlags">
+            <summary>
+            From _AMSTREAMSELECTENABLEFLAGS
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.Merit">
+            <summary>
+            unnamed enum
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.ColorKey">
+            <summary>
+            From COLORKEY
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.RegPinMedium">
+            <summary>
+            From REGPINMEDIUM
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DVInfo">
+            <summary>
+            From DVINFO
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DVEncoderResolution">
+            <summary>
+            From _DVENCODERRESOLUTION
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DVEncoderFormat">
+            <summary>
+            From _DVENCODERFORMAT
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DVEncoderVideoFormat">
+            <summary>
+            From _DVENCODERVIDEOFORMAT
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.AMRenderExFlags">
+            <summary>
+            From _AM_RENSDEREXFLAGS
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.InterleavingMode">
+            <summary>
+            From InterleavingMode
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.AMFileSinkFlags">
+            <summary>
+            From AM_FILESINK_FLAGS
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.KSPropertySupport">
+            <summary>
+            From KSPROPERTY_SUPPORT_* defines
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.AMPropertyPin">
+            <summary>
+            From AMPROPERTY_PIN
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.AMTunerSubChannel">
+            <summary>
+            From AMTunerSubChannel
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.AMTunerSignalStrength">
+            <summary>
+            From AMTunerSignalStrength
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.AMTunerModeType">
+            <summary>
+            From AMTunerModeType
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.AMTunerEventType">
+            <summary>
+            From AMTunerEventType
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.AnalogVideoStandard">
+            <summary>
+            From AnalogVideoStandard
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.TunerInputType">
+            <summary>
+            From TunerInputType
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.VideoControlFlags">
+            <summary>
+            From VideoControlFlags
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.TVAudioMode">
+            <summary>
+            From TVAudioMode
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.VideoProcAmpProperty">
+            <summary>
+            From VideoProcAmpProperty
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.VideoProcAmpFlags">
+            <summary>
+            From VideoProcAmpFlags
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.PhysicalConnectorType">
+            <summary>
+            From PhysicalConnectorType
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.AMTVAudioEventType">
+            <summary>
+            From AMTVAudioEventType
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.CompressionCaps">
+            <summary>
+            From CompressionCaps
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.VfwCompressDialogs">
+            <summary>
+            From VfwCompressDialogs
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.VfwCaptureDialogs">
+            <summary>
+            From VfwCaptureDialogs
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.ExtDevicePort">
+            <summary>
+            From DEV_PORT_*
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.ExtDeviceCaps">
+            <summary>
+            From ED_DEVCAP*, ED_DEVTYPE* etc.
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.ExtTransportCaps">
+            <summary>
+            From ED_TRANSCAP*
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.ExtTransportMediaStates">
+            <summary>
+            From ED_MEDIA*
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.ExtTransportModes">
+            <summary>
+            From ED_MODE*
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.ExtTransportStatus">
+            <summary>
+            From ED_MEDIA* etc.
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.ExtTransportParameters">
+            <summary>
+            From ED_TRANSBASIC* etc.
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.ExtTransportAudio">
+            <summary>
+            From ED_AUDIO*
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.ExtTransportEdit">
+            <summary>
+            From ED_EDIT*
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.VideoStreamConfigCaps">
+            <summary>
+            From VIDEO_STREAM_CONFIG_CAPS
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.AudioStreamConfigCaps">
+            <summary>
+            From AUDIO_STREAM_CONFIG_CAPS
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.Quality">
+            <summary>
+            From Quality
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.QualityMessageType">
+            <summary>
+            From QualityMessageType
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.CameraControlProperty">
+            <summary>
+            From CameraControlProperty
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.CameraControlFlags">
+            <summary>
+            From CameraControlFlags
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.NotifyFlags">
+            <summary>
+            From define AM_MEDIAEVENT_NONOTIFY
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.OABool">
+            <summary>
+            From #define OATRUE/OAFALSE
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.WindowStyle">
+            <summary>
+            From WS_* defines
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.WindowStyleEx">
+            <summary>
+            From WS_EX_* defines
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.WindowState">
+            <summary>
+            From SW_* defines
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DispatchFlags">
+            <summary>
+            From DISPATCH_* defines
+            </summary>
+        </member>
+        <member name="M:DirectShow4Net.DES.DESError.ThrowExceptionForHR(System.Int32)">
+            <summary>
+            If hr has a "failed" status code (E_*), throw an exception.  Note that status
+            messages (S_*) are not considered failure codes.  If DES or DShow error text
+            is available, it is used to build the exception, otherwise a generic com error
+            is thrown.
+            </summary>
+            <param name="hr">The HRESULT to check</param>
+        </member>
+        <member name="T:DirectShow4Net.DES.AMTimeline">
+            <summary>
+            From CLSID_AMTimeline
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DES.PropertySetter">
+            <summary>
+            From CLSID_PropertySetter
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DES.AMTimelineObj">
+            <summary>
+            From CLSID_AMTimelineObj
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DES.AMTimelineSrc">
+            <summary>
+            From CLSID_AMTimelineSrc
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DES.AMTimelineTrack">
+            <summary>
+            From CLSID_AMTimelineTrack
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DES.AMTimelineComp">
+            <summary>
+            From CLSID_AMTimelineComp
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DES.AMTimelineGroup">
+            <summary>
+            From CLSID_AMTimelineGroup
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DES.AMTimelineTrans">
+            <summary>
+            From CLSID_AMTimelineTrans
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DES.AMTimelineEffect">
+            <summary>
+            From CLSID_AMTimelineEffect
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DES.RenderEngine">
+            <summary>
+            From CLSID_RenderEngine
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DES.SmartRenderEngine">
+            <summary>
+            From CLSID_SmartRenderEngine
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DES.AudMixer">
+            <summary>
+            From CLSID_AudMixer
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DES.Xml2Dex">
+            <summary>
+            From CLSID_Xml2Dex
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DES.MediaLocator">
+            <summary>
+            From CLSID_MediaLocator
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DES.MediaDet">
+            <summary>
+            From CLSID_MediaDet
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DES.DxtCompositor">
+            <summary>
+            From CLSID_DxtCompositor
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DES.DxtAlphaSetter">
+            <summary>
+            From CLSID_DxtAlphaSetter
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DES.DxtJpeg">
+            <summary>
+            From CLSID_DxtJpeg
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DES.ColorSource">
+            <summary>
+            From CLSID_ColorSource
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DES.DxtKey">
+            <summary>
+            From CLSID_DxtKey
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DES.TimelineMajorType">
+            <summary>
+            From TIMELINE_MAJOR_TYPE
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DES.TimelineInsertMode">
+            <summary>
+            From unnamed enum
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DES.SFNValidateFlags">
+            <summary>
+            From unnamed enum
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DES.SCompFmt0">
+            <summary>
+            From SCompFmt0
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DES.ResizeFlags">
+            <summary>
+            From unnamed enum
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DES.DexterFTrackSearchFlags">
+            <summary>
+            From DEXTERF_TRACK_SEARCH_FLAGS
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DES.DexterParam">
+            <summary>
+            From DEXTER_PARAM
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DES.ConnectFDynamic">
+            <summary>
+            From unnamed enum
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DES.DexterValue">
+            <summary>
+            From DEXTER_VALUE
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DES.Dexterf">
+            <summary>
+            From DEXTERF
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DES.DESErrorCode">
+            <summary>
+            From DEX_IDS_* defines
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.CDef">
+            <summary>
+            From CDEF_CLASS_* defines
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.PinConnectedStatus">
+            <summary>
+            Not from DirectShow
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.BitmapInfo">
+            <summary>
+            From BITMAPINFO
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.BitmapInfoHeader">
+            <summary>
+            From BITMAPINFOHEADER
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DDPixelFormat">
+            <summary>
+            From DDPIXELFORMAT
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DsCAUUID">
+            <summary>
+            From CAUUID
+            </summary>
+        </member>
+        <member name="M:DirectShow4Net.DsCAUUID.ToGuidArray">
+            <summary>
+            Perform a manual marshaling of pElems to retrieve an array of System.Guid.
+            Assume this structure has been already filled by the ISpecifyPropertyPages.GetPages() method.
+            </summary>
+            <returns>A managed representation of pElems (cElems items)</returns>
+        </member>
+        <member name="T:DirectShow4Net.DsLong">
+            <summary>
+            DirectShow4Net.DsLong is a wrapper class around a <see cref="T:System.Int64"/> value type.
+            </summary>
+            <remarks>
+            This class is necessary to enable null paramters passing.
+            </remarks>
+        </member>
+        <member name="M:DirectShow4Net.DsLong.#ctor(System.Int64)">
+            <summary>
+            Constructor
+            Initialize a new instance of DirectShow4Net.DsLong with the Value parameter
+            </summary>
+            <param name="Value">Value to assign to this new instance</param>
+        </member>
+        <member name="M:DirectShow4Net.DsLong.ToString">
+            <summary>
+            Get a string representation of this DirectShow4Net.DsLong Instance.
+            </summary>
+            <returns>A string representing this instance</returns>
+        </member>
+        <member name="M:DirectShow4Net.DsLong.op_Implicit(DirectShow4Net.DsLong)~System.Int64">
+             <summary>
+             Define implicit cast between DirectShow4Net.DsLong and System.Int64 for languages supporting this feature.
+             VB.Net doesn't support implicit cast. <see cref="M:DirectShow4Net.DsLong.ToInt64"/> for similar functionality.
+             <code>
+               // Define a new DsLong instance
+               DsLong dsL = new DsLong(9876543210);
+               // Do implicit cast between DsLong and Int64
+               long l = dsL;
+            
+               Console.WriteLine(l.ToString());
+             </code>
+             </summary>
+             <param name="g">DirectShow4Net.DsLong to be cast</param>
+             <returns>A casted System.Int64</returns>
+        </member>
+        <member name="M:DirectShow4Net.DsLong.op_Implicit(System.Int64)~DirectShow4Net.DsLong">
+             <summary>
+             Define implicit cast between System.Int64 and DirectShow4Net.DsLong for languages supporting this feature.
+             VB.Net doesn't support implicit cast. <see cref="!:DirectShow4Net.DsGuid.FromInt64"/> for similar functionality.
+             <code>
+               // Define a new Int64 instance
+               long l = 9876543210;
+               // Do implicit cast between Int64 and DsLong
+               DsLong dsl = l;
+            
+               Console.WriteLine(dsl.ToString());
+             </code>
+             </summary>
+             <param name="g">System.Int64 to be cast</param>
+             <returns>A casted DirectShow4Net.DsLong</returns>
+        </member>
+        <member name="M:DirectShow4Net.DsLong.ToInt64">
+            <summary>
+            Get the System.Int64 equivalent to this DirectShow4Net.DsLong instance.
+            </summary>
+            <returns>A System.Int64</returns>
+        </member>
+        <member name="M:DirectShow4Net.DsLong.FromInt64(System.Int64)">
+            <summary>
+            Get a new DirectShow4Net.DsLong instance for a given System.Int64
+            </summary>
+            <param name="g">The System.Int64 to wrap into a DirectShow4Net.DsLong</param>
+            <returns>A new instance of DirectShow4Net.DsLong</returns>
+        </member>
+        <member name="T:DirectShow4Net.DsGuid">
+            <summary>
+            DirectShow4Net.DsGuid is a wrapper class around a System.Guid value type.
+            </summary>
+            <remarks>
+            This class is necessary to enable null paramters passing.
+            </remarks>
+        </member>
+        <member name="M:DirectShow4Net.DsGuid.#ctor">
+            <summary>
+            Empty constructor. 
+            Initialize it with System.Guid.Empty
+            </summary>
+        </member>
+        <member name="M:DirectShow4Net.DsGuid.#ctor(System.String)">
+            <summary>
+            Constructor.
+            Initialize this instance with a given System.Guid string representation.
+            </summary>
+            <param name="g">A valid System.Guid as string</param>
+        </member>
+        <member name="M:DirectShow4Net.DsGuid.#ctor(System.Guid)">
+            <summary>
+            Constructor.
+            Initialize this instance with a given System.Guid.
+            </summary>
+            <param name="g">A System.Guid value type</param>
+        </member>
+        <member name="M:DirectShow4Net.DsGuid.ToString">
+            <summary>
+            Get a string representation of this DirectShow4Net.DsGuid Instance.
+            </summary>
+            <returns>A string representing this instance</returns>
+        </member>
+        <member name="M:DirectShow4Net.DsGuid.ToString(System.String)">
+            <summary>
+            Get a string representation of this DirectShow4Net.DsGuid Instance with a specific format.
+            </summary>
+            <param name="format"><see cref="M:System.Guid.ToString"/> for a description of the format parameter.</param>
+            <returns>A string representing this instance according to the format parameter</returns>
+        </member>
+        <member name="M:DirectShow4Net.DsGuid.op_Implicit(DirectShow4Net.DsGuid)~System.Guid">
+             <summary>
+             Define implicit cast between DirectShow4Net.DsGuid and System.Guid for languages supporting this feature.
+             VB.Net doesn't support implicit cast. <see cref="M:DirectShow4Net.DsGuid.ToGuid"/> for similar functionality.
+             <code>
+               // Define a new DsGuid instance
+               DsGuid dsG = new DsGuid("{33D57EBF-7C9D-435e-A15E-D300B52FBD91}");
+               // Do implicit cast between DsGuid and Guid
+               Guid g = dsG;
+            
+               Console.WriteLine(g.ToString());
+             </code>
+             </summary>
+             <param name="g">DirectShow4Net.DsGuid to be cast</param>
+             <returns>A casted System.Guid</returns>
+        </member>
+        <member name="M:DirectShow4Net.DsGuid.op_Implicit(System.Guid)~DirectShow4Net.DsGuid">
+             <summary>
+             Define implicit cast between System.Guid and DirectShow4Net.DsGuid for languages supporting this feature.
+             VB.Net doesn't support implicit cast. <see cref="M:DirectShow4Net.DsGuid.FromGuid(System.Guid)"/> for similar functionality.
+             <code>
+               // Define a new Guid instance
+               Guid g = new Guid("{B9364217-366E-45f8-AA2D-B0ED9E7D932D}");
+               // Do implicit cast between Guid and DsGuid
+               DsGuid dsG = g;
+            
+               Console.WriteLine(dsG.ToString());
+             </code>
+             </summary>
+             <param name="g">System.Guid to be cast</param>
+             <returns>A casted DirectShow4Net.DsGuid</returns>
+        </member>
+        <member name="M:DirectShow4Net.DsGuid.ToGuid">
+            <summary>
+            Get the System.Guid equivalent to this DirectShow4Net.DsGuid instance.
+            </summary>
+            <returns>A System.Guid</returns>
+        </member>
+        <member name="M:DirectShow4Net.DsGuid.FromGuid(System.Guid)">
+            <summary>
+            Get a new DirectShow4Net.DsGuid instance for a given System.Guid
+            </summary>
+            <param name="g">The System.Guid to wrap into a DirectShow4Net.DsGuid</param>
+            <returns>A new instance of DirectShow4Net.DsGuid</returns>
+        </member>
+        <member name="T:DirectShow4Net.DsInt">
+            <summary>
+            DirectShow4Net.DsInt is a wrapper class around a <see cref="T:System.Int32"/> value type.
+            </summary>
+            <remarks>
+            This class is necessary to enable null paramters passing.
+            </remarks>
+        </member>
+        <member name="M:DirectShow4Net.DsInt.#ctor(System.Int32)">
+            <summary>
+            Constructor
+            Initialize a new instance of DirectShow4Net.DsInt with the Value parameter
+            </summary>
+            <param name="Value">Value to assign to this new instance</param>
+        </member>
+        <member name="M:DirectShow4Net.DsInt.ToString">
+            <summary>
+            Get a string representation of this DirectShow4Net.DsInt Instance.
+            </summary>
+            <returns>A string representing this instance</returns>
+        </member>
+        <member name="M:DirectShow4Net.DsInt.op_Implicit(DirectShow4Net.DsInt)~System.Int32">
+             <summary>
+             Define implicit cast between DirectShow4Net.DsInt and System.Int64 for languages supporting this feature.
+             VB.Net doesn't support implicit cast. <see cref="!:DirectShow4Net.DsInt.ToInt64"/> for similar functionality.
+             <code>
+               // Define a new DsInt instance
+               DsInt dsI = new DsInt(0x12345678);
+               // Do implicit cast between DsInt and Int32
+               int i = dsI;
+            
+               Console.WriteLine(i.ToString());
+             </code>
+             </summary>
+             <param name="g">DirectShow4Net.DsInt to be cast</param>
+             <returns>A casted System.Int32</returns>
+        </member>
+        <member name="M:DirectShow4Net.DsInt.op_Implicit(System.Int32)~DirectShow4Net.DsInt">
+             <summary>
+             Define implicit cast between System.Int32 and DirectShow4Net.DsInt for languages supporting this feature.
+             VB.Net doesn't support implicit cast. <see cref="!:DirectShow4Net.DsGuid.FromInt32"/> for similar functionality.
+             <code>
+               // Define a new Int32 instance
+               int i = 0x12345678;
+               // Do implicit cast between Int64 and DsInt
+               DsInt dsI = i;
+            
+               Console.WriteLine(dsI.ToString());
+             </code>
+             </summary>
+             <param name="g">System.Int32 to be cast</param>
+             <returns>A casted DirectShow4Net.DsInt</returns>
+        </member>
+        <member name="M:DirectShow4Net.DsInt.ToInt32">
+            <summary>
+            Get the System.Int32 equivalent to this DirectShow4Net.DsInt instance.
+            </summary>
+            <returns>A System.Int32</returns>
+        </member>
+        <member name="M:DirectShow4Net.DsInt.FromInt32(System.Int32)">
+            <summary>
+            Get a new DirectShow4Net.DsInt instance for a given System.Int32
+            </summary>
+            <param name="g">The System.Int32 to wrap into a DirectShow4Net.DsInt</param>
+            <returns>A new instance of DirectShow4Net.DsInt</returns>
+        </member>
+        <member name="T:DirectShow4Net.DsShort">
+            <summary>
+            DirectShow4Net.DsShort is a wrapper class around a <see cref="T:System.Int16"/> value type.
+            </summary>
+            <remarks>
+            This class is necessary to enable null paramters passing.
+            </remarks>
+        </member>
+        <member name="M:DirectShow4Net.DsShort.#ctor(System.Int16)">
+            <summary>
+            Constructor
+            Initialize a new instance of DirectShow4Net.DsShort with the Value parameter
+            </summary>
+            <param name="Value">Value to assign to this new instance</param>
+        </member>
+        <member name="M:DirectShow4Net.DsShort.ToString">
+            <summary>
+            Get a string representation of this DirectShow4Net.DsShort Instance.
+            </summary>
+            <returns>A string representing this instance</returns>
+        </member>
+        <member name="M:DirectShow4Net.DsShort.op_Implicit(DirectShow4Net.DsShort)~System.Int16">
+             <summary>
+             Define implicit cast between DirectShow4Net.DsShort and System.Int16 for languages supporting this feature.
+             VB.Net doesn't support implicit cast. <see cref="!:DirectShow4Net.DsShort.ToInt64"/> for similar functionality.
+             <code>
+               // Define a new DsShort instance
+               DsShort dsS = new DsShort(0x1234);
+               // Do implicit cast between DsShort and Int16
+               short s = dsS;
+            
+               Console.WriteLine(s.ToString());
+             </code>
+             </summary>
+             <param name="g">DirectShow4Net.DsShort to be cast</param>
+             <returns>A casted System.Int16</returns>
+        </member>
+        <member name="M:DirectShow4Net.DsShort.op_Implicit(System.Int16)~DirectShow4Net.DsShort">
+             <summary>
+             Define implicit cast between System.Int16 and DirectShow4Net.DsShort for languages supporting this feature.
+             VB.Net doesn't support implicit cast. <see cref="!:DirectShow4Net.DsGuid.FromInt16"/> for similar functionality.
+             <code>
+               // Define a new Int16 instance
+               short s = 0x1234;
+               // Do implicit cast between Int64 and DsShort
+               DsShort dsS = s;
+            
+               Console.WriteLine(dsS.ToString());
+             </code>
+             </summary>
+             <param name="g">System.Int16 to be cast</param>
+             <returns>A casted DirectShow4Net.DsShort</returns>
+        </member>
+        <member name="M:DirectShow4Net.DsShort.ToInt16">
+            <summary>
+            Get the System.Int16 equivalent to this DirectShow4Net.DsShort instance.
+            </summary>
+            <returns>A System.Int16</returns>
+        </member>
+        <member name="M:DirectShow4Net.DsShort.FromInt16(System.Int16)">
+            <summary>
+            Get a new DirectShow4Net.DsShort instance for a given System.Int64
+            </summary>
+            <param name="g">The System.Int16 to wrap into a DirectShow4Net.DsShort</param>
+            <returns>A new instance of DirectShow4Net.DsShort</returns>
+        </member>
+        <member name="T:DirectShow4Net.DsRect">
+            <summary>
+            DirectShow4Net.DsRect is a managed representation of the Win32 RECT structure.
+            </summary>
+        </member>
+        <member name="M:DirectShow4Net.DsRect.#ctor">
+            <summary>
+            Empty contructor. Initialize all fields to 0
+            </summary>
+        </member>
+        <member name="M:DirectShow4Net.DsRect.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            A parametred constructor. Initialize fields with given values.
+            </summary>
+            <param name="left">the left value</param>
+            <param name="top">the top value</param>
+            <param name="right">the right value</param>
+            <param name="bottom">the bottom value</param>
+        </member>
+        <member name="M:DirectShow4Net.DsRect.#ctor(System.Drawing.Rectangle)">
+            <summary>
+            A parametred constructor. Initialize fields with a given <see cref="T:System.Drawing.Rectangle"/>.
+            </summary>
+            <param name="rectangle">A <see cref="T:System.Drawing.Rectangle"/></param>
+            <remarks>
+            Warning, DsRect define a rectangle by defining two of his corners and <see cref="T:System.Drawing.Rectangle"/> define a rectangle with his upper/left corner, his width and his height.
+            </remarks>
+        </member>
+        <member name="M:DirectShow4Net.DsRect.ToString">
+            <summary>
+            Provide de string representation of this DsRect instance
+            </summary>
+            <returns>A string formated like this : [left, top - right, bottom]</returns>
+        </member>
+        <member name="M:DirectShow4Net.DsRect.op_Implicit(DirectShow4Net.DsRect)~System.Drawing.Rectangle">
+             <summary>
+             Define implicit cast between DirectShow4Net.DsRect and System.Drawing.Rectangle for languages supporting this feature.
+             VB.Net doesn't support implicit cast. <see cref="M:DirectShow4Net.DsRect.ToRectangle"/> for similar functionality.
+             <code>
+               // Define a new Rectangle instance
+               Rectangle r = new Rectangle(0, 0, 100, 100);
+               // Do implicit cast between Rectangle and DsRect
+               DsRect dsR = r;
+            
+               Console.WriteLine(dsR.ToString());
+             </code>
+             </summary>
+             <param name="r">a DsRect to be cast</param>
+             <returns>A casted System.Drawing.Rectangle</returns>
+        </member>
+        <member name="M:DirectShow4Net.DsRect.op_Implicit(System.Drawing.Rectangle)~DirectShow4Net.DsRect">
+             <summary>
+             Define implicit cast between System.Drawing.Rectangle and DirectShow4Net.DsRect for languages supporting this feature.
+             VB.Net doesn't support implicit cast. <see cref="M:DirectShow4Net.DsRect.FromRectangle(System.Drawing.Rectangle)"/> for similar functionality.
+             <code>
+               // Define a new DsRect instance
+               DsRect dsR = new DsRect(0, 0, 100, 100);
+               // Do implicit cast between DsRect and Rectangle
+               Rectangle r = dsR;
+            
+               Console.WriteLine(r.ToString());
+             </code>
+             </summary>
+             <param name="r">A System.Drawing.Rectangle to be cast</param>
+             <returns>A casted DsRect</returns>
+        </member>
+        <member name="M:DirectShow4Net.DsRect.ToRectangle">
+            <summary>
+            Get the System.Drawing.Rectangle equivalent to this DirectShow4Net.DsRect instance.
+            </summary>
+            <returns>A System.Drawing.Rectangle</returns>
+        </member>
+        <member name="M:DirectShow4Net.DsRect.FromRectangle(System.Drawing.Rectangle)">
+            <summary>
+            Get a new DirectShow4Net.DsRect instance for a given <see cref="T:System.Drawing.Rectangle"/>
+            </summary>
+            <param name="r">The <see cref="T:System.Drawing.Rectangle"/> used to initialize this new DirectShow4Net.DsGuid</param>
+            <returns>A new instance of DirectShow4Net.DsGuid</returns>
+        </member>
+        <member name="M:DirectShow4Net.DsError.ThrowExceptionForHR(System.Int32)">
+            <summary>
+            If hr has a "failed" status code (E_*), throw an exception.  Note that status
+            messages (S_*) are not considered failure codes.  If DirectShow error text
+            is available, it is used to build the exception, otherwise a generic com error
+            is thrown.
+            </summary>
+            <param name="hr">The HRESULT to check</param>
+        </member>
+        <member name="M:DirectShow4Net.DsError.GetErrorText(System.Int32)">
+            <summary>
+            Returns a string describing a DS error.  Works for both error codes
+            (values 《 0) and Status codes (values 》= 0)
+            </summary>
+            <param name="hr">HRESULT for which to get description</param>
+            <returns>The string, or null if no error text can be found</returns>
+        </member>
+        <member name="M:DirectShow4Net.DsUtils.GetPinCategory(DirectShow4Net.IPin)">
+            <summary>
+            Returns the PinCategory of the specified pin.  Usually a member of PinCategory.  Not all pins have a category.
+            </summary>
+            <param name="pPin"></param>
+            <returns>Guid indicating pin category or Guid.Empty on no category.  Usually a member of PinCategory</returns>
+        </member>
+        <member name="M:DirectShow4Net.DsUtils.FreeAMMediaType(DirectShow4Net.AMMediaType)">
+            <summary>
+             Free the nested structures and release any
+             COM objects within an AMMediaType struct.
+            </summary>
+        </member>
+        <member name="M:DirectShow4Net.DsUtils.FreePinInfo(DirectShow4Net.PinInfo)">
+            <summary>
+             Free the nested interfaces within a PinInfo struct.
+            </summary>
+        </member>
+        <member name="P:DirectShow4Net.DsDevice.DevicePath">
+            <summary>
+            Returns a unique identifier for a device
+            </summary>
+        </member>
+        <member name="P:DirectShow4Net.DsDevice.ClassID">
+            <summary>
+            Returns the ClassID for a device
+            </summary>
+        </member>
+        <member name="M:DirectShow4Net.DsDevice.GetDevicesOfCat(System.Guid)">
+            <summary>
+            Returns an array of DsDevices of type devcat.
+            </summary>
+            <param name="cat">Any one of FilterCategory</param>
+        </member>
+        <member name="M:DirectShow4Net.DsDevice.GetPropBagValue(System.String)">
+            <summary>
+            Get a specific PropertyBag value from a moniker
+            </summary>
+            <param name="sPropName">The name of the value to retrieve</param>
+            <returns>String or null on error</returns>
+        </member>
+        <member name="M:DirectShow4Net.DsFindPin.ByDirection(DirectShow4Net.IBaseFilter,DirectShow4Net.PinDirection,System.Int32)">
+            <summary>
+            Scans a filter's pins looking for a pin in the specified direction
+            </summary>
+            <param name="vSource">The filter to scan</param>
+            <param name="vDir">The direction to find</param>
+            <param name="iIndex">Zero based index (ie 2 will return the third pin in the specified direction)</param>
+            <returns>The matching pin, or null if not found</returns>
+        </member>
+        <member name="M:DirectShow4Net.DsFindPin.ByName(DirectShow4Net.IBaseFilter,System.String)">
+            <summary>
+            Scans a filter's pins looking for a pin with the specified name
+            </summary>
+            <param name="vSource">The filter to scan</param>
+            <param name="vPinName">The pin name to find</param>
+            <returns>The matching pin, or null if not found</returns>
+        </member>
+        <member name="M:DirectShow4Net.DsFindPin.ByCategory(DirectShow4Net.IBaseFilter,System.Guid,System.Int32)">
+            <summary>
+            Scan's a filter's pins looking for a pin with the specified category
+            </summary>
+            <param name="vSource">The filter to scan</param>
+            <param name="PinCategory">The guid from PinCategory to scan for</param>
+            <param name="iIndex">Zero based index (ie 2 will return the third pin of the specified category)</param>
+            <returns>The matching pin, or null if not found</returns>
+        </member>
+        <member name="M:DirectShow4Net.DsFindPin.ByConnectionStatus(DirectShow4Net.IBaseFilter,DirectShow4Net.PinConnectedStatus,System.Int32)">
+            <summary>
+            Scans a filter's pins looking for a pin with the specified connection status
+            </summary>
+            <param name="vSource">The filter to scan</param>
+            <param name="vStat">The status to find (connected/unconnected)</param>
+            <param name="iIndex">Zero based index (ie 2 will return the third pin with the specified status)</param>
+            <returns>The matching pin, or null if not found</returns>
+        </member>
+        <member name="M:DirectShow4Net.DsToString.AMMediaTypeToString(DirectShow4Net.AMMediaType)">
+            <summary>
+            Produces a usable string that describes the MediaType object
+            </summary>
+            <returns>Concatenation of MajorType + SubType + FormatType + Fixed + Temporal + SampleSize.ToString</returns>
+        </member>
+        <member name="M:DirectShow4Net.DsToString.MediaTypeToString(System.Guid)">
+            <summary>
+            Converts AMMediaType.MajorType Guid to a readable string
+            </summary>
+            <returns>MajorType Guid as a readable string or Guid if unrecognized</returns>
+        </member>
+        <member name="M:DirectShow4Net.DsToString.MediaSubTypeToString(System.Guid)">
+            <summary>
+            Converts the AMMediaType.SubType Guid to a readable string
+            </summary>
+            <returns>SubType Guid as a readable string or Guid if unrecognized</returns>
+        </member>
+        <member name="M:DirectShow4Net.DsToString.MediaFormatTypeToString(System.Guid)">
+            <summary>
+            Converts the AMMediaType.FormatType Guid to a readable string
+            </summary>
+            <returns>FormatType Guid as a readable string or Guid if unrecognized</returns>
+        </member>
+        <member name="M:DirectShow4Net.DsToString.WalkClass(System.Type,System.Guid)">
+            <summary>
+            Use reflection to walk a class looking for a property containing a specified guid
+            </summary>
+            <param name="MyType">Class to scan</param>
+            <param name="guid">Guid to scan for</param>
+            <returns>String representing property name that matches, or Guid.ToString() for no match</returns>
+        </member>
+        <member name="T:DirectShow4Net.Dvd.DvdDomain">
+            <summary>
+            From DVD_DOMAIN
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.Dvd.DvdMenuId">
+            <summary>
+            From DVD_MENU_ID
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.Dvd.DvdDiscSide">
+            <summary>
+            From DVD_DISC_SIDE
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.Dvd.DvdPreferredDisplayMode">
+            <summary>
+            From DVD_PREFERRED_DISPLAY_MODE
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.Dvd.DvdFrameRate">
+            <summary>
+            From DVD_FRAMERATE
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.Dvd.DvdTimeCodeFlags">
+            <summary>
+            From DVD_TIMECODE_FLAGS
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.Dvd.ValidUOPFlag">
+            <summary>
+            From VALID_UOP_FLAG
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.Dvd.DvdCmdFlags">
+            <summary>
+            From DVD_CMD_FLAGS
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.Dvd.DvdOptionFlag">
+            <summary>
+            From DVD_OPTION_FLAG
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.Dvd.DvdRelativeButton">
+            <summary>
+            From DVD_RELATIVE_BUTTON
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.Dvd.DvdParentalLevel">
+            <summary>
+            From DVD_PARENTAL_LEVEL
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.Dvd.DvdAudioLangExt">
+            <summary>
+            From DVD_AUDIO_LANG_EXT
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.Dvd.DvdSubPictureLangExt">
+            <summary>
+            From DVD_SUBPICTURE_LANG_EXT
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.Dvd.DvdAudioAppMode">
+            <summary>
+            From DVD_AUDIO_APPMODE
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.Dvd.DvdAudioFormat">
+            <summary>
+            From DVD_AUDIO_FORMAT
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.Dvd.DvdKaraokeDownMix">
+            <summary>
+            From DVD_KARAOKE_DOWNMIX
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.Dvd.DvdKaraokeContents">
+            <summary>
+            From DVD_KARAOKE_CONTENTS
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.Dvd.DvdKaraokeAssignment">
+            <summary>
+            From DVD_KARAOKE_ASSIGNMENT
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.Dvd.DvdVideoCompression">
+            <summary>
+            From DVD_VIDEO_COMPRESSION
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.Dvd.DvdSubPictureType">
+            <summary>
+            From DVD_SUBPICTURE_TYPE
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.Dvd.DvdSubPictureCoding">
+            <summary>
+            From DVD_SUBPICTURE_CODING
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.Dvd.DvdTitleAppMode">
+            <summary>
+            From DVD_TITLE_APPMODE
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.Dvd.DvdTextStringType">
+            <summary>
+            From DVD_TextStringType
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.Dvd.DvdTextCharSet">
+            <summary>
+            From DVD_TextCharSet
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.Dvd.DvdAudioCaps">
+            <summary>
+            From DVD_AUDIO_CAPS_* defines
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.Dvd.AMDvdGraphFlags">
+            <summary>
+            From AM_DVD_GRAPH_FLAGS
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.Dvd.AMDvdStreamFlags">
+            <summary>
+            From AM_DVD_STREAM_FLAGS
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.Dvd.GPRMArray">
+            <summary>
+            From GPRMARRAY
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.Dvd.SPRMArray">
+            <summary>
+            From SPRMARRAY
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.Dvd.DvdHMSFTimeCode">
+            <summary>
+            From DVD_HMSF_TIMECODE
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.Dvd.DvdPlaybackLocation2">
+            <summary>
+            From DVD_PLAYBACK_LOCATION2
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.Dvd.DvdAudioAttributes">
+            <summary>
+            From DVD_AudioAttributes
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.Dvd.DvdMUAMixingInfo">
+            <summary>
+            From DVD_MUA_MixingInfo
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.Dvd.DvdMUACoeff">
+            <summary>
+            From DVD_MUA_Coeff
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.Dvd.DvdMultichannelAudioAttributes">
+            <summary>
+            From DVD_MultichannelAudioAttributes
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.Dvd.DvdKaraokeAttributes">
+            <summary>
+            From DVD_KaraokeAttributes
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.Dvd.DvdVideoAttributes">
+            <summary>
+            From DVD_VideoAttributes
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.Dvd.DvdSubpictureAttributes">
+            <summary>
+            From DVD_SubpictureAttributes
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.Dvd.DvdTitleAttributes">
+            <summary>
+            From DVD_TitleAttributes
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.Dvd.DvdMenuAttributes">
+            <summary>
+            From DVD_MenuAttributes
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.Dvd.DvdDecoderCaps">
+            <summary>
+            From DVD_DECODER_CAPS
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.Dvd.AMDvdRenderStatus">
+            <summary>
+            From AM_DVD_RENDERSTATUS
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.AMPinFlowControl">
+            <summary>
+            From _AM_PIN_FLOW_CONTROL_BLOCK_FLAGS
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.AMGraphConfigReconnect">
+            <summary>
+            From AM_GRAPH_CONFIG_RECONNECT_FLAGS
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.AMFilterFlags">
+            <summary>
+            From _AM_FILTER_FLAGS
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.RemFilterFlags">
+            <summary>
+            From _REM_FILTER_FLAGS
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.AMLine21CCLevel">
+            <summary>
+            From AM_LINE21_CCLEVEL
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.AMLine21CCService">
+            <summary>
+            From AM_LINE21_CCSERVICE
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.AMLine21CCState">
+            <summary>
+            From AM_LINE21_CCSTATE
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.AMLine21DrawBGMode">
+            <summary>
+            From AM_LINE21_DRAWBGMODE
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DMO.DMOOutputDataBufferFlags">
+            <summary>
+            From _DMO_OUTPUT_DATA_BUFFER_FLAGS
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DMO.DMOEnumerator">
+            <summary>
+            From DMO_ENUM_FLAGS
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DMO.DMORegisterFlags">
+            <summary>
+            From DMO_REGISTER_FLAGS
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DMO.DMOProcessOutput">
+            <summary>
+            From DMO_PROCESS_OUTPUT_FLAGS
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DMO.DMOInputDataBuffer">
+            <summary>
+            From DMO_INPUT_DATA_BUFFER_FLAGS
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DMO.DMOInplaceProcess">
+            <summary>
+            From DMO_INPLACE_PROCESS_FLAGS
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DMO.DMOInputStreamInfo">
+            <summary>
+            From DMO_INPUT_STREAM_INFO_FLAGS
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DMO.DMOOutputStreamInfo">
+            <summary>
+            From DMO_OUTPUT_STREAM_INFO_FLAGS
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DMO.DMOSetType">
+            <summary>
+            From _DMO_SET_TYPE_FLAGS
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DMO.DMOInputStatusFlags">
+            <summary>
+            From DMO_INPUT_STATUS_FLAGS
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DMO.DMOVideoOutputStream">
+            <summary>
+            From DMO_VIDEO_OUTPUT_STREAM_FLAGS
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DMO.DMOPartialMediatype">
+            <summary>
+            From DMO_PARTIAL_MEDIATYPE
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DMO.DMOOutputDataBuffer">
+            <summary>
+            From DMO_OUTPUT_DATA_BUFFER
+            </summary>
+        </member>
+        <member name="F:DirectShow4Net.DMO.DMOCategory.AudioDecoder">
+            <summary> DMOCATEGORY_AUDIO_DECODER </summary>
+        </member>
+        <member name="F:DirectShow4Net.DMO.DMOCategory.AudioEncoder">
+            <summary> DMOCATEGORY_AUDIO_ENCODER </summary>
+        </member>
+        <member name="F:DirectShow4Net.DMO.DMOCategory.VideoDecoder">
+            <summary> DMOCATEGORY_VIDEO_DECODER </summary>
+        </member>
+        <member name="F:DirectShow4Net.DMO.DMOCategory.VideoEncoder">
+            <summary> DMOCATEGORY_VIDEO_ENCODER </summary>
+        </member>
+        <member name="F:DirectShow4Net.DMO.DMOCategory.AudioEffect">
+            <summary> DMOCATEGORY_AUDIO_EFFECT </summary>
+        </member>
+        <member name="F:DirectShow4Net.DMO.DMOCategory.VideoEffect">
+            <summary> DMOCATEGORY_VIDEO_EFFECT </summary>
+        </member>
+        <member name="F:DirectShow4Net.DMO.DMOCategory.AudioCaptureEffect">
+            <summary> DMOCATEGORY_AUDIO_CAPTURE_EFFECT </summary>
+        </member>
+        <member name="M:DirectShow4Net.DMO.DMOError.ThrowExceptionForHR(System.Int32)">
+            <summary>
+            If hr has a "failed" status code (E_*), throw an exception.  Note that status
+            messages (S_*) are not considered failure codes.  If DMO or DShow error text
+            is available, it is used to build the exception, otherwise a generic COM error
+            is thrown.
+            </summary>
+            <param name="hr">The HRESULT to check</param>
+        </member>
+        <member name="F:DirectShow4Net.DMO.MediaParamTimeFormat.Reference">
+            <summary> GUID_TIME_REFERENCE </summary>
+        </member>
+        <member name="F:DirectShow4Net.DMO.MediaParamTimeFormat.Music">
+            <summary> GUID_TIME_MUSIC </summary>
+        </member>
+        <member name="F:DirectShow4Net.DMO.MediaParamTimeFormat.Samples">
+            <summary> GUID_TIME_SAMPLES, audio capture category </summary>
+        </member>
+        <member name="T:DirectShow4Net.DMO.MPData">
+            <summary>
+            From MP_DATA
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DMO.MPEnvelopeSegment">
+            <summary>
+            From MP_ENVELOPE_SEGMENT
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DMO.MPFlags">
+            <summary>
+            From MPF_ENVLP_* defines
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DMO.MPType">
+            <summary>
+            From MP_TYPE
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DMO.MPCaps">
+            <summary>
+            From MP_CAPS_CURVE* defines
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DMO.ParamInfo">
+            <summary>
+            From MP_PARAMINFO
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.KSMultipleItem">
+            <summary>
+            From KSMULTIPLE_ITEM - Note that data is returned in the memory IMMEDIATELY following this struct.
+            The Size parm indicates ths size of the KSMultipleItem plus the extra bytes.
+            </summary>
+        </member>
+        <member name="M:DirectShow4Net.IKsPin.KsQueryMediums(System.IntPtr@)">
+            <summary>
+            The caller must free the returned structures, using the CoTaskMemFree function
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.MixerData">
+            <summary>
+            From MIXER_DATA_* defines
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.MixerState">
+            <summary>
+            From MIXER_STATE_* defines
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DDColor">
+            <summary>
+            From DDCOLOR_* defines
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DDColorControl">
+            <summary>
+            From DDCOLORCONTROL
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.MPEGRequestType">
+            <summary>
+            From MPEG_REQUEST_TYPE
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.MPEGContextType">
+            <summary>
+            From MPEG_CONTEXT_TYPE
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.MPEGPacketList">
+            <summary>
+            From MPEG_PACKET_LIST
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DSMCCFilterOptions">
+            <summary>
+            From DSMCC_FILTER_OPTIONS
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.ATSCFilterOptions">
+            <summary>
+            From ATSC_FILTER_OPTIONS
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.MPEG2Filter">
+            <summary>
+            From MPEG2_FILTER
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DVB_EIT_FILTER_OPTIONS">
+            <summary>
+            From DVB_EIT_FILTER_OPTIONS
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.MPEG2Filter2">
+            <summary>
+            From MPEG2_FILTER2
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.MPEGContextUnion">
+            <summary>
+            From unnamed union
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.BCSDeMux">
+            <summary>
+            From MPEG_BCS_DEMUX
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.MPEGWinSock">
+            <summary>
+            From MPEG_WINSOCK
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.MPEGContext">
+            <summary>
+            From MPEG_CONTEXT
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.MPEGStreamBuffer">
+            <summary>
+            From MPEG_STREAM_BUFFER
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.WSTLevel">
+            <summary>
+            From AM_WST_LEVEL
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.WSTService">
+            <summary>
+            From AM_WST_SERVICE
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.WSTState">
+            <summary>
+            From AM_WST_STATE
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.WSTDrawBGMode">
+            <summary>
+            From AM_WST_DRAWBGMODE
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.MPEGAudioDivider">
+            <summary>
+            Not from DirectShow
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.MPEGAudioDual">
+            <summary>
+            From AM_MPEG_AUDIO_DUAL_* defines
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.MPEGAudioAccuracy">
+            <summary>
+            Not from DirectShow
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.MPEGAudioChannels">
+            <summary>
+            Not from DirectShow
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.WSTPage">
+            <summary>
+            From AM_WST_PAGE
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.AcmMpegHeadLayer">
+            <summary>
+            From ACM_MPEG_LAYER* defines
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.AcmMpegHeadMode">
+            <summary>
+            From ACM_MPEG_* defines
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.AcmMpegHeadFlags">
+            <summary>
+            From ACM_MPEG_* defines
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.WaveMask">
+            <summary>
+            From SPEAKER_* defines
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.MPEG1WaveFormat">
+            <summary>
+            From MPEG1WAVEFORMAT
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.WaveFormatExtensible">
+            <summary>
+            From WAVEFORMATEXTENSIBLE
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.ASFWriterConfig">
+            <summary>
+            From _AM_ASFWRITERCONFIG_PARAM
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.AMInterlace">
+            <summary>
+            From AMINTERLACE_*
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.AMCopyProtect">
+            <summary>
+            From AMCOPYPROTECT_*
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.AMControl">
+            <summary>
+            From AMCONTROL_*
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.VideoInfoHeader">
+            <summary>
+            From VIDEOINFOHEADER
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.VideoInfoHeader2">
+            <summary>
+            From VIDEOINFOHEADER2
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.WaveFormatEx">
+            <summary>
+            From WAVEFORMATEX
+            </summary>
+        </member>
+        <member name="M:DirectShow4Net.ISampleGrabberCB.SampleCB(System.Double,DirectShow4Net.IMediaSample)">
+            <summary>
+            When called, callee must release pSample
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.AMExtendedSeekingCapabilities">
+            <summary>
+            From AMExtendedSeekingCapabilities
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.SBE.RecordingType">
+            <summary>
+            From unnamed structure
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.SBE.StreamBufferAttrDataType">
+            <summary>
+            From STREAMBUFFER_ATTR_DATATYPE
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.SBE.StreamBufferEventCode">
+            <summary>
+            From unnamed structure
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.SBE.StreamBufferRecording">
+            <summary>
+            From g_wszStreamBufferRecording* static const WCHAR
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.SBE.StreamBufferAttribute">
+            <summary>
+            From STREAMBUFFER_ATTRIBUTE
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.SBE.SBEPinData">
+            <summary>
+            From SBE_PIN_DATA
+            </summary>
+        </member>
+        <member name="F:DirectShow4Net.SBE.SBEEvent.RecControlStarted">
+            <summary> EVENTID_SBE2RecControlStarted </summary>
+        </member>
+        <member name="F:DirectShow4Net.SBE.SBEEvent.RecControlStopped">
+            <summary> EVENTID_SBE2RecControlStopped </summary>
+        </member>
+        <member name="F:DirectShow4Net.SBE.SBEEvent.StreamDescEvent">
+            <summary> SBE2_STREAM_DESC_EVENT </summary>
+        </member>
+        <member name="F:DirectShow4Net.SBE.SBEEvent.V1StreamsCreationEvent">
+            <summary> SBE2_V1_STREAMS_CREATION_EVENT </summary>
+        </member>
+        <member name="F:DirectShow4Net.SBE.SBEEvent.V2StreamsCreationEvent">
+            <summary> SBE2_V2_STREAMS_CREATION_EVENT </summary>
+        </member>
+        <member name="T:DirectShow4Net.SBE.CrossbarDefaultFlags">
+            <summary>
+            From CROSSBAR_DEFAULT_FLAGS
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.SBE.SBE2_StreamDesc">
+            <summary>
+            From SBE2_STREAM_DESC
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.SBE.DVRStreamDesc">
+            <summary>
+            From DVR_STREAM_DESC
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.StreamBufferRecordingAttributes">
+            <summary>
+            CLSID_StreamBufferRecordingAttributes
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.AudioRecord">
+            <summary>
+            CLSID_AudioRecord
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.AVICo">
+            <summary>
+            CLSID_AVICo
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.AVIDoc">
+            <summary>
+            CLSID_AVIDoc
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.AviReader">
+            <summary>
+            CLSID_AviReader
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.FGControl">
+            <summary>
+            CLSID_FGControl 
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.FileSource">
+            <summary>
+            CLSID_FileSource
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.FilterMapper">
+            <summary>
+            CLSID_FilterMapper
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.ProtoFilterGraph">
+            <summary>
+            CLSID_ProtoFilterGraph
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.MOVReader">
+            <summary>
+            CLSID_MOVReader
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.VPObject">
+            <summary>
+            CLSID_VPObject
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.VPVBIObject">
+            <summary>
+            CLSID_VPVBIObject
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.MPEG1Doc">
+            <summary>
+            CLSID_MPEG1Doc
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.TextRender">
+            <summary>
+            CLSID_TextRender
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.CDeviceMoniker">
+            <summary>
+            CLSID_CDeviceMoniker
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DTFilter">
+            <summary>
+            CLSID_DTFilter
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.ETFilter">
+            <summary>
+            CLSID_ETFilter
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.FilterGraphPrivateThread">
+            <summary>
+            CLSID_FilterGraphPrivateThread
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DtvCcFilter">
+            <summary>
+            CLSID_DtvCcFilter
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.MSTVCaptionFilter">
+            <summary>
+            CLSID_MSTVCaptionFilter
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.CreateDevEnum">
+            <summary>
+            CLSID_SystemDeviceEnum
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.FilterGraph">
+            <summary>
+            CLSID_FilterGraph
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.FilterGraphNoThread">
+            <summary>
+            CLSID_FilterGraphNoThread
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.CaptureGraphBuilder2">
+            <summary>
+            CLSID_CaptureGraphBuilder2
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DvdGraphBuilder">
+            <summary>
+            CLSID_DvdGraphBuilder
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.CaptureGraphBuilder">
+            <summary>
+            CLSID_CaptureGraphBuilder
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.StreamBufferConfig">
+            <summary>
+            CLSID_StreamBufferConfig
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.StreamBufferComposeRecording">
+            <summary>
+            CLSID_StreamBufferComposeRecording
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.SeekingPassThru">
+            <summary>
+            CLSID_SeekingPassThru
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.FilterMapper2">
+            <summary>
+            CLSID_FilterMapper2
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.MemoryAllocator">
+            <summary>
+            CLSID_MemoryAllocator
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.MediaPropertyBag">
+            <summary>
+            CLSID_MediaPropertyBag
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DVDState">
+            <summary>
+            CLSID_DVDState
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.SectionList">
+            <summary>
+            CLSID_SectionList
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.Mpeg2Stream">
+            <summary>
+            CLSID_Mpeg2Stream
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.Mpeg2Data">
+            <summary>
+            CLSID_Mpeg2Data
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.SAMIParser">
+            <summary>
+            Unnamed clsid
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.InternalScriptCommandRenderer">
+            <summary>
+            Unnamed clsid
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.BroadcastEventService">
+            <summary>
+            CLSID_BroadcastEventService
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.AtscPsipParser">
+            <summary>
+            CLSID_AtscPsipParser
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DvbSiParser">
+            <summary>
+            CLSID_DvbSiParser
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DMOWrapperFilter">
+            <summary>
+            CLSID_DMOWrapperFilter
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.StreamBufferSink">
+            <summary>
+            CLSID_StreamBufferSink
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.SampleGrabber">
+            <summary>
+            CLSID_SampleGrabber
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.StreamBufferSource">
+            <summary>
+            CLSID_StreamBufferSource
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.VideoMixingRenderer">
+            <summary>
+            CLSID_VideoMixingRenderer
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.VideoMixingRenderer9">
+            <summary>
+            CLSID_VideoMixingRenderer9
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.VideoRendererDefault">
+            <summary>
+            CLSID_VideoRendererDefault
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.AviSplitter">
+            <summary>
+            CLSID_AviSplitter
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.SmartTee">
+            <summary>
+            CLSID_SmartTee
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.NullRenderer">
+            <summary>
+            CLSID_NullRenderer
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.ACMWrapper">
+            <summary>
+            CLSID_ACMWrapper
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.AudioRender">
+            <summary>
+            CLSID_AudioRender
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.AVIDec">
+            <summary>
+            CLSID_AVIDec
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.AVIDraw">
+            <summary>
+            CLSID_AVIDraw
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.AviDest">
+            <summary>
+            CLSID_AviDest
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.ATSCNetworkProvider">
+            <summary>
+            CLSID_ATSCNetworkProvider
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DVBCNetworkProvider">
+            <summary>
+            CLSID_DVBCNetworkProvider
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DVBSNetworkProvider">
+            <summary>
+            CLSID_DVBSNetworkProvider
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DVBTNetworkProvider">
+            <summary>
+            CLSID_DVBTNetworkProvider
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.NetworkProvider">
+            <summary>
+            CLSID_NetworkProvider
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.Colour">
+            <summary>
+            CLSID_Colour
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DSoundRender">
+            <summary>
+            CLSID_DSoundRender
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DVMux">
+            <summary>
+            CLSID_DVMux
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DVSplitter">
+            <summary>
+            CLSID_DVSplitter
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DVVideoCodec">
+            <summary>
+            CLSID_DVVideoCodec
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DVVideoEnc">
+            <summary>
+            CLSID_DVVideoEnc
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DVDNavigator">
+            <summary>
+            CLSID_DVDNavigator
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.AsyncReader">
+            <summary>
+            CLSID_AsyncReader
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.URLReader">
+            <summary>
+            CLSID_URLReader
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.FileWriter">
+            <summary>
+            CLSID_FileWriter
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.ModexRenderer">
+            <summary>
+            CLSID_ModexRenderer
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.InfTee">
+            <summary>
+            CLSID_InfTee
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.Line21Decoder">
+            <summary>
+            CLSID_Line21Decoder
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.Line21Decoder2">
+            <summary>
+            CLSID_Line21Decoder2
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.AVIMIDIRender">
+            <summary>
+            CLSID_AVIMIDIRender
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.MJPGEnc">
+            <summary>
+            CLSID_MJPGEnc
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.MjpegDec">
+            <summary>
+            CLSID_MjpegDec
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.CMpegAudioCodec">
+            <summary>
+            CLSID_CMpegAudioCodec
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.MPEG1Splitter">
+            <summary>
+            CLSID_MPEG1Splitter
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.CMpegVideoCodec">
+            <summary>
+            CLSID_CMpegVideoCodec
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.MPEG2Demultiplexer">
+            <summary>
+            CLSID_MPEG2Demultiplexer
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.MMSPLITTER">
+            <summary>
+            CLSID_MMSPLITTER
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.OverlayMixer">
+            <summary>
+            CLSID_OverlayMixer
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.OverlayMixer2">
+            <summary>
+            CLSID_OverlayMixer2
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.QTDec">
+            <summary>
+            CLSID_QTDec
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.QuickTimeParser">
+            <summary>
+            CLSID_QuickTimeParser
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.VBISurfaces">
+            <summary>
+            CLSID_VBISurfaces
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.VfwCapture">
+            <summary>
+            CLSID_VfwCapture
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.Dither">
+            <summary>
+            CLSID_Dither
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.VideoPortManager">
+            <summary>
+            CLSID_VideoPortManager
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.VideoRenderer">
+            <summary>
+            CLSID_VideoRenderer
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.WMAsfReader">
+            <summary>
+            CLSID_WMAsfReader
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.SystemClock">
+            <summary>
+            CLSID_SystemClock
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.WMAsfWriter">
+            <summary>
+            CLSID_WMAsfWriter
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.WSTDecoder">
+            <summary>
+            CLSID_WSTDecoder
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.Mpeg2VideoStreamAnalyzer">
+            <summary>
+            CLSID_Mpeg2VideoStreamAnalyzer
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.PTFilter">
+            <summary>
+            CLSID_PTFilter
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.MPEG2Demultiplexer_NoClock">
+            <summary>
+            CLSID_MPEG2Demultiplexer_NoClock
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.SBE2Sink">
+            <summary>
+            CLSID_SBE2Sink
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.StreamBufferPropertyHandler">
+            <summary>
+            CLSID_StreamBufferPropertyHandler
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.StreamBufferThumbnailHandler">
+            <summary>
+            CLSID_StreamBufferThumbnailHandler
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.SBE2File">
+            <summary>
+            CLSID_SBE2File
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.CCAFilter">
+            <summary>
+            CLSID_CCAFilter
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.CaptionsFilter">
+            <summary>
+            CLSID_CaptionsFilter
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.SubtitlesFilter">
+            <summary>
+            CLSID_SubtitlesFilter
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DirectShowPluginControl">
+            <summary>
+            CLSID_DirectShowPluginControl
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.SBE2MediaTypeProfile">
+            <summary>
+            CLSID_SBE2MediaTypeProfile
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.SBE2FileScan">
+            <summary>
+            CLSID_SBE2FileScan
+            </summary>
+        </member>
+        <member name="F:DirectShow4Net.FilterCategory.CPCAFiltersCategory">
+            <summary> CLSID_CPCAFiltersCategory </summary>
+        </member>
+        <member name="F:DirectShow4Net.FilterCategory.MediaEncoderCategory">
+            <summary> CLSID_MediaEncoderCategory </summary>
+        </member>
+        <member name="F:DirectShow4Net.FilterCategory.MediaMultiplexerCategory">
+            <summary> CLSID_MediaMultiplexerCategory </summary>
+        </member>
+        <member name="F:DirectShow4Net.FilterCategory.DMOFilterCategory">
+            <summary> CLSID_DMOFilterCategory </summary>
+        </member>
+        <member name="F:DirectShow4Net.FilterCategory.AudioInputDevice">
+            <summary> CLSID_AudioInputDeviceCategory, audio capture category </summary>
+        </member>
+        <member name="F:DirectShow4Net.FilterCategory.VideoInputDevice">
+            <summary> CLSID_VideoInputDeviceCategory, video capture category </summary>
+        </member>
+        <member name="F:DirectShow4Net.FilterCategory.VideoCompressorCategory">
+            <summary> CLSID_VideoCompressorCategory, video compressor category </summary>
+        </member>
+        <member name="F:DirectShow4Net.FilterCategory.AudioCompressorCategory">
+            <summary> CLSID_AudioCompressorCategory, audio compressor category </summary>
+        </member>
+        <member name="F:DirectShow4Net.FilterCategory.LegacyAmFilterCategory">
+            <summary> CLSID_LegacyAmFilterCategory, legacy filters </summary>
+        </member>
+        <member name="F:DirectShow4Net.FilterCategory.AudioRendererCategory">
+            <summary> CLSID_AudioRendererCategory, Audio renderer category</summary>
+        </member>
+        <member name="F:DirectShow4Net.FilterCategory.BDAReceiverComponentsCategory">
+            <summary> KSCATEGORY_BDA_RECEIVER_COMPONENT, BDA Receiver Components category</summary>
+        </member>
+        <member name="F:DirectShow4Net.FilterCategory.BDASourceFiltersCategory">
+            <summary> KSCATEGORY_BDA_NETWORK_TUNER, BDA Source Filters category</summary>
+        </member>
+        <member name="F:DirectShow4Net.FilterCategory.BDARenderingFiltersCategory">
+            <summary> KSCATEGORY_BDA_IP_SINK, BDA Rendering Filters category</summary>
+        </member>
+        <member name="F:DirectShow4Net.FilterCategory.BDANetworkProvidersCategory">
+            <summary> KSCATEGORY_BDA_NETWORK_PROVIDER, BDA Network Providers category</summary>
+        </member>
+        <member name="F:DirectShow4Net.FilterCategory.BDATransportInformationRenderersCategory">
+            <summary> KSCATEGORY_BDA_TRANSPORT_INFORMATION, BDA Transport Information Renderers category</summary>
+        </member>
+        <member name="F:DirectShow4Net.FilterCategory.MidiRendererCategory">
+            <summary> CLSID_MidiRendererCategory </summary>
+        </member>
+        <member name="F:DirectShow4Net.FilterCategory.TransmitCategory">
+            <summary> CLSID_TransmitCategory  External Renderers Category</summary>
+        </member>
+        <member name="F:DirectShow4Net.FilterCategory.DeviceControlCategory">
+            <summary> CLSID_DeviceControlCategory  Device Control Filters</summary>
+        </member>
+        <member name="F:DirectShow4Net.FilterCategory.VideoEffects1Category">
+            <summary> CLSID_VideoEffects1Category </summary>
+        </member>
+        <member name="F:DirectShow4Net.FilterCategory.VideoEffects2Category">
+            <summary> CLSID_VideoEffects2Category </summary>
+        </member>
+        <member name="F:DirectShow4Net.FilterCategory.AudioEffects1Category">
+            <summary> CLSID_AudioEffects1Category </summary>
+        </member>
+        <member name="F:DirectShow4Net.FilterCategory.AudioEffects2Category">
+            <summary> CLSID_AudioEffects2Category </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "F:DirectShow4Net.FilterCategory.KSDataDecompressor" -->
+        <member name="F:DirectShow4Net.FilterCategory.KSCommunicationsTransform">
+            <summary> KSCATEGORY_COMMUNICATIONSTRANSFORM </summary>
+        </member>
+        <member name="F:DirectShow4Net.FilterCategory.KSDataTransform">
+            <summary> KSCATEGORY_DATATRANSFORM </summary>
+        </member>
+        <member name="F:DirectShow4Net.FilterCategory.KSInterfaceTransform">
+            <summary> KSCATEGORY_INTERFACETRANSFORM </summary>
+        </member>
+        <member name="F:DirectShow4Net.FilterCategory.KSMixer">
+            <summary> KSCATEGORY_MIXER </summary>
+        </member>
+        <member name="F:DirectShow4Net.FilterCategory.KSAudioDevice">
+            <summary> KSCATEGORY_AUDIO_DEVICE </summary>
+        </member>
+        <member name="F:DirectShow4Net.FilterCategory.ActiveMovieCategories">
+            <summary> CLSID_ActiveMovieCategories </summary>
+        </member>
+        <member name="F:DirectShow4Net.FilterCategory.AMKSCapture">
+            <summary> AM_KSCATEGORY_CAPTURE </summary>
+        </member>
+        <member name="F:DirectShow4Net.FilterCategory.AMKSRender">
+            <summary> AM_KSCATEGORY_RENDER </summary>
+        </member>
+        <member name="F:DirectShow4Net.FilterCategory.AMKSDataCompressor">
+            <summary> AM_KSCATEGORY_DATACOMPRESSOR </summary>
+        </member>
+        <member name="F:DirectShow4Net.FilterCategory.AMKSAudio">
+            <summary> AM_KSCATEGORY_AUDIO </summary>
+        </member>
+        <member name="F:DirectShow4Net.FilterCategory.AMKSVideo">
+            <summary> AM_KSCATEGORY_VIDEO </summary>
+        </member>
+        <member name="F:DirectShow4Net.FilterCategory.AMKSTVTuner">
+            <summary> AM_KSCATEGORY_TVTUNER </summary>
+        </member>
+        <member name="F:DirectShow4Net.FilterCategory.AMKSCrossbar">
+            <summary> AM_KSCATEGORY_CROSSBAR </summary>
+        </member>
+        <member name="F:DirectShow4Net.FilterCategory.AMKSTVAudio">
+            <summary> AM_KSCATEGORY_TVAUDIO </summary>
+        </member>
+        <member name="F:DirectShow4Net.FilterCategory.AMKSVBICodec">
+            <summary> AM_KSCATEGORY_VBICODEC </summary>
+        </member>
+        <member name="F:DirectShow4Net.FilterCategory.AMKSSplitter">
+            <summary> AM_KSCATEGORY_SPLITTER </summary>
+        </member>
+        <member name="F:DirectShow4Net.FilterCategory.WDMStreamingEncoderDevices">
+            <summary> Not defined </summary>
+        </member>
+        <member name="F:DirectShow4Net.FilterCategory.WDMStreamingMultiplexerDevices">
+            <summary> Not defined </summary>
+        </member>
+        <member name="F:DirectShow4Net.FilterCategory.LTMMVideoProcessors">
+            <summary> Not defined </summary>
+        </member>
+        <member name="F:DirectShow4Net.VMRClsId.AllocPresenter">
+            <summary>CLSID_AllocPresenter</summary>
+        </member>
+        <member name="F:DirectShow4Net.VMRClsId.AllocPresenterDDXclMode">
+            <summary>CLSID_AllocPresenterDDXclMode</summary>
+        </member>
+        <member name="F:DirectShow4Net.TVEClsId.DShowTVEFilter">
+            <summary>CLSID_DShowTVEFilter</summary>
+        </member>
+        <member name="F:DirectShow4Net.TVEClsId.TVEFilterTuneProperties">
+            <summary>CLSID_TVEFilterTuneProperties</summary>
+        </member>
+        <member name="F:DirectShow4Net.TVEClsId.TVEFilterCCProperties">
+            <summary>CLSID_TVEFilterCCProperties</summary>
+        </member>
+        <member name="F:DirectShow4Net.TVEClsId.TVEFilterStatsProperties">
+            <summary>CLSID_TVEFilterStatsProperties</summary>
+        </member>
+        <member name="F:DirectShow4Net.ENCAPIClsId.IVideoEncoderProxy">
+            <summary>CLSID_IVideoEncoderProxy</summary>
+        </member>
+        <member name="F:DirectShow4Net.ENCAPIClsId.ICodecAPIProxy">
+            <summary>CLSID_ICodecAPIProxy</summary>
+        </member>
+        <member name="F:DirectShow4Net.ENCAPIClsId.IVideoEncoderCodecAPIProxy">
+            <summary>CLSID_IVideoEncoderCodecAPIProxy</summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaType.Video">
+            <summary> MEDIATYPE_Video 'vids' </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaType.Interleaved">
+            <summary> MEDIATYPE_Interleaved 'iavs' </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaType.Audio">
+            <summary> MEDIATYPE_Audio 'auds' </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaType.Texts">
+            <summary> MEDIATYPE_Text 'txts' </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaType.Stream">
+            <summary> MEDIATYPE_Stream </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaType.VBI">
+            <summary> MEDIATYPE_VBI </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaType.Midi">
+            <summary> MEDIATYPE_Midi </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaType.File">
+            <summary> MEDIATYPE_File </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaType.ScriptCommand">
+            <summary> MEDIATYPE_ScriptCommand </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaType.AuxLine21Data">
+            <summary> MEDIATYPE_AUXLine21Data </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaType.Timecode">
+            <summary> MEDIATYPE_Timecode </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaType.LMRT">
+            <summary> MEDIATYPE_LMRT </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaType.URLStream">
+            <summary> MEDIATYPE_URL_STREAM </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaType.AnalogVideo">
+            <summary> MEDIATYPE_AnalogVideo </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaType.AnalogAudio">
+            <summary> MEDIATYPE_AnalogAudio </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaType.Mpeg2Sections">
+            <summary> MEDIATYPE_MPEG2_SECTIONS </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaType.DTVCCData">
+            <summary> MEDIATYPE_DTVCCData </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaType.MSTVCaption">
+            <summary> MEDIATYPE_MSTVCaption </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaType.AUXTeletextPage">
+            <summary> MEDIATYPE_AUXTeletextPage </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaType.CC_Container">
+            <summary> MEDIATYPE_CC_CONTAINER </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.CLPL">
+            <summary> MEDIASUBTYPE_CLPL </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.YUYV">
+            <summary> MEDIASUBTYPE_YUYV </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.IYUV">
+            <summary> MEDIASUBTYPE_IYUV </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.YVU9">
+            <summary> MEDIASUBTYPE_YVU9 </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.Y411">
+            <summary> MEDIASUBTYPE_Y411 </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.Y41P">
+            <summary> MEDIASUBTYPE_Y41P </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.YUY2">
+            <summary> MEDIASUBTYPE_YUY2 </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.YVYU">
+            <summary> MEDIASUBTYPE_YVYU </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.UYVY">
+            <summary> MEDIASUBTYPE_UYVY </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.Y211">
+            <summary> MEDIASUBTYPE_Y211 </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.CLJR">
+            <summary> MEDIASUBTYPE_CLJR </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.IF09">
+            <summary> MEDIASUBTYPE_IF09 </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.CPLA">
+            <summary> MEDIASUBTYPE_CPLA </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.MJPG">
+            <summary> MEDIASUBTYPE_MJPG </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.TVMJ">
+            <summary> MEDIASUBTYPE_TVMJ </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.WAKE">
+            <summary> MEDIASUBTYPE_WAKE </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.CFCC">
+            <summary> MEDIASUBTYPE_CFCC </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.IJPG">
+            <summary> MEDIASUBTYPE_IJPG </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.PLUM">
+            <summary> MEDIASUBTYPE_Plum </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.DVCS">
+            <summary> MEDIASUBTYPE_DVCS </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.DVSD">
+            <summary> MEDIASUBTYPE_DVSD </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.MDVF">
+            <summary> MEDIASUBTYPE_MDVF </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.RGB1">
+            <summary> MEDIASUBTYPE_RGB1 </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.RGB4">
+            <summary> MEDIASUBTYPE_RGB4 </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.RGB8">
+            <summary> MEDIASUBTYPE_RGB8 </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.RGB565">
+            <summary> MEDIASUBTYPE_RGB565 </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.RGB555">
+            <summary> MEDIASUBTYPE_RGB555 </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.RGB24">
+            <summary> MEDIASUBTYPE_RGB24 </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.RGB32">
+            <summary> MEDIASUBTYPE_RGB32 </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.ARGB1555">
+            <summary> MEDIASUBTYPE_ARGB1555 </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.ARGB4444">
+            <summary> MEDIASUBTYPE_ARGB4444 </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.ARGB32">
+            <summary> MEDIASUBTYPE_ARGB32 </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.A2R10G10B10">
+            <summary> MEDIASUBTYPE_A2R10G10B10 </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.A2B10G10R10">
+            <summary> MEDIASUBTYPE_A2B10G10R10 </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.AYUV">
+            <summary> MEDIASUBTYPE_AYUV </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.AI44">
+            <summary> MEDIASUBTYPE_AI44 </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.IA44">
+            <summary> MEDIASUBTYPE_IA44 </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.RGB32_D3D_DX7_RT">
+            <summary> MEDIASUBTYPE_RGB32_D3D_DX7_RT </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.RGB16_D3D_DX7_RT">
+            <summary> MEDIASUBTYPE_RGB16_D3D_DX7_RT </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.ARGB32_D3D_DX7_RT">
+            <summary> MEDIASUBTYPE_ARGB32_D3D_DX7_RT </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.ARGB4444_D3D_DX7_RT">
+            <summary> MEDIASUBTYPE_ARGB4444_D3D_DX7_RT </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.ARGB1555_D3D_DX7_RT">
+            <summary> MEDIASUBTYPE_ARGB1555_D3D_DX7_RT </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.RGB32_D3D_DX9_RT">
+            <summary> MEDIASUBTYPE_RGB32_D3D_DX9_RT </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.RGB16_D3D_DX9_RT">
+            <summary> MEDIASUBTYPE_RGB16_D3D_DX9_RT </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.ARGB32_D3D_DX9_RT">
+            <summary> MEDIASUBTYPE_ARGB32_D3D_DX9_RT </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.ARGB4444_D3D_DX9_RT">
+            <summary> MEDIASUBTYPE_ARGB4444_D3D_DX9_RT </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.ARGB1555_D3D_DX9_RT">
+            <summary> MEDIASUBTYPE_ARGB1555_D3D_DX9_RT </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.YV12">
+            <summary> MEDIASUBTYPE_YV12 </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.NV12">
+            <summary> MEDIASUBTYPE_NV12 </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.IMC1">
+            <summary> MEDIASUBTYPE_IMC1 </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.IMC2">
+            <summary> MEDIASUBTYPE_IMC2 </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.IMC3">
+            <summary> MEDIASUBTYPE_IMC3 </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.IMC4">
+            <summary> MEDIASUBTYPE_IMC4 </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.S340">
+            <summary> MEDIASUBTYPE_S340 </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.S342">
+            <summary> MEDIASUBTYPE_S342 </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.Overlay">
+            <summary> MEDIASUBTYPE_Overlay </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.MPEG1Packet">
+            <summary> MEDIASUBTYPE_MPEG1Packet </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.MPEG1Payload">
+            <summary> MEDIASUBTYPE_MPEG1Payload </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.MPEG1AudioPayload">
+            <summary> MEDIASUBTYPE_MPEG1AudioPayload </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.MPEG1SystemStream">
+            <summary> MEDIATYPE_MPEG1SystemStream </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.MPEG1System">
+            <summary> MEDIASUBTYPE_MPEG1System </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.MPEG1VideoCD">
+            <summary> MEDIASUBTYPE_MPEG1VideoCD </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.MPEG1Video">
+            <summary> MEDIASUBTYPE_MPEG1Video </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.MPEG1Audio">
+            <summary> MEDIASUBTYPE_MPEG1Audio </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.Avi">
+            <summary> MEDIASUBTYPE_Avi </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.Asf">
+            <summary> MEDIASUBTYPE_Asf </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.QTMovie">
+            <summary> MEDIASUBTYPE_QTMovie </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.QTRpza">
+            <summary> MEDIASUBTYPE_QTRpza </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.QTSmc">
+            <summary> MEDIASUBTYPE_QTSmc </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.QTRle">
+            <summary> MEDIASUBTYPE_QTRle </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.QTJpeg">
+            <summary> MEDIASUBTYPE_QTJpeg </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.PCMAudio_Obsolete">
+            <summary> MEDIASUBTYPE_PCMAudio_Obsolete </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.PCM">
+            <summary> MEDIASUBTYPE_PCM </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.WAVE">
+            <summary> MEDIASUBTYPE_WAVE </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.AU">
+            <summary> MEDIASUBTYPE_AU </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.AIFF">
+            <summary> MEDIASUBTYPE_AIFF </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.dvhd">
+            <summary> MEDIASUBTYPE_dvhd </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.dvsl">
+            <summary> MEDIASUBTYPE_dvsl </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.dv25">
+            <summary> MEDIASUBTYPE_dv25 </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.dv50">
+            <summary> MEDIASUBTYPE_dv50 </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.dvh1">
+            <summary> MEDIASUBTYPE_dvh1 </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.Line21_BytePair">
+            <summary> MEDIASUBTYPE_Line21_BytePair </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.Line21_GOPPacket">
+            <summary> MEDIASUBTYPE_Line21_GOPPacket </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.Line21_VBIRawData">
+            <summary> MEDIASUBTYPE_Line21_VBIRawData </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.TELETEXT">
+            <summary> MEDIASUBTYPE_TELETEXT </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.WSS">
+            <summary> MEDIASUBTYPE_WSS </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.VPS">
+            <summary> MEDIASUBTYPE_VPS </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.DRM_Audio">
+            <summary> MEDIASUBTYPE_DRM_Audio </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.IEEE_FLOAT">
+            <summary> MEDIASUBTYPE_IEEE_FLOAT </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.DOLBY_AC3_SPDIF">
+            <summary> MEDIASUBTYPE_DOLBY_AC3_SPDIF </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.RAW_SPORT">
+            <summary> MEDIASUBTYPE_RAW_SPORT </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.SPDIF_TAG_241h">
+            <summary> MEDIASUBTYPE_SPDIF_TAG_241h </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.DssVideo">
+            <summary> MEDIASUBTYPE_DssVideo </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.DssAudio">
+            <summary> MEDIASUBTYPE_DssAudio </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.VPVideo">
+            <summary> MEDIASUBTYPE_VPVideo </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.VPVBI">
+            <summary> MEDIASUBTYPE_VPVBI </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.AnalogVideo_NTSC_M">
+            <summary> MEDIASUBTYPE_AnalogVideo_NTSC_M </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.AnalogVideo_PAL_B">
+            <summary> MEDIASUBTYPE_AnalogVideo_PAL_B </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.AnalogVideo_PAL_D">
+            <summary> MEDIASUBTYPE_AnalogVideo_PAL_D </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.AnalogVideo_PAL_G">
+            <summary> MEDIASUBTYPE_AnalogVideo_PAL_G </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.AnalogVideo_PAL_H">
+            <summary> MEDIASUBTYPE_AnalogVideo_PAL_H </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.AnalogVideo_PAL_I">
+            <summary> MEDIASUBTYPE_AnalogVideo_PAL_I </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.AnalogVideo_PAL_M">
+            <summary> MEDIASUBTYPE_AnalogVideo_PAL_M </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.AnalogVideo_PAL_N">
+            <summary> MEDIASUBTYPE_AnalogVideo_PAL_N </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.AnalogVideo_PAL_N_COMBO">
+            <summary> MEDIASUBTYPE_AnalogVideo_PAL_N_COMBO </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.AnalogVideo_SECAM_B">
+            <summary> MEDIASUBTYPE_AnalogVideo_SECAM_B </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.AnalogVideo_SECAM_D">
+            <summary> MEDIASUBTYPE_AnalogVideo_SECAM_D </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.AnalogVideo_SECAM_G">
+            <summary> MEDIASUBTYPE_AnalogVideo_SECAM_G </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.AnalogVideo_SECAM_H">
+            <summary> MEDIASUBTYPE_AnalogVideo_SECAM_H </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.AnalogVideo_SECAM_K">
+            <summary> MEDIASUBTYPE_AnalogVideo_SECAM_K </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.AnalogVideo_SECAM_K1">
+            <summary> MEDIASUBTYPE_AnalogVideo_SECAM_K1 </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.AnalogVideo_SECAM_L">
+            <summary> MEDIASUBTYPE_AnalogVideo_SECAM_L </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.I420">
+            <summary> not in uuids.h </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.VideoImage">
+            <summary> WMMEDIASUBTYPE_VIDEOIMAGE </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.Mpeg2Video">
+            <summary> WMMEDIASUBTYPE_MPEG2_VIDEO </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.WebStream">
+            <summary> WMMEDIASUBTYPE_WebStream </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.Mpeg2Audio">
+            <summary> MEDIASUBTYPE_MPEG2_AUDIO </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.DolbyAC3">
+            <summary> MEDIASUBTYPE_DOLBY_AC3 </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.DvbSI">
+            <summary> MEDIASUBTYPE_DVB_SI </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.AtscSI">
+            <summary> MEDIASUBTYPE_ATSC_SI </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.Mpeg2Data">
+            <summary> MEDIASUBTYPE_MPEG2DATA </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.Mpeg2Program">
+            <summary> MEDIASUBTYPE_MPEG2_PROGRAM </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.Mpeg2Transport">
+            <summary> MEDIASUBTYPE_MPEG2_TRANSPORT </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.Mpeg2TransportStride">
+            <summary> MEDIASUBTYPE_MPEG2_TRANSPORT_STRIDE </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.None">
+            <summary> MEDIASUBTYPE_None </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.H264">
+            <summary> MEDIASUBTYPE_H264 </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.NV24">
+            <summary> MEDIASUBTYPE_NV24 </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.Data708_608">
+            <summary> MEDIASUBTYPE_708_608Data </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.DtvCcData">
+            <summary> MEDIASUBTYPE_DtvCcData </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.DVB_Subtitles">
+            <summary> MEDIASUBTYPE_DVB_SUBTITLES </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.ISDB_Captions">
+            <summary> MEDIASUBTYPE_ISDB_CAPTIONS </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.ISDB_Superimpose">
+            <summary> MEDIASUBTYPE_ISDB_SUPERIMPOSE </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.NV11">
+            <summary> MEDIASUBTYPE_NV11 </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.P208">
+            <summary> MEDIASUBTYPE_P208 </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.P210">
+            <summary> MEDIASUBTYPE_P210 </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.P216">
+            <summary> MEDIASUBTYPE_P216 </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.P010">
+            <summary> MEDIASUBTYPE_P010 </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.P016">
+            <summary> MEDIASUBTYPE_P016 </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.Y210">
+            <summary> MEDIASUBTYPE_Y210 </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.Y216">
+            <summary> MEDIASUBTYPE_Y216 </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.P408">
+            <summary> MEDIASUBTYPE_P408 </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.CC_Container">
+            <summary> MEDIASUBTYPE_CC_CONTAINER </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.VBI">
+            <summary> MEDIASUBTYPE_VBI </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.XDS">
+            <summary> MEDIASUBTYPE_XDS </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.ETDTFilter_Tagged">
+            <summary> MEDIASUBTYPE_ETDTFilter_Tagged </summary>
+        </member>
+        <member name="F:DirectShow4Net.MediaSubType.CPFilters_Processed">
+            <summary> MEDIASUBTYPE_CPFilters_Processed </summary>
+        </member>
+        <member name="F:DirectShow4Net.FormatType.None">
+            <summary> FORMAT_None </summary>
+        </member>
+        <member name="F:DirectShow4Net.FormatType.VideoInfo">
+            <summary> FORMAT_VideoInfo </summary>
+        </member>
+        <member name="F:DirectShow4Net.FormatType.VideoInfo2">
+            <summary> FORMAT_VideoInfo2 </summary>
+        </member>
+        <member name="F:DirectShow4Net.FormatType.WaveEx">
+            <summary> FORMAT_WaveFormatEx </summary>
+        </member>
+        <member name="F:DirectShow4Net.FormatType.MpegVideo">
+            <summary> FORMAT_MPEGVideo </summary>
+        </member>
+        <member name="F:DirectShow4Net.FormatType.MpegStreams">
+            <summary> FORMAT_MPEGStreams </summary>
+        </member>
+        <member name="F:DirectShow4Net.FormatType.DvInfo">
+            <summary> FORMAT_DvInfo </summary>
+        </member>
+        <member name="F:DirectShow4Net.FormatType.AnalogVideo">
+            <summary> FORMAT_AnalogVideo </summary>
+        </member>
+        <member name="F:DirectShow4Net.FormatType.Mpeg2Video">
+            <summary> FORMAT_MPEG2Video </summary>
+        </member>
+        <member name="F:DirectShow4Net.FormatType.DolbyAC3">
+            <summary> FORMAT_DolbyAC3 </summary>
+        </member>
+        <member name="F:DirectShow4Net.FormatType.Mpeg2Audio">
+            <summary> FORMAT_MPEG2Audio </summary>
+        </member>
+        <member name="F:DirectShow4Net.FormatType.WSS525">
+            <summary> FORMAT_525WSS </summary>
+        </member>
+        <member name="F:DirectShow4Net.FormatType.ETDTFilter_Tagged">
+            <summary> FORMATTYPE_ETDTFilter_Tagged </summary>
+        </member>
+        <member name="F:DirectShow4Net.FormatType.CPFilters_Processed">
+            <summary> FORMATTYPE_CPFilters_Processed </summary>
+        </member>
+        <member name="F:DirectShow4Net.DSAttrib.UDCRTag">
+            <summary> DSATTRIB_UDCRTag </summary>
+        </member>
+        <member name="F:DirectShow4Net.DSAttrib.PicSampleSeq">
+            <summary> DSATTRIB_PicSampleSeq </summary>
+        </member>
+        <member name="F:DirectShow4Net.DSAttrib.OptionalVideoAttributes">
+            <summary> DSATTRIB_OptionalVideoAttributes </summary>
+        </member>
+        <member name="F:DirectShow4Net.DSAttrib.CC_ContainerInfo">
+            <summary> DSATTRIB_CC_CONTAINER_INFO </summary>
+        </member>
+        <member name="F:DirectShow4Net.DSAttrib.TransportProperties">
+            <summary> DSATTRIB_TRANSPORT_PROPERTIES </summary>
+        </member>
+        <member name="F:DirectShow4Net.DSAttrib.PBDATagAttribute">
+            <summary> DSATTRIB_PBDATAG_ATTRIBUTE </summary>
+        </member>
+        <member name="F:DirectShow4Net.DSAttrib.CaptureStreamtime">
+            <summary> DSATTRIB_CAPTURE_STREAMTIME </summary>
+        </member>
+        <member name="F:DirectShow4Net.DSAttrib.DShowStreamDesc">
+            <summary> DSATTRIB_DSHOW_STREAM_DESC </summary>
+        </member>
+        <member name="F:DirectShow4Net.DSAttrib.SampleLiveStreamtime">
+            <summary> DSATTRIB_SAMPLE_LIVE_STREAM_TIME </summary>
+        </member>
+        <member name="F:DirectShow4Net.DSAttrib.WMDRMProtectionInfo">
+            <summary> DSATTRIB_WMDRMProtectionInfo </summary>
+        </member>
+        <member name="F:DirectShow4Net.DSAttrib.BadSampleInfo">
+            <summary> DSATTRIB_BadSampleInfo </summary>
+        </member>
+        <member name="F:DirectShow4Net.PropSetID.Pin">
+            <summary> AMPROPSETID_Pin</summary>
+        </member>
+        <member name="F:DirectShow4Net.PropSetID.DroppedFrames">
+            <summary> PROPSETID_VIDCAP_DROPPEDFRAMES </summary>
+        </member>
+        <member name="F:DirectShow4Net.PropSetID.ENCAPIPARAM_BitRate">
+            <summary> STATIC_ENCAPIPARAM_BITRATE </summary>
+        </member>
+        <member name="F:DirectShow4Net.PropSetID.ENCAPIPARAM_PeakBitRate">
+            <summary> STATIC_ENCAPIPARAM_PEAK_BITRATE </summary>
+        </member>
+        <member name="F:DirectShow4Net.PropSetID.ENCAPIPARAM_BitRateMode">
+            <summary> STATIC_ENCAPIPARAM_BITRATE_MODE </summary>
+        </member>
+        <member name="F:DirectShow4Net.PropSetID.ENCAPIPARAM_SAP_MODE">
+            <summary> ENCAPIPARAM_SAP_MODE </summary>
+        </member>
+        <member name="F:DirectShow4Net.PropSetID.CODECAPI_AVDecMmcssClass">
+            <summary> CODECAPI_AVDecMmcssClass </summary>
+        </member>
+        <member name="F:DirectShow4Net.PropSetID.CODECAPI_ChangeLists">
+            <summary> STATIC_CODECAPI_CHANGELISTS </summary>
+        </member>
+        <member name="F:DirectShow4Net.PropSetID.CODECAPI_VideoEncoder">
+            <summary> STATIC_CODECAPI_VIDEO_ENCODER </summary>
+        </member>
+        <member name="F:DirectShow4Net.PropSetID.CODECAPI_AudioEncoder">
+            <summary> STATIC_CODECAPI_AUDIO_ENCODER </summary>
+        </member>
+        <member name="F:DirectShow4Net.PropSetID.CODECAPI_SetAllDefaults">
+            <summary> STATIC_CODECAPI_SETALLDEFAULTS </summary>
+        </member>
+        <member name="F:DirectShow4Net.PropSetID.CODECAPI_AllSettings">
+            <summary> STATIC_CODECAPI_ALLSETTINGS </summary>
+        </member>
+        <member name="F:DirectShow4Net.PropSetID.CODECAPI_SupportsEvents">
+            <summary> STATIC_CODECAPI_SUPPORTSEVENTS </summary>
+        </member>
+        <member name="F:DirectShow4Net.PropSetID.CODECAPI_CurrentChangeList">
+            <summary> STATIC_CODECAPI_CURRENTCHANGELIST </summary>
+        </member>
+        <member name="F:DirectShow4Net.PinCategory.Capture">
+            <summary> PIN_CATEGORY_CAPTURE </summary>
+        </member>
+        <member name="F:DirectShow4Net.PinCategory.Preview">
+            <summary> PIN_CATEGORY_PREVIEW </summary>
+        </member>
+        <member name="F:DirectShow4Net.PinCategory.AnalogVideoIn">
+            <summary> PIN_CATEGORY_ANALOGVIDEOIN </summary>
+        </member>
+        <member name="F:DirectShow4Net.PinCategory.VBI">
+            <summary> PIN_CATEGORY_VBI </summary>
+        </member>
+        <member name="F:DirectShow4Net.PinCategory.VideoPort">
+            <summary> PIN_CATEGORY_VIDEOPORT </summary>
+        </member>
+        <member name="F:DirectShow4Net.PinCategory.NABTS">
+            <summary> PIN_CATEGORY_NABTS </summary>
+        </member>
+        <member name="F:DirectShow4Net.PinCategory.EDS">
+            <summary> PIN_CATEGORY_EDS </summary>
+        </member>
+        <member name="F:DirectShow4Net.PinCategory.TeleText">
+            <summary> PIN_CATEGORY_TELETEXT </summary>
+        </member>
+        <member name="F:DirectShow4Net.PinCategory.CC">
+            <summary> PIN_CATEGORY_CC </summary>
+        </member>
+        <member name="F:DirectShow4Net.PinCategory.Still">
+            <summary> PIN_CATEGORY_STILL </summary>
+        </member>
+        <member name="F:DirectShow4Net.PinCategory.TimeCode">
+            <summary> PIN_CATEGORY_TIMECODE </summary>
+        </member>
+        <member name="F:DirectShow4Net.PinCategory.VideoPortVBI">
+            <summary> PIN_CATEGORY_VIDEOPORT_VBI </summary>
+        </member>
+        <member name="F:DirectShow4Net.FindDirection.UpstreamOnly">
+            <summary> LOOK_UPSTREAM_ONLY </summary>
+        </member>
+        <member name="F:DirectShow4Net.FindDirection.DownstreamOnly">
+            <summary> LOOK_DOWNSTREAM_ONLY </summary>
+        </member>
+        <member name="F:DirectShow4Net.PropertyPages.CrossbarFilterPropertyPage">
+            <summary> CLSID_CrossbarFilterPropertyPage </summary>
+        </member>
+        <member name="F:DirectShow4Net.PropertyPages.AudioInputMixer">
+            <summary> CLSID_AudioInputMixerProperties </summary>
+        </member>
+        <member name="F:DirectShow4Net.PropertyPages.AudioProperties">
+            <summary> CLSID_AudioProperties </summary>
+        </member>
+        <member name="F:DirectShow4Net.PropertyPages.AudioRendererAdvancedProperties">
+            <summary> CLSID_AudioRendererAdvancedProperties </summary>
+        </member>
+        <member name="F:DirectShow4Net.PropertyPages.AviMux">
+            <summary> CLSID_AviMuxProptyPage </summary>
+        </member>
+        <member name="F:DirectShow4Net.PropertyPages.AviMux1">
+            <summary> CLSID_AviMuxProptyPage1 </summary>
+        </member>
+        <member name="F:DirectShow4Net.PropertyPages.DVDec">
+            <summary> CLSID_DVDecPropertiesPage </summary>
+        </member>
+        <member name="F:DirectShow4Net.PropertyPages.DVEnc">
+            <summary> CLSID_DVEncPropertiesPage </summary>
+        </member>
+        <member name="F:DirectShow4Net.PropertyPages.Modex">
+            <summary> CLSID_ModexProperties </summary>
+        </member>
+        <member name="F:DirectShow4Net.PropertyPages.Capture">
+            <summary> CLSID_CaptureProperties </summary>
+        </member>
+        <member name="F:DirectShow4Net.PropertyPages.WstDecoder">
+            <summary> CLSID_WstDecoderPropertyPage </summary>
+        </member>
+        <member name="F:DirectShow4Net.PropertyPages.DVMux">
+            <summary> CLSID_DVMuxPropertyPage </summary>
+        </member>
+        <member name="F:DirectShow4Net.PropertyPages.VideoProcAmpPropertyPage">
+            <summary> CLSID_VideoProcAmpPropertyPage </summary>
+        </member>
+        <member name="F:DirectShow4Net.PropertyPages.CameraControlPropertyPage">
+            <summary> CLSID_CameraControlPropertyPage </summary>
+        </member>
+        <member name="F:DirectShow4Net.PropertyPages.AnalogVideoDecoderPropertyPage">
+            <summary> CLSID_AnalogVideoDecoderPropertyPage </summary>
+        </member>
+        <member name="F:DirectShow4Net.PropertyPages.VideoStreamConfigPropertyPage">
+            <summary> CLSID_VideoStreamConfigPropertyPage </summary>
+        </member>
+        <member name="F:DirectShow4Net.PropertyPages.ATSCNetworkPropertyPage">
+            <summary> CLSID_ATSCNetworkPropertyPage </summary>
+        </member>
+        <member name="F:DirectShow4Net.PropertyPages.TVTunerFilterPropertyPage">
+            <summary> CLSID_TVTunerFilterPropertyPage </summary>
+        </member>
+        <member name="F:DirectShow4Net.PropertyPages.TVAudioFilterPropertyPage">
+            <summary> CLSID_TVAudioFilterPropertyPage </summary>
+        </member>
+        <member name="F:DirectShow4Net.BDANodeCategory.RFTuner">
+            <summary> KSNODE_BDA_RF_TUNER </summary>
+        </member>
+        <member name="F:DirectShow4Net.BDANodeCategory.QAMDemodulator">
+            <summary> KSNODE_BDA_QAM_DEMODULATOR </summary>
+        </member>
+        <member name="F:DirectShow4Net.BDANodeCategory.QPSKDemodulator">
+            <summary> KSNODE_BDA_QPSK_DEMODULATOR </summary>
+        </member>
+        <member name="F:DirectShow4Net.BDANodeCategory.EightVSBDemodulator">
+            <summary> KSNODE_BDA_8VSB_DEMODULATOR </summary>
+        </member>
+        <member name="F:DirectShow4Net.BDANodeCategory.COFDMDemodulator">
+            <summary> KSNODE_BDA_COFDM_DEMODULATOR </summary>
+        </member>
+        <member name="F:DirectShow4Net.BDANodeCategory.OpenCablePod">
+            <summary> KSNODE_BDA_OPENCABLE_POD </summary>
+        </member>
+        <member name="F:DirectShow4Net.BDANodeCategory.CommonCAPod">
+            <summary> KSNODE_BDA_COMMON_CA_POD </summary>
+        </member>
+        <member name="F:DirectShow4Net.BDANodeCategory.PidFilter">
+            <summary> KSNODE_BDA_PID_FILTER </summary>
+        </member>
+        <member name="F:DirectShow4Net.BDANodeCategory.IPSink">
+            <summary> KSNODE_BDA_IP_SINK </summary>
+        </member>
+        <member name="F:DirectShow4Net.TAGTables.UdriTagTables">
+            <summary> UUID_UdriTagTables </summary>
+        </member>
+        <member name="F:DirectShow4Net.TAGTables.WMDRMTagTables">
+            <summary> UUID_WMDRMTagTables </summary>
+        </member>
+        <member name="T:DirectShow4Net.KSTopologyConnection">
+            <summary>
+            From KSTOPOLOGY_CONNECTION
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.AMVP_Mode">
+            <summary>
+            From AMVP_MODE
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.VMR9PresentationFlags">
+            <summary>
+            From VMR9PresentationFlags
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.VMR9SurfaceAllocationFlags">
+            <summary>
+            From VMR9SurfaceAllocationFlags
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.VMR9ProcAmpControlFlags">
+            <summary>
+            From VMR9ProcAmpControlFlags
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.VMR9MixerPrefs">
+            <summary>
+            From VMR9MixerPrefs
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.VMR9DeinterlaceTech">
+            <summary>
+            From VMR9DeinterlaceTech
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.VMR9AlphaBitmapFlags">
+            <summary>
+            From VMR9AlphaBitmapFlags
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.VMR9DeinterlacePrefs">
+            <summary>
+            From VMR9DeinterlacePrefs
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.VMR9RenderPrefs">
+            <summary>
+            From VMR9RenderPrefs
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.VMR9Mode">
+            <summary>
+            From VMR9Mode
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.VMR9AspectRatioMode">
+            <summary>
+            From VMR9AspectRatioMode
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.VMR9SampleFormat">
+            <summary>
+            From VMR9_SampleFormat
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.VMR9PresentationInfo">
+            <summary>
+            From VMR9PresentationInfo
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.VMR9AllocationInfo">
+            <summary>
+            From VMR9AllocationInfo
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.VMR9ProcAmpControl">
+            <summary>
+            From VMR9ProcAmpControl
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.VMR9MonitorInfo">
+            <summary>
+            From VMR9MonitorInfo
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.VMR9DeinterlaceCaps">
+            <summary>
+            From VMR9DeinterlaceCaps
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.VMR9VideoStreamInfo">
+            <summary>
+            From VMR9VideoStreamInfo
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.VMR9VideoDesc">
+            <summary>
+            From VMR9VideoDesc
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.VMR9Frequency">
+            <summary>
+            From VMR9Frequency
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.VMR9AlphaBitmap">
+            <summary>
+            From VMR9AlphaBitmap
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.VMR9ProcAmpControlRange">
+            <summary>
+            From VMR9ProcAmpControlRange
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.VMRDeinterlaceTech">
+            <summary>
+            From VMRDeinterlaceTech
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.VMRBitmap">
+            <summary>
+            From VMRBITMAP_* defines
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.VMRDeinterlacePrefs">
+            <summary>
+            From VMRDeinterlacePrefs
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.VMRMixerPrefs">
+            <summary>
+            From VMRMixerPrefs
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.VMRRenderPrefs">
+            <summary>
+            From VMRRenderPrefs
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.VMRMode">
+            <summary>
+            From VMRMode
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.VMRAspectRatioMode">
+            <summary>
+            From VMR_ASPECT_RATIO_MODE
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.VMRAlphaBitmap">
+            <summary>
+            From VMRALPHABITMAP
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.VMRDeinterlaceCaps">
+            <summary>
+            From VMRDeinterlaceCaps
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.VMRFrequency">
+            <summary>
+            From VMRFrequency
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.VMRVideoDesc">
+            <summary>
+            From VMRVideoDesc
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.VMRVideoStreamInfo">
+            <summary>
+            From VMRVIDEOSTREAMINFO
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.DDColorKey">
+            <summary>
+            From DDCOLORKEY
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.VMRMonitorInfo">
+            <summary>
+            From VMRMONITORINFO
+            </summary>
+        </member>
+        <member name="T:DirectShow4Net.VMRGuid">
+            <summary>
+            From VMRGUID
+            </summary>
+        </member>
+        <member name="M:DirectShow4Net.IVMRWindowlessControl.GetCurrentImage(System.IntPtr@)">
+            <summary>
+            the caller is responsible for free the returned memory by calling CoTaskMemFree.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -9,7 +9,7 @@ using System;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
-namespace DirectShowLib.Sample
+namespace DirectShow4Net.Sample
 {
   [System.Security.SuppressUnmanagedCodeSecurity]
   internal sealed class NativeMethods

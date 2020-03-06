@@ -12,11 +12,11 @@ using System.Windows.Forms;
 
 using Microsoft.Win32;
 
-using DirectShowLib;
-using DirectShowLib.BDA;
-using DirectShowLib.Utils;
+using DirectShow4Net;
+using DirectShow4Net.BDA;
+using DirectShow4Net.Utils;
 
-namespace DirectShowLib.Sample
+namespace DirectShow4Net.Sample
 {
 	public class BDAGraphBuilder : IDisposable
 	{

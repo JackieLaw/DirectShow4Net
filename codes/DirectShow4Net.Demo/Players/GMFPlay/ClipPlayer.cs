@@ -9,8 +9,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text;
-using DirectShowLib;
-using DirectShowLib.GDCL;
+using DirectShow4Net;
+using DirectShow4Net.GDCL;
 using System.Runtime.InteropServices;
 using System.Diagnostics;
 

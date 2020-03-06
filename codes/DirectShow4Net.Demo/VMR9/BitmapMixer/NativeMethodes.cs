@@ -8,7 +8,7 @@ or FITNESS FOR A PARTICULAR PURPOSE.
 using System;
 using System.Runtime.InteropServices;
 
-namespace DirectShowLib.Sample
+namespace DirectShow4Net.Sample
 {
 	internal sealed class NativeMethodes
 	{

@@ -74,9 +74,8 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DirectShowLib-2005, Version=1.4.0.0, Culture=neutral, PublicKeyToken=67e7b740cdfc2d3f, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\lib\DirectShowLib-2005.dll</HintPath>
+    <Reference Include="DirectShow4Net">
+      <HintPath>..\..\..\..\lib\DirectShow4Net\DirectShow4Net.dll</HintPath>
     </Reference>
     <Reference Include="System">
       <Name>System</Name>

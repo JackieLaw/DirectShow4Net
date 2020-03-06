@@ -8,7 +8,7 @@ or FITNESS FOR A PARTICULAR PURPOSE.
 using System;
 using System.Windows.Forms;
 
-namespace DirectShowLib.Sample
+namespace DirectShow4Net.Sample
 {
 	public sealed class StartUp
 	{

@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Forms;
 
-using DirectShowLib;
-using DirectShowLib.DES;
+using DirectShow4Net;
+using DirectShow4Net.DES;
 
-namespace DirectShowLib.Samples
+namespace DirectShow4Net.Samples
 {
   /// <summary>
   /// A wrapper class around the DirectShow's MediaDet object.

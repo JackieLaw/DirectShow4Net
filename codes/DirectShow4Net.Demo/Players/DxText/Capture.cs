@@ -15,7 +15,7 @@ using System.Runtime.InteropServices;
 using System.Diagnostics;
 using System.Windows.Forms;
 
-using DirectShowLib;
+using DirectShow4Net;
 
 
 namespace DxText

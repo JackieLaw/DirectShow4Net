@@ -12,9 +12,9 @@ using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
-using DirectShowLib;
+using DirectShow4Net;
 
-namespace DirectShowLib.Sample
+namespace DirectShow4Net.Sample
 {
   internal enum PlayState
   {
@@ -102,7 +102,7 @@ namespace DirectShowLib.Sample
       InitializeComponent();
 
       //
-      // TODO : ajoutez le code du constructeur après l'appel à InitializeComponent
+      // TODO : ajoutez le code du constructeur après l'appel ?InitializeComponent
       //
     }
 
@@ -122,7 +122,7 @@ namespace DirectShowLib.Sample
     }
 
 
-    #region Code généré par le Concepteur Windows Form
+    #region Code génér?par le Concepteur Windows Form
     /// <summary>
     /// Méthode requise pour la prise en charge du concepteur - ne modifiez pas
     /// le contenu de cette méthode avec l'éditeur de code.

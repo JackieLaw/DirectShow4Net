@@ -10,10 +10,10 @@ using System.IO;
 using System.Runtime.InteropServices;
 using System.Text;
 
-using DirectShowLib;
-using DirectShowLib.SBE;
+using DirectShow4Net;
+using DirectShow4Net.SBE;
 
-namespace DirectShowLib.Sample
+namespace DirectShow4Net.Sample
 {
   public class SBECutter2 : IDisposable
   {

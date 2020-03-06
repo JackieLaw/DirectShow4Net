@@ -18,7 +18,7 @@ using System.Diagnostics;
 using System.Windows.Forms;
 using System.Threading;
 
-using DirectShowLib;
+using DirectShow4Net;
 
 
 namespace DxPlay

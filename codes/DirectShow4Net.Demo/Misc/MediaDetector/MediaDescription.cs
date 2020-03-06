@@ -3,7 +3,7 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace DirectShowLib.Samples
+namespace DirectShow4Net.Samples
 {
   /// <summary>
   /// This class is mainly a storage class.

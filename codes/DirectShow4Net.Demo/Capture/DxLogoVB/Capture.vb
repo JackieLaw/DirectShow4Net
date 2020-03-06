@@ -11,7 +11,7 @@ Imports System.Drawing.Imaging
 Imports System.Runtime.InteropServices
 Imports System.Diagnostics
 
-Imports DirectShowLib
+Imports DirectShow4Net
 
 Public Class Capture
     Implements ISampleGrabberCB

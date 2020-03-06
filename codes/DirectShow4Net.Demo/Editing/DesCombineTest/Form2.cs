@@ -93,52 +93,50 @@ namespace TestConverter
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(6, 49);
+            this.label3.Location = new System.Drawing.Point(7, 53);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 16);
+            this.label3.Size = new System.Drawing.Size(120, 17);
             this.label3.TabIndex = 21;
             this.label3.Text = "Audio File Name";
             // 
             // tbAudioFile
             // 
-            this.tbAudioFile.Location = new System.Drawing.Point(8, 69);
+            this.tbAudioFile.Location = new System.Drawing.Point(10, 74);
             this.tbAudioFile.Name = "tbAudioFile";
-            this.tbAudioFile.Size = new System.Drawing.Size(248, 20);
+            this.tbAudioFile.Size = new System.Drawing.Size(297, 21);
             this.tbAudioFile.TabIndex = 4;
-            this.tbAudioFile.Text = "";
             // 
             // btnAudio
             // 
-            this.btnAudio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-            this.btnAudio.Location = new System.Drawing.Point(264, 68);
+            this.btnAudio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAudio.Location = new System.Drawing.Point(317, 73);
             this.btnAudio.Name = "btnAudio";
-            this.btnAudio.Size = new System.Drawing.Size(24, 23);
+            this.btnAudio.Size = new System.Drawing.Size(29, 25);
             this.btnAudio.TabIndex = 5;
             this.btnAudio.Text = "...";
             this.btnAudio.Click += new System.EventHandler(this.btnAudio_Click);
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(8, 8);
+            this.label1.Location = new System.Drawing.Point(10, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 16);
+            this.label1.Size = new System.Drawing.Size(120, 17);
             this.label1.TabIndex = 24;
             this.label1.Text = "Video File Name";
             // 
             // tbVideoFile
             // 
-            this.tbVideoFile.Location = new System.Drawing.Point(8, 24);
+            this.tbVideoFile.Location = new System.Drawing.Point(10, 26);
             this.tbVideoFile.Name = "tbVideoFile";
-            this.tbVideoFile.Size = new System.Drawing.Size(248, 20);
+            this.tbVideoFile.Size = new System.Drawing.Size(297, 21);
             this.tbVideoFile.TabIndex = 1;
-            this.tbVideoFile.Text = "";
             // 
             // btnVideo
             // 
-            this.btnVideo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
-            this.btnVideo.Location = new System.Drawing.Point(264, 23);
+            this.btnVideo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVideo.Location = new System.Drawing.Point(317, 25);
             this.btnVideo.Name = "btnVideo";
-            this.btnVideo.Size = new System.Drawing.Size(24, 23);
+            this.btnVideo.Size = new System.Drawing.Size(29, 25);
             this.btnVideo.TabIndex = 2;
             this.btnVideo.Text = "...";
             this.btnVideo.Click += new System.EventHandler(this.button1_Click);
@@ -146,69 +144,69 @@ namespace TestConverter
             // btnOk
             // 
             this.btnOk.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnOk.Location = new System.Drawing.Point(40, 160);
+            this.btnOk.Location = new System.Drawing.Point(48, 172);
             this.btnOk.Name = "btnOk";
-            this.btnOk.Size = new System.Drawing.Size(80, 32);
+            this.btnOk.Size = new System.Drawing.Size(96, 35);
             this.btnOk.TabIndex = 20;
             this.btnOk.Text = "Ok";
             // 
             // btnCancel
             // 
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(184, 160);
+            this.btnCancel.Location = new System.Drawing.Point(221, 172);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(72, 32);
+            this.btnCancel.Size = new System.Drawing.Size(86, 35);
             this.btnCancel.TabIndex = 21;
             this.btnCancel.Text = "Cancel";
             // 
             // label12
             // 
-            this.label12.Location = new System.Drawing.Point(48, 128);
+            this.label12.Location = new System.Drawing.Point(58, 138);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(56, 23);
+            this.label12.Size = new System.Drawing.Size(67, 25);
             this.label12.TabIndex = 3;
             this.label12.Text = "End Time";
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(48, 104);
+            this.label5.Location = new System.Drawing.Point(58, 112);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 23);
+            this.label5.Size = new System.Drawing.Size(67, 25);
             this.label5.TabIndex = 2;
             this.label5.Text = "Start Time";
             // 
             // tbEnd
             // 
-            this.tbEnd.Location = new System.Drawing.Point(112, 128);
+            this.tbEnd.Location = new System.Drawing.Point(134, 138);
             this.tbEnd.Name = "tbEnd";
-            this.tbEnd.Size = new System.Drawing.Size(48, 20);
+            this.tbEnd.Size = new System.Drawing.Size(58, 21);
             this.tbEnd.TabIndex = 9;
             this.tbEnd.Text = "-1";
             this.tbEnd.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // tbStart
             // 
-            this.tbStart.Location = new System.Drawing.Point(112, 104);
+            this.tbStart.Location = new System.Drawing.Point(134, 112);
             this.tbStart.Name = "tbStart";
-            this.tbStart.Size = new System.Drawing.Size(48, 20);
+            this.tbStart.Size = new System.Drawing.Size(58, 21);
             this.tbStart.TabIndex = 8;
             this.tbStart.Text = "0";
             this.tbStart.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label13
             // 
-            this.label13.Location = new System.Drawing.Point(168, 104);
+            this.label13.Location = new System.Drawing.Point(202, 112);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(32, 16);
+            this.label13.Size = new System.Drawing.Size(38, 17);
             this.label13.TabIndex = 4;
             this.label13.Text = "secs";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label14
             // 
-            this.label14.Location = new System.Drawing.Point(168, 128);
+            this.label14.Location = new System.Drawing.Point(202, 138);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(32, 23);
+            this.label14.Size = new System.Drawing.Size(38, 25);
             this.label14.TabIndex = 5;
             this.label14.Text = "secs";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -216,9 +214,9 @@ namespace TestConverter
             // Form2
             // 
             this.AcceptButton = this.btnOk;
-            this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
+            this.AutoScaleBaseSize = new System.Drawing.Size(6, 14);
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(296, 204);
+            this.ClientSize = new System.Drawing.Size(403, 254);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.tbVideoFile);
@@ -238,6 +236,7 @@ namespace TestConverter
             this.Name = "Form2";
             this.Text = "Add Files";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 		#endregion

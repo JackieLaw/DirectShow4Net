@@ -6,7 +6,7 @@
 '*****************************************************************************/
 
 Imports DESCombineLib
-Imports DirectShowLib
+Imports DirectShow4Net
 
 Public Class Form1
     Inherits System.Windows.Forms.Form
@@ -82,7 +82,7 @@ Public Class Form1
 
         Try
             If ds Is Nothing Then
-                Dim ibfVideoCompressor As DirectShowLib.IBaseFilter
+                Dim ibfVideoCompressor As DirectShow4Net.IBaseFilter
 
                 ' Get the video compressor
                 ibfVideoCompressor = GetVideoCompressor("Microsoft Video 1")
@@ -120,7 +120,7 @@ Public Class Form1
     End Sub
 
     ' Walk the list of video compressors looking for one by name
-    Private Function GetVideoCompressor(ByVal sName As String) As DirectShowLib.IBaseFilter
+    Private Function GetVideoCompressor(ByVal sName As String) As DirectShow4Net.IBaseFilter
 
         Dim dsd() As DsDevice = DsDevice.GetDevicesOfCat(FilterCategory.VideoCompressorCategory)
         GetVideoCompressor = Nothing
@@ -130,10 +130,10 @@ Public Class Form1
 
                 ' Found it
                 Dim o As Object = Nothing
-                Dim grf As Guid = GetType(DirectShowLib.IBaseFilter).GUID
+                Dim grf As Guid = GetType(DirectShow4Net.IBaseFilter).GUID
 
                 dev.Mon.BindToObject(Nothing, Nothing, grf, o)
-                GetVideoCompressor = DirectCast(o, DirectShowLib.IBaseFilter)
+                GetVideoCompressor = DirectCast(o, DirectShow4Net.IBaseFilter)
 
                 Exit For
             End If
